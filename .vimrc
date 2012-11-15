@@ -34,5 +34,8 @@ set numberwidth=2
 set history=1000
 set winwidth=79
 
+set pdev=pdf
+set printoptions=paper:a4,syntax:y,wrap:y,duplex:long
+
 colorscheme elflord
 
