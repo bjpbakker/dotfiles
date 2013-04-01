@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# 
+# Prints metadata about a Maven module
+# 
+# Usage: module-info pom.xml
+# 
+# You can pass in more than one pom at a time. To pass in all sub-modules:
+# 
+#   $ module-info `find . -name 'pom.xml'`
+# 
+
+set -e
+
+modules=$*
+
+xsltproc=`which xsltproc`
+
+main() {
+  enforce_usage
+  show_metadata
+}
+
+enforce_usage() {
+  if [ -z "$modules" ]; then
+    usage
+    exit $E_BADARGS
+  fi
+}
+
+usage() {
+  program=`basename $0`
+  echo "usage: $program [modules]"
+  echo ""
+  echo "example: $program \`find . -name 'pom.xml'\`"
+}
+
+show_metadata() {
+  stylesheet="`dirname $0`/support/module-info.xsl"
+  $xsltproc $stylesheet $modules
+}
+
+main
+
