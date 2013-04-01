@@ -1,25 +1,29 @@
 [user]
-    name = Bart Bakker
-    email = bart@thesoftwarecraft.com
+  name = Bart Bakker
 [color]
-    ui = auto
+  ui = auto
 [alias]
-    st = status
-    ci = commit
-    co = checkout
-    di = diff
-    dc = diff --cached
-    amend = commit --amend
+  st = status
+  ci = commit
+  co = checkout
+  di = diff
+  dc = diff --cached
+  amend = commit --amend
+  unstage = reset HEAD
 
-    l = "!. ~/.githelpers && pretty_git_log"
-    la = !git l --all
-    r = !git l -30
-    ra = !git r --all
-    head = !git l -1
-    h = !git head
+  l = "!. ~/.githelpers && pretty_git_log"
+  la = !git l --all
+  r = !git l -30
+  ra = !git r --all
+  head = !git l -1
+  h = !git head
+
+  graph = log --graph --pretty=format:'%C(yellow)%h%Creset%C(white bold)%d%Creset %C(white)%s%Creset' --all
 
 [merge]
   tool = vimdiff
 [svn]
-    rmdir = true
+  rmdir = true
 
+[push]
+  default = simple
