@@ -1,0 +1,5 @@
+--sort-files
+
+--type-set=io=io
+--type-set=markdown=md,mkd,markdown
+
