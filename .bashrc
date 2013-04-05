@@ -15,7 +15,7 @@ export HISTIGNORE="fg:bg:genpw"
 export HISTSIZE=10000
 shopt -s histappend
 
-source /usr/share/git/completion/git-prompt.sh
+source /usr/share/git-core/git-prompt.sh
 
 function git_minutes_since_last_commit() {
   local now=`date +%s`
