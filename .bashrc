@@ -46,10 +46,7 @@ function git_prompt() {
     echo "${git_prompt}"
   fi
 }
-function rvm_prompt() {
-  rvm-prompt
-}
-PS1="\[$WHITE\]\h:\W\[\$(git_color)\]\$(git_prompt) \[$WHITE\]\$(rvm_prompt)\[$NORMAL\] \u\$ "
+PS1="\[$WHITE\]\h:\W\[\$(git_color)\]\$(git_prompt)\[$NORMAL\] \u\$ "
 
 alias rbgrep="grep --include='*.rb' $*"
 alias jgrep="grep --include='*.java' $*"
