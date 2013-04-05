@@ -13,5 +13,6 @@
 /.ssh/
 /.bash_history
 /.viminfo
+/.lesshst
 .DS_Store
 .*.swp
