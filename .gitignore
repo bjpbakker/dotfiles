@@ -1,3 +1,12 @@
+/.Trash/
+/.CFUserTextEncoding
+/.gem/
+/.rvm/
+/.ssh/
+/.subversion/
+/.viminfo
+/.lesshst
+/.*[_-]history
 /Desktop/
 /Documents/
 /Downloads/
@@ -8,15 +17,6 @@
 /Public/
 /Send Registration
 /Sites/
-/.Trash/
-/.CFUserTextEncoding
-/.gem/
-/.rvm/
-/.ssh/
-/.subversion/
-/.viminfo
-/.lesshst
-/.*[_-]history
 /accounts
 /proj
 .DS_Store
