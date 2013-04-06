@@ -11,9 +11,9 @@
 /.Trash/
 /.CFUserTextEncoding
 /.ssh/
-/.bash_history
 /.viminfo
 /.lesshst
+/.*_history
 /proj
 .DS_Store
 .*.swp
