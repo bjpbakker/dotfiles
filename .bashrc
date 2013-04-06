@@ -6,7 +6,7 @@ export PATH="~/bin:$PATH"
 
 export TERM='xterm-color'
 alias ls='ls -G'
-alias ll='ls -l'
+alias ll='ls -lG'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
