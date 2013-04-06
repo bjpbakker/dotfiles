@@ -14,5 +14,6 @@
 /.bash_history
 /.viminfo
 /.lesshst
+/proj
 .DS_Store
 .*.swp
