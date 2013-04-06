@@ -10,10 +10,13 @@
 /Sites/
 /.Trash/
 /.CFUserTextEncoding
+/.gem/
+/.rvm/
 /.ssh/
+/.subversion/
 /.viminfo
 /.lesshst
-/.*_history
+/.*[_-]history
 /accounts
 /proj
 .DS_Store
