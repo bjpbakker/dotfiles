@@ -52,7 +52,6 @@ alias rbgrep="grep --include='*.rb' $*"
 alias jgrep="grep --include='*.java' $*"
 alias ls-files="find . -type f"
 
-export JAVA_HOME=/opt/jdk1.7
 export MAVEN_OPTS='-Xms128m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m'
 mvn() { $M2_HOME/bin/mvn $* | tee /tmp/last-mvn ; }
 
