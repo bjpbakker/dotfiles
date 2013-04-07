@@ -4,6 +4,7 @@
 /.rvm/
 /.ssh/
 /.subversion/
+/.m2/
 /.viminfo
 /.lesshst
 /.*[_-]history
