@@ -53,7 +53,7 @@ alias jgrep="grep --include='*.java' $*"
 alias ls-files="find . -type f"
 
 export MAVEN_OPTS='-Xms128m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m'
-mvn() { $M2_HOME/bin/mvn $* | tee /tmp/last-mvn ; }
+mvn() { /usr/local/bin/mvn $* | tee /tmp/last-mvn ; }
 
 export PATH=$PATH:$HOME/node_modules/.bin
 
