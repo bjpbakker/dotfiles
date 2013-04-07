@@ -55,10 +55,9 @@ alias ls-files="find . -type f"
 export MAVEN_OPTS='-Xms128m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m'
 mvn() { /usr/local/bin/mvn $* | tee /tmp/last-mvn ; }
 
-export PATH=$PATH:$HOME/node_modules/.bin
+source `brew --prefix`/etc/bash_completion
 
 export PATH="$PATH:$HOME/.rvm/bin"
-
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 [[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
 
