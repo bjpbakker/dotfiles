@@ -18,7 +18,7 @@
   head = !git l -1
   h = !git head
 
-  graph = log --graph --pretty=format:'%C(yellow)%h%Creset%C(white bold)%d%Creset %C(white)%s%Creset' --all
+  graph = log --graph --pretty=format:'%C(yellow)%h%Creset%C(red)%d%Creset %C(white)%s%Creset' --all
 
 [merge]
   tool = vimdiff
