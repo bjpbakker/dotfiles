@@ -4,6 +4,8 @@
 /.dropbox/
 /.gem/
 /.lighttable/
+/.node-gyp/
+/.npm/
 /.rvm/
 /.ssh/
 /.subversion/
