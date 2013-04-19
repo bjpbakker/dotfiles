@@ -11,6 +11,7 @@
 /.subversion/
 /.m2/
 /.viminfo
+/.vim/.netrwhist
 /.lesshst
 /.*[_-]history
 /Desktop/
