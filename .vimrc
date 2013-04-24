@@ -2,8 +2,8 @@ call pathogen#runtime_append_all_bundles()
 
 set nocompatible
 syntax on
-
 filetype plugin indent on
+colorscheme solarized
 
 set shell=bash
 
@@ -38,8 +38,6 @@ set winwidth=79
 
 set pdev=pdf
 set printoptions=paper:a4,syntax:y,wrap:y,duplex:long
-
-colorscheme elflord
 
 " fix cursor in tmux
 " -> tmux only forwards escape sequences to the terminal if surrounded by a DCS sequence
