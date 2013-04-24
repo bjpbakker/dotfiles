@@ -18,15 +18,8 @@ set backspace=indent,eol,start
 set showtabline=2
 
 set laststatus=2
-set statusline=
-set statusline+=%<\                   " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*\    " buffer number, and flags
-set statusline+=%-40f\                " relative path
-set statusline+=%=                    " separate between right and left aligned
-set statusline+=%1*%y%*%*\            " file type
-set statusline+=%10(L(%l/%L)%)\       " line
-set statusline+=%2(C(%v/125)%)\       " column
-set statusline+=%P
+
+:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
 set number
 set ruler
