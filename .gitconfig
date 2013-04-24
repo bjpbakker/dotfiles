@@ -11,6 +11,8 @@
   amend = commit --amend
   unstage = reset HEAD
 
+  ca = commit --all
+
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
   r = !git l -30
