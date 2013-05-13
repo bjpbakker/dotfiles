@@ -61,3 +61,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 [[ -r ~/.rvm/scripts/completion ]] && source ~/.rvm/scripts/completion
 
+alias npm-exec='PATH=$(npm bin):$PATH'
+
