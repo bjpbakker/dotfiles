@@ -3,6 +3,7 @@
 /.cups/
 /.dropbox/
 /.gem/
+/.heroku/
 /.lighttable/
 /.node-gyp/
 /.npm/
@@ -10,6 +11,7 @@
 /.ssh/
 /.subversion/
 /.m2/
+/.netrc
 /.viminfo
 /.vim/.netrwhist
 /.lesshst
