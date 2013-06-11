@@ -4,7 +4,7 @@
 . ~/bin/bash_colors.sh
 export PATH="~/bin:$PATH"
 
-export TERM='xterm-color'
+export TERM='xterm-256color'
 alias ls='ls -G'
 alias ll='ls -lG'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
