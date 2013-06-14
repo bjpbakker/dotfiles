@@ -4,6 +4,7 @@
 .dropbox/
 .gem/
 .heroku/
+.lein/
 .lighttable/
 .node-gyp/
 .npm/
