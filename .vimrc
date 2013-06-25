@@ -30,6 +30,12 @@ set numberwidth=2
 set history=1000
 set winwidth=79
 
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
 set pdev=pdf
 set printoptions=paper:a4,syntax:y,wrap:y,duplex:long
 
