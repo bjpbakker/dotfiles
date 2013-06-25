@@ -36,6 +36,12 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Don't use arrow keys
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
 set pdev=pdf
 set printoptions=paper:a4,syntax:y,wrap:y,duplex:long
 
