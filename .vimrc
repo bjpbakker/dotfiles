@@ -42,6 +42,14 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" XMPFilter bindings
+nmap <buffer> <c-x><c-m> <Plug>(xmpfilter-mark)
+xmap <buffer> <c-x><c-m> <Plug>(xmpfilter-mark)
+imap <buffer> <c-x><c-m> <Plug>(xmpfilter-mark)
+nmap <buffer> <c-x><c-e> <Plug>(xmpfilter-run)
+xmap <buffer> <c-x><c-e> <Plug>(xmpfilter-run)
+imap <buffer> <c-x><c-e> <Plug>(xmpfilter-run)
+
 set pdev=pdf
 set printoptions=paper:a4,syntax:y,wrap:y,duplex:long
 
