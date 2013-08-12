@@ -32,4 +32,6 @@ Sites/
 accounts
 proj
 .DS_Store
+.dbshell
+.mongorc.js
 .*.swp
