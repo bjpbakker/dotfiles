@@ -3,4 +3,5 @@
 --type-set=io=io
 --type-set=markdown=md,mkd,markdown
 --type-set=javascript=js
+--type-set=cucumber=feature
 
