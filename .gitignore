@@ -3,6 +3,7 @@
 .cups/
 .dropbox/
 .gem/
+.ghc/
 .heroku/
 .lein/
 .lighttable/
