@@ -15,8 +15,6 @@ export HISTIGNORE="fg:bg:genpw"
 export HISTSIZE=10000
 shopt -s histappend
 
-source /usr/share/git-core/git-prompt.sh
-
 function git_minutes_since_last_commit() {
   local now=`date +%s`
   local last_commit=`git log --pretty=format:'%at' -1`
