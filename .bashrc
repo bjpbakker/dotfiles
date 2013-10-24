@@ -50,7 +50,7 @@ alias rbgrep="grep --include='*.rb' $*"
 alias jgrep="grep --include='*.java' $*"
 alias ls-files="find . -type f"
 
-export MAVEN_OPTS='-Xms128m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m'
+export MAVEN_OPTS='-Xms128m -Xmx512m'
 mvn() { /usr/local/bin/mvn $* | tee /tmp/last-mvn ; }
 
 source `brew --prefix`/etc/bash_completion
