@@ -50,6 +50,10 @@ alias rbgrep="grep --include='*.rb' $*"
 alias jgrep="grep --include='*.java' $*"
 alias ls-files="find . -type f"
 
+# livin' on the edge
+alias yolo=sudo
+alias please=sudo
+
 export MAVEN_OPTS='-Xms128m -Xmx512m'
 mvn() { /usr/local/bin/mvn $* | tee /tmp/last-mvn ; }
 
