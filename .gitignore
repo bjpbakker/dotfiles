@@ -16,6 +16,7 @@
 .m2/
 .ivy2/
 .sbt/
+.anyconnect
 .dbshell
 .mongorc.js
 .netrc
