@@ -1,5 +1,7 @@
 [user]
   name = Bart Bakker
+[core]
+	editor = vim
 [color]
   ui = auto
 [alias]
