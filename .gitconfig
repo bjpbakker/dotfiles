@@ -29,8 +29,5 @@
 
 [merge]
   tool = vimdiff
-[svn]
-  rmdir = true
-
 [push]
   default = simple
