@@ -1,5 +1,7 @@
 .Trash/
 .CFUserTextEncoding
+.cache/
+.config/
 .cups/
 .dropbox/
 .gem/
