@@ -4,10 +4,10 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
-if has('gui_running')
-  set background=light
-else
+if exists('$TMUX')
   set background=dark
+else
+  set background=light
 endif
 colorscheme solarized
 
