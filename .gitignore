@@ -2,6 +2,7 @@
 *~
 /.CFUserTextEncoding
 /.Trash/
+/.history
 /.*[_-]history
 /.anyconnect
 /.atom/
@@ -30,6 +31,7 @@
 /.sbt/
 /.viminfo
 /.vim/.netrwhist
+/.zcompdump
 /Applications/
 /Desktop/
 /Documents/
