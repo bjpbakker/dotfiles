@@ -29,5 +29,18 @@
 
 [merge]
   tool = vimdiff
+[mergetool]
+  prompt = false
+[mergetool "p4merge"]
+  cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+  keepTemporaries = false
+  trustExitCode = false
+  keepBackup = false
+[diff]
+  tool = vimdiff
+  guitool = p4diff
+  prompt = false
+[difftool "p4diff"]
+  cmd= p4merge "$LOCAL" "$REMOTE"
 [push]
   default = current
