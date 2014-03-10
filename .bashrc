@@ -56,6 +56,7 @@ alias please=sudo
 
 export MAVEN_OPTS='-Xms128m -Xmx512m'
 mvn() { /usr/local/bin/mvn $* | tee /tmp/last-mvn ; }
+alias last-mvn='less /tmp/last-mvn'
 
 source `brew --prefix`/etc/bash_completion
 
