@@ -28,6 +28,7 @@
   graph = log --graph --pretty=format:'%C(yellow)%h%Creset%C(red)%d%Creset %C(white)%s%Creset' --all
 
 [merge]
+  stat = true
   tool = vimdiff
 [mergetool]
   prompt = false
@@ -40,6 +41,8 @@
   tool = vimdiff
   guitool = p4diff
   prompt = false
+  renames = true
+  mnemonicprefix = true
 [difftool "p4diff"]
   cmd= p4merge "$LOCAL" "$REMOTE"
 [push]
