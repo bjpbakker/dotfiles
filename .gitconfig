@@ -2,6 +2,8 @@
   name = Bart Bakker
 [core]
 	editor = vim
+	autocrlf = input
+	safecrlf = true
 [color]
   ui = auto
 [alias]
