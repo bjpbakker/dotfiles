@@ -1,5 +1,6 @@
 .Trash/
 .CFUserTextEncoding
+.atom/
 .cache/
 .config/
 .cups/
