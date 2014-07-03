@@ -1,39 +1,68 @@
-call pathogen#runtime_append_all_bundles()
+" This is Bart Bakker's .vimrc
+" vim:set ts=2 sts=2 sw=2 expandtab
+
+autocmd!
+
+call pathogen#incubate()
 
 set nocompatible
-syntax on
-filetype plugin indent on
-
-if exists('$TMUX')
-  set background=dark
-else
-  set background=light
-endif
-colorscheme solarized
-
-set shell=bash
+" Allow unsaved background buffers (with marks/undo for them).
+set hidden
+set history=10000
+set autoindent tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+set backspace=indent,eol,start
 
 set hlsearch
 set showmatch
 set incsearch
 set ignorecase smartcase
 
-set textwidth=0 nosmartindent autoindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-set backspace=indent,eol,start
+set switchbuf=useopen
 
-set showtabline=2
-
-set laststatus=2
-
-:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-
-set number
-set ruler
 set cursorline
-
-set numberwidth=2
-set history=1000
+" Keep some context when scrolling off the end of a buffer.
+set scrolloff=3
 set winwidth=79
+set number
+set numberwidth=2
+set laststatus=2
+set showtabline=2
+set ruler
+set cmdheight=1
+set foldmethod=manual
+set nofoldenable
+
+set background=light
+colorscheme solarized
+
+" Who needs backups.
+set nobackup
+set nowritebackup
+
+set showcmd
+set wildmode=longest,list
+set wildmenu
+
+syntax on
+filetype plugin indent on
+
+let mapleader=","
+" Fix slow O inserts.
+set timeout timeoutlen=1000 ttimeoutlen=100
+" Normally, Vim messes with iskeyword when you open a shell file. This can
+" leak out, polluting other file types even after a 'set ft=' change. This
+" variable prevents the iskeyword change so it can't hurt anyone.
+let g:sh_noisk=1
+
+set modeline
+set modelines=3
+" Insert only one space when joining lines that contain sentence-terminating
+" punctuation like '.'.
+set nojoinspaces
+" If a file is changed outside of Vim, reload without asking
+set autoread
+
+set shell=bash
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
@@ -57,15 +86,4 @@ imap <buffer> <c-x><c-e> <Plug>(xmpfilter-run)
 
 set pdev=pdf
 set printoptions=paper:a4,syntax:y,wrap:y,duplex:long
-
-" fix cursor in tmux
-" -> tmux only forwards escape sequences to the terminal if surrounded by a DCS sequence
-" more details at http://sourceforge.net/mailarchive/forum.php?thread_name=AANLkTinkbdoZ8eNR1X2UobLTeww1jFrvfJxTMfKSq-L%2B%40mail.gmail.com&forum_name=tmux-users
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
 
