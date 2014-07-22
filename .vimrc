@@ -71,12 +71,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Don't use arrow keys
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
-
 " XMPFilter bindings
 nmap <buffer> <c-x><c-m> <Plug>(xmpfilter-mark)
 xmap <buffer> <c-x><c-m> <Plug>(xmpfilter-mark)
