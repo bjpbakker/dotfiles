@@ -32,8 +32,9 @@ set cmdheight=1
 set foldmethod=manual
 set nofoldenable
 
-set background=light
-colorscheme solarized
+set t_Co=256
+set background=dark
+colorscheme brt
 
 " Who needs backups.
 set nobackup
