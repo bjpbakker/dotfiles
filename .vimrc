@@ -63,6 +63,11 @@ set nojoinspaces
 " If a file is changed outside of Vim, reload without asking
 set autoread
 
+" Invisible characters
+set listchars=trail:.,tab:>-,eol:$
+set nolist
+noremap <Leader>i :set list!<CR>
+
 set shell=bash
 
 " Move around splits with <c-hjkl>
