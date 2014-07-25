@@ -17,6 +17,8 @@ setopt hist_ignore_space
 
 # Use vim as editor
 export EDITOR=vi
+# EDITOR=vi implies set -o vi so force it back.
+set -o emacs
 
 # Bind C-x C-e to edit current command line in EDITOR
 autoload -U edit-command-line
