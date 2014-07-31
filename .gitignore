@@ -12,6 +12,7 @@
 /.cups/
 /.dbshell
 /.dropbox/
+/.emscripten*
 /.gem/
 /.ghc/
 /.heroku/
