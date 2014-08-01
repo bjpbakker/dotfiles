@@ -24,7 +24,6 @@
 /.node-gyp/
 /.npm/
 /.pip/
-/.rvm/
 /.ssh/
 /.subversion/
 /.m2/
