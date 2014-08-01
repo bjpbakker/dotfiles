@@ -30,6 +30,7 @@
 /.m2/
 /.ivy2/
 /.sbt/
+/.vagrant.d/
 /.viminfo
 /.vim/.netrwhist
 /.zcompdump
@@ -46,6 +47,7 @@
 /Public/
 /Send Registration
 /Sites/
+/VirtualBox\ VMs/
 /accounts
 /breakable-toys
 /proj
