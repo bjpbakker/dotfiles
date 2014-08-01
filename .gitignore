@@ -28,6 +28,7 @@
 /.subversion/
 /.m2/
 /.ivy2/
+/.rbenv/
 /.sbt/
 /.vagrant.d/
 /.viminfo
