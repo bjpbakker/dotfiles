@@ -16,6 +16,7 @@
 /.gem/
 /.ghc/
 /.heroku/
+/.ivy2/
 /.lein/
 /.lesshst
 /.lighttable/
@@ -34,6 +35,7 @@
 /.viminfo
 /.zcompdump
 /.zilverline*
+/.zinc/
 /Applications/
 /Desktop/
 /Documents/
