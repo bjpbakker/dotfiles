@@ -26,6 +26,7 @@
 /.node-gyp/
 /.npm/
 /.pip/
+/.private/
 /.rbenv/
 /.sbt/
 /.ssh/

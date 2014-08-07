@@ -39,7 +39,7 @@ alias please=sudo
 export ZSH=$HOME/.zsh
 
 typeset -U config_files
-config_files=($ZSH/*.zsh)
+config_files=($ZSH/*.zsh $HOME/.private/*.zsh(N))
 
 for init in $config_files; do
     source $init
