@@ -67,8 +67,6 @@ set listchars=trail:.,tab:>-,eol:$
 set nolist
 noremap <Leader>i :set list!<CR>
 
-set shell=bash
-
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
