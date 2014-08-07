@@ -67,6 +67,10 @@ set listchars=trail:.,tab:>-,eol:$
 set nolist
 noremap <Leader>i :set list!<CR>
 
+" Tweak Command-T
+let g:CommandTFileScanner='ruby'
+let g:CommandTMaxFiles=10000
+
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
