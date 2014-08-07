@@ -1,4 +1,4 @@
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Maven needs lots of -err- everything
 export MAVEN_OPTS='-Xms128m -Xmx512m'
