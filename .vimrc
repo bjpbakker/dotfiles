@@ -2,7 +2,7 @@
 
 autocmd!
 
-call pathogen#incubate()
+call pathogen#infect()
 
 set nocompatible
 " Allow unsaved background buffers (with marks/undo for them).
