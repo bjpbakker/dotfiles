@@ -65,14 +65,14 @@ set autoread
 " Invisible characters
 set listchars=trail:.,tab:>-,eol:$
 set nolist
-noremap <Leader>i :set list!<CR>
+noremap <Leader>i :set list!<cr>
 
 " Ignore files in .git/, swp files, build output files, etc
 set wildignore=.git,.*.swp,*.o,build,target
 
-" Tweak Command-T
-let g:CommandTFileScanner='ruby'
-let g:CommandTMaxFiles=10000
+" CtrlP mappins
+nnoremap <leader>f :CtrlP<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
