@@ -95,6 +95,7 @@ command! WildignoreFromGitignore :call <SID>WildignoreFromGitignore()
 " CtrlP
 nnoremap <leader>f :CtrlP<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
+let g:ctrlp_show_hidden = 1
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
