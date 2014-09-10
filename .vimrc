@@ -95,7 +95,12 @@ command! WildignoreFromGitignore :call <SID>WildignoreFromGitignore()
 " CtrlP
 nnoremap <leader>f :CtrlP<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
-let g:ctrlp_show_hidden = 1
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s --files-with-matches --hidden --nocolor -g ""'
+    let g:ctrlp_use_caching = 0
+else
+    let g:ctrlp_show_hidden = 1
+endif
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
