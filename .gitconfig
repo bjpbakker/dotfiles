@@ -18,7 +18,6 @@
   pullff = pull --ff-only
   noff = merge --no-ff
   fa = fetch --all
-  ca = commit --all
 
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
