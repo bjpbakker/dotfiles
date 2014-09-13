@@ -70,28 +70,6 @@ noremap <Leader>i :set list!<cr>
 " Ignore files in .git/, swp files, build output files, etc
 set wildignore=.git,.*.swp
 
-" Append Git ignore patterns to wildignore.
-" This only works for patterns in the root .gitignore.
-function! s:WildignoreFromGitignore()
-    let git_root = fnamemodify(fugitive#extract_git_dir('%:p'), ':h')
-    let gitignore = git_root . '/.gitignore'
-    if (filereadable(gitignore))
-        let ignores = ''
-        for line in readfile(gitignore)
-            let ignored = substitute(line, '\s|\n', '', 'g')
-            if ignored =~ '^#|$' | con | endif " Skip comments and empty lines
-            if ignored =~ '^!' | con | endif " Vim supports no negative ignores
-            if ignored =~ '^/.\+' | let ignored = substitute(ignored, '^/', '*/', 'g') | endif
-            if ignored =~ '/$' | let ignored = substitute(ignored, '/$', '', 'g') | endif
-            let ignores .= (empty(ignores) ? '' : ",") . ignored
-        endfor
-        let set_wildignore = "set wildignore+=" . ignores
-        execute set_wildignore
-    endif
-endfunction
-
-command! WildignoreFromGitignore :call <SID>WildignoreFromGitignore()
-
 " CtrlP
 nnoremap <leader>f :CtrlP<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
@@ -113,6 +91,28 @@ function s:RainbowParenthesesLoad()
   RainbowParenthesesLoadSquare
   RainbowParenthesesLoadBraces
 endfunction
+
+" Append Git ignore patterns to wildignore.
+" This only works for patterns in the root .gitignore.
+function! s:WildignoreFromGitignore()
+    let git_root = fnamemodify(fugitive#extract_git_dir('%:p'), ':h')
+    let gitignore = git_root . '/.gitignore'
+    if (filereadable(gitignore))
+        let ignores = ''
+        for line in readfile(gitignore)
+            let ignored = substitute(line, '\s|\n', '', 'g')
+            if ignored =~ '^#|$' | con | endif " Skip comments and empty lines
+            if ignored =~ '^!' | con | endif " Vim supports no negative ignores
+            if ignored =~ '^/.\+' | let ignored = substitute(ignored, '^/', '*/', 'g') | endif
+            if ignored =~ '/$' | let ignored = substitute(ignored, '/$', '', 'g') | endif
+            let ignores .= (empty(ignores) ? '' : ",") . ignored
+        endfor
+        let set_wildignore = "set wildignore+=" . ignores
+        execute set_wildignore
+    endif
+endfunction
+
+command! WildignoreFromGitignore :call <SID>WildignoreFromGitignore()
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
