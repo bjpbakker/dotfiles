@@ -102,6 +102,18 @@ else
     let g:ctrlp_show_hidden = 1
 endif
 
+augroup vimrcEx
+    autocmd!
+    autocmd VimEnter * RainbowParenthesesToggle
+    autocmd Syntax clojure call s:RainbowParenthesesLoad()
+augroup END
+
+function s:RainbowParenthesesLoad()
+  RainbowParenthesesLoadRound
+  RainbowParenthesesLoadSquare
+  RainbowParenthesesLoadBraces
+endfunction
+
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
