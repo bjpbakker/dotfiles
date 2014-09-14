@@ -86,7 +86,7 @@ augroup vimrcEx
     autocmd Syntax clojure call s:RainbowParenthesesLoad()
 augroup END
 
-function s:RainbowParenthesesLoad()
+function! s:RainbowParenthesesLoad()
   RainbowParenthesesLoadRound
   RainbowParenthesesLoadSquare
   RainbowParenthesesLoadBraces
