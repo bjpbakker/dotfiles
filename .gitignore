@@ -28,6 +28,7 @@
 /.subversion/
 /.vagrant.d/
 /.vim/.netrwhist
+/.vim/bundle/*
 /.viminfo
 /.zcompdump
 /.zilverline*
