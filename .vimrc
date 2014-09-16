@@ -2,9 +2,33 @@
 
 autocmd!
 
-call pathogen#infect()
-
 set nocompatible
+
+" Load plugins with Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-eunuch'
+Plugin 'kien/rainbow_parentheses.vim'
+
+Plugin 'vim-ruby/vim-ruby'
+Plugin 't9md/vim-ruby-xmpfilter'
+
+Plugin 'rizzatti/funcoo.vim'
+Plugin 'rizzatti/dash.vim'
+
+call vundle#end()
+
+filetype plugin indent on
+syntax on
+
 " Allow unsaved background buffers (with marks/undo for them).
 set hidden
 set history=10000
@@ -42,9 +66,6 @@ set nowritebackup
 set showcmd
 set wildmode=longest,list
 set wildmenu
-
-syntax on
-filetype plugin indent on
 
 let mapleader=","
 " Fix slow O inserts.
