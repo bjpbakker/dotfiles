@@ -101,6 +101,9 @@ else
     let g:ctrlp_show_hidden = 1
 endif
 
+" Write on <CR>
+nnoremap <cr> :write<cr>
+
 augroup vimrcEx
     autocmd!
 
