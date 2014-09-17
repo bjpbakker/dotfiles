@@ -103,6 +103,8 @@ endif
 
 augroup vimrcEx
     autocmd!
+
+    " Rainbow parentheses
     autocmd VimEnter * RainbowParenthesesToggle
     autocmd Syntax clojure call s:RainbowParenthesesLoad()
 augroup END
