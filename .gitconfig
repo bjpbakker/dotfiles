@@ -13,6 +13,7 @@
   di = diff
   dc = diff --cached
   amend = commit --amend
+  fixup = commit --amend --no-edit
   unstage = reset HEAD
   ff = merge --ff-only
   pullff = pull --ff-only
