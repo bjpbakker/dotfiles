@@ -16,6 +16,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
+Plugin 'mileszs/ack.vim'
+
 Plugin 'kien/rainbow_parentheses.vim'
 
 Plugin 'vim-ruby/vim-ruby'
@@ -99,6 +101,11 @@ if executable('ag')
     let g:ctrlp_use_caching = 0
 else
     let g:ctrlp_show_hidden = 1
+endif
+
+" Ack should use ag
+if executable('ag')
+    let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
 
 " Write on <CR>
