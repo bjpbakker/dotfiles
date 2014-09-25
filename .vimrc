@@ -156,6 +156,12 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Work with quickfix lists
+nnoremap <leader>j :cnext<cr>
+nnoremap <leader>k :cprev<cr>
+nnoremap <leader>J :clast<cr>
+nnoremap <leader>K :cfirst<cr>
+
 " XMPFilter bindings
 nmap <buffer> <c-x><c-m> <Plug>(xmpfilter-mark)
 xmap <buffer> <c-x><c-m> <Plug>(xmpfilter-mark)
