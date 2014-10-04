@@ -120,6 +120,8 @@ augroup vimrcEx
     " Rainbow parentheses
     autocmd VimEnter * RainbowParenthesesToggle
     autocmd Syntax clojure call s:RainbowParenthesesLoad()
+
+    autocmd FileType c setlocal noexpandtab
 augroup END
 
 function! s:RainbowParenthesesLoad()
