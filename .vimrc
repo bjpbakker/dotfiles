@@ -29,6 +29,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/dash.vim'
 
+Plugin 'editorconfig/editorconfig-vim'
+
 call vundle#end()
 
 filetype plugin indent on
