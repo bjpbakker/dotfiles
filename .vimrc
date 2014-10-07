@@ -26,6 +26,8 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+Plugin 'bling/vim-airline'
+
 Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/dash.vim'
 
