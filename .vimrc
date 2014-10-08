@@ -26,6 +26,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'cypok/vim-sml'
 
 Plugin 'godlygeek/tabular'
@@ -127,6 +128,10 @@ nnoremap <leader>g :GitGutterToggle<cr>
 let g:syntastic_check_on_open=0
 let g:syntastic_enable_signs=1
 nnoremap <silent> <leader>e :SyntasticCheck<cr>:Errors<cr>
+
+" Scala
+let g:scala_use_default_keymappings = 0
+let g:syntastic_scala_checkers = ['fsc']
 
 " Write on <CR>
 nnoremap <cr> :write<cr>
