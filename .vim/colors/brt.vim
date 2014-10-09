@@ -15,6 +15,8 @@ hi SpellBad ctermfg=darkgrey ctermbg=160 cterm=BOLD
 " IR Black doesn't highlight operators for some reason
 hi Operator ctermfg=lightblue ctermbg=NONE cterm=NONE
 
+hi SignColumn ctermbg=234
+
 highlight DiffAdd term=reverse cterm=bold ctermbg=lightgreen ctermfg=16
 highlight DiffChange term=reverse cterm=bold ctermbg=lightblue ctermfg=16
 highlight DiffText term=reverse cterm=bold ctermbg=lightgray ctermfg=16
