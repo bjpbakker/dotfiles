@@ -44,7 +44,7 @@ syntax on
 " Allow unsaved background buffers (with marks/undo for them).
 set hidden
 set history=10000
-set autoindent tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+set autoindent tabstop=4 shiftwidth=4 softtabstop=4 expandtab smarttab
 set backspace=indent,eol,start
 
 set hlsearch
