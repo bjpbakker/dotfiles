@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
 Plugin 'mileszs/ack.vim'
@@ -117,11 +118,15 @@ if executable('ag')
     let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
 
+nnoremap <leader>g :GitGutterToggle<cr>
+
 " Write on <CR>
 nnoremap <cr> :write<cr>
 
 augroup vimrcEx
     autocmd!
+
+    autocmd VimEnter * GitGutterDisable
 
     " Rainbow parentheses
     autocmd VimEnter * RainbowParenthesesToggle
