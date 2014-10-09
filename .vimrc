@@ -23,6 +23,8 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 't9md/vim-ruby-xmpfilter'
 
+Plugin 'cypok/vim-sml'
+
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
