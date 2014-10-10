@@ -12,9 +12,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
 Plugin 'mileszs/ack.vim'
@@ -23,13 +25,10 @@ Plugin 'kien/rainbow_parentheses.vim'
 
 Plugin 'vim-ruby/vim-ruby'
 Plugin 't9md/vim-ruby-xmpfilter'
-
 Plugin 'cypok/vim-sml'
 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-
-Plugin 'bling/vim-airline'
 
 Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/dash.vim'
