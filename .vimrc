@@ -28,6 +28,8 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'cypok/vim-sml'
+Plugin 'moll/vim-node'
+Plugin 'pangloss/vim-javascript'
 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
