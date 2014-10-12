@@ -135,6 +135,10 @@ nnoremap <silent> <leader>e :SyntasticCheck<cr>:Errors<cr>
 let g:scala_use_default_keymappings = 0
 let g:syntastic_scala_checkers = ['fsc']
 
+" JavaScript
+let g:syntastic_javascript_checkers = ['closurecompiler']
+let g:syntastic_javascript_closurecompiler_path = '/usr/local/Cellar/closure-compiler/20140814/libexec/build/compiler.jar'
+
 " Dash
 nnoremap <c-x><c-d> :Dash<cr>
 
