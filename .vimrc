@@ -21,6 +21,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
 Plugin 'mileszs/ack.vim'
 
+Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 
 Plugin 'vim-ruby/vim-ruby'
@@ -119,13 +120,18 @@ endif
 
 nnoremap <leader>g :GitGutterToggle<cr>
 
+" Syntastic
+let g:syntastic_check_on_open=0
+let g:syntastic_enable_signs=1
+nnoremap <silent> <leader>e :SyntasticCheck<cr>:Errors<cr>
+
 " Write on <CR>
 nnoremap <cr> :write<cr>
 
 augroup vimrcEx
     autocmd!
 
-    autocmd VimEnter * GitGutterDisable
+    autocmd VimEnter * call s:Initialize()
 
     " Rainbow parentheses
     autocmd VimEnter * RainbowParenthesesToggle
@@ -140,6 +146,12 @@ function! s:RainbowParenthesesLoad()
   RainbowParenthesesLoadRound
   RainbowParenthesesLoadSquare
   RainbowParenthesesLoadBraces
+endfunction
+
+function! s:Initialize()
+    GitGutterDisable
+    " Syntastic starts in active mode, switch to passive
+    SyntasticToggleMode
 endfunction
 
 " Append Git ignore patterns to wildignore.
@@ -171,10 +183,14 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " Work with quickfix lists
-nnoremap <leader>j :cnext<cr>
-nnoremap <leader>k :cprev<cr>
-nnoremap <leader>J :clast<cr>
-nnoremap <leader>K :cfirst<cr>
+nnoremap <leader>j :exe (GetListPrefix() . "next")<cr>
+nnoremap <leader>k :exe (GetListPrefix() . "prev")<cr>
+nnoremap <leader>J :exe (GetListPrefix() . "last")<cr>
+nnoremap <leader>K :exe (GetListPrefix() . "first")<cr>
+
+function! GetListPrefix()
+    return ! empty(getloclist(0)) ? 'l' : ! empty(getqflist()) ? 'l' : ''
+endfunction
 
 " XMPFilter bindings
 nmap <buffer> <c-x><c-m> <Plug>(xmpfilter-mark)
