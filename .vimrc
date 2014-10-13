@@ -75,6 +75,9 @@ colorscheme brt
 set nobackup
 set nowritebackup
 
+" Move swap files out of the way - but preserve original folder structure
+set directory=~/.tmp//
+
 set showcmd
 set wildmode=longest,list
 set wildmenu
