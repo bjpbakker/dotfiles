@@ -151,7 +151,7 @@ endfunction
 function! s:Initialize()
     GitGutterDisable
     " Syntastic starts in active mode, switch to passive
-    SyntasticToggleMode
+    silent SyntasticToggleMode
 endfunction
 
 " Append Git ignore patterns to wildignore.
