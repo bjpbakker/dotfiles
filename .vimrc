@@ -107,6 +107,7 @@ noremap <Leader>i :set list!<cr>
 set wildignore=.git,.*.swp
 
 " CtrlP
+let g:ctrlp_map = '' " <c-p> binding conflicts with Vim default <c-p> for previous
 nnoremap <leader>f :CtrlP<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 if executable('ag')
