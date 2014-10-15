@@ -32,7 +32,6 @@ Plugin 'cypok/vim-sml'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
-Plugin 'rizzatti/funcoo.vim'
 Plugin 'rizzatti/dash.vim'
 
 Plugin 'editorconfig/editorconfig-vim'
@@ -132,6 +131,9 @@ nnoremap <silent> <leader>e :SyntasticCheck<cr>:Errors<cr>
 " Scala
 let g:scala_use_default_keymappings = 0
 let g:syntastic_scala_checkers = ['fsc']
+
+" Dash
+nnoremap <c-x><c-d> :Dash<cr>
 
 " Write on <CR>
 nnoremap <cr> :write<cr>
