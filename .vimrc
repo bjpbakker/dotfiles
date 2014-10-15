@@ -139,6 +139,9 @@ nnoremap <c-x><c-d> :Dash<cr>
 " Write on <CR>
 nnoremap <cr> :write<cr>
 
+" ctags are kept in .tags
+set tags+=.tags
+
 augroup vimrcEx
     autocmd!
 
