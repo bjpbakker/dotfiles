@@ -203,10 +203,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " Work with quickfix lists
-nnoremap <leader>j :exe (GetListPrefix() . "next")<cr>
-nnoremap <leader>k :exe (GetListPrefix() . "prev")<cr>
-nnoremap <leader>J :exe (GetListPrefix() . "last")<cr>
-nnoremap <leader>K :exe (GetListPrefix() . "first")<cr>
+nnoremap <silent> <leader>j :exe (GetListPrefix() . "next")<cr>
+nnoremap <silent> <leader>k :exe (GetListPrefix() . "prev")<cr>
+nnoremap <silent> <leader>J :exe (GetListPrefix() . "last")<cr>
+nnoremap <silent> <leader>K :exe (GetListPrefix() . "first")<cr>
 
 function! GetListPrefix()
     return ! empty(getloclist(0)) ? 'l' : ! empty(getqflist()) ? 'c' : ''
