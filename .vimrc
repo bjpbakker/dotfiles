@@ -21,7 +21,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-eunuch'
 Plugin 'mileszs/ack.vim'
 
-Plugin 'scrooloose/syntastic'
+Plugin 'bjpbakker/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 
 Plugin 'vim-ruby/vim-ruby'
@@ -137,7 +137,7 @@ let g:syntastic_scala_checkers = ['fsc']
 
 " JavaScript
 let g:syntastic_javascript_checkers = ['closurecompiler']
-let g:syntastic_javascript_closurecompiler_path = '/usr/local/Cellar/closure-compiler/20140814/libexec/build/compiler.jar'
+let g:syntastic_javascript_closurecompiler_executable = 'closure-compiler'
 
 " Dash
 nnoremap <c-x><c-d> :Dash<cr>
