@@ -145,6 +145,9 @@ nnoremap <c-x><c-d> :Dash<cr>
 " ctags are kept in .tags
 set tags+=.tags
 
+" insert UUID at cursor in insert mode
+inoremap <expr> <c-r>!uuid GenUuid()
+
 augroup vimrcEx
     autocmd!
 
@@ -179,6 +182,10 @@ function! s:Initialize()
     GitGutterDisable
     " Syntastic starts in active mode, switch to passive
     silent SyntasticToggleMode
+endfunction
+
+function! GenUuid()
+    return substitute(system('uuid'), '\n$', '', '')
 endfunction
 
 " Append Git ignore patterns to wildignore.
