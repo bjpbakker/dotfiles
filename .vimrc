@@ -142,9 +142,6 @@ let g:syntastic_javascript_closurecompiler_script = 'closure-compiler'
 " Dash
 nnoremap <c-x><c-d> :Dash<cr>
 
-" Write on <CR>
-nnoremap <cr> :write<cr>
-
 " ctags are kept in .tags
 set tags+=.tags
 
@@ -152,6 +149,11 @@ augroup vimrcEx
     autocmd!
 
     autocmd VimEnter * call s:Initialize()
+
+    " Don't map <Enter> when in command windows since it's used to run
+    " commands there
+    autocmd! CmdwinEnter * :unmap <cr>
+    autocmd! CmdwinLeave * :call MapCR()
 
     " Rainbow parentheses
     autocmd VimEnter * RainbowParenthesesToggle
@@ -161,6 +163,11 @@ augroup vimrcEx
 
     autocmd FileType xml setlocal formatprg=xmllint\ --format\ -
 augroup END
+
+function! MapCR()
+    nnoremap <cr> :write<cr>
+endfunction
+call MapCR()
 
 function! s:RainbowParenthesesLoad()
   RainbowParenthesesLoadRound
