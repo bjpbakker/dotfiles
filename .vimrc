@@ -163,6 +163,7 @@ augroup vimrcEx
     autocmd Syntax clojure call s:RainbowParenthesesLoad()
 
     autocmd FileType c setlocal noexpandtab
+    autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
     autocmd FileType xml setlocal formatprg=xmllint\ --format\ -
 augroup END
