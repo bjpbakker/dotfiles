@@ -224,7 +224,7 @@ nnoremap <silent> <leader>J :exe (GetListPrefix() . "last")<cr>
 nnoremap <silent> <leader>K :exe (GetListPrefix() . "first")<cr>
 
 function! GetListPrefix()
-    return ! empty(getloclist(0)) ? 'l' : ! empty(getqflist()) ? 'c' : ''
+    return ! empty(getloclist(0)) ? 'l' : ! empty(getqflist()) ? 'c' : 'b'
 endfunction
 
 " XMPFilter bindings
