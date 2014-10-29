@@ -2,43 +2,44 @@
 
 autocmd!
 
-set nocompatible
+if has('vim_starting')
+    set nocompatible
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-" Load plugins with Vundle
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
+call neobundle#end()
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'bling/vim-airline'
 
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-eunuch'
-Plugin 'mileszs/ack.vim'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
 
-Plugin 'scrooloose/syntastic'
-Plugin 'kien/rainbow_parentheses.vim'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-eunuch'
+NeoBundle 'mileszs/ack.vim'
 
-Plugin 'vim-ruby/vim-ruby'
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'cypok/vim-sml'
-Plugin 'moll/vim-node'
-Plugin 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'kien/rainbow_parentheses.vim'
 
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 't9md/vim-ruby-xmpfilter'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'cypok/vim-sml'
+NeoBundle 'moll/vim-node'
+NeoBundle 'pangloss/vim-javascript'
 
-Plugin 'rizzatti/dash.vim'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'plasticboy/vim-markdown'
 
-Plugin 'editorconfig/editorconfig-vim'
+NeoBundle 'rizzatti/dash.vim'
 
-call vundle#end()
+NeoBundle 'editorconfig/editorconfig-vim'
 
 filetype plugin indent on
 syntax on
