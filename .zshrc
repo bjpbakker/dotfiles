@@ -1,6 +1,6 @@
 setopt PROMPT_SUBST
 autoload -U promptinit; promptinit
-prompt brt
+prompt pure
 
 # Colorize
 alias ls='ls -G'
