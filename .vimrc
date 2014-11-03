@@ -16,6 +16,13 @@ call neobundle#end()
 
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'Shougo/vimproc.vim', {
+            \ 'build' : {
+            \     'mac' : 'make -f make_mac.mak',
+            \     'linux' : 'make',
+            \    },
+            \ }
+NeoBundle 'Shougo/vimshell.vim'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
