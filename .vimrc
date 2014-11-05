@@ -77,6 +77,10 @@ set cmdheight=1
 set foldmethod=manual
 set nofoldenable
 
+" Open split panes at more natural positions
+set splitbelow
+set splitright
+
 set t_Co=256
 set background=dark
 colorscheme brt
