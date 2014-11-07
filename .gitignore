@@ -17,6 +17,7 @@
 /.ghc/
 /.heroku/
 /.ivy2/
+/.lldb/
 /.lein/
 /.lesshst
 /.local/
