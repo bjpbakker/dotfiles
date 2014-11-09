@@ -39,6 +39,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 't9md/vim-ruby-xmpfilter'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'cypok/vim-sml'
+NeoBundle 'wlangstroth/vim-racket'
 NeoBundle 'moll/vim-node'
 NeoBundle 'pangloss/vim-javascript'
 
