@@ -145,10 +145,6 @@ let g:syntastic_check_on_open=0
 let g:syntastic_enable_signs=1
 nnoremap <silent> <leader>e :SyntasticCheck<cr>:Errors<cr>
 
-" Scala
-let g:scala_use_default_keymappings = 0
-let g:syntastic_scala_checkers = ['fsc']
-
 " JavaScript
 let g:syntastic_javascript_checkers = ['closurecompiler']
 let g:syntastic_javascript_closurecompiler_script = 'closure-compiler'
@@ -174,7 +170,7 @@ augroup vimrcEx
 
     " Rainbow parentheses
     autocmd VimEnter * RainbowParenthesesToggle
-    autocmd Syntax clojure,scala call s:RainbowParenthesesLoad()
+    autocmd Syntax clojure call s:RainbowParenthesesLoad()
 
     autocmd FileType c setlocal noexpandtab
     autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
