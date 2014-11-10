@@ -158,6 +158,10 @@ set tags+=.tags
 " insert UUID at cursor in insert mode
 inoremap <expr> <c-r>!uuid GenUuid()
 
+" neocomplcache
+inoremap <expr><c-g> neocomplcache#undo_completion()
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 augroup vimrcEx
     autocmd!
 
