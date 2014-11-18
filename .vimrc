@@ -94,6 +94,10 @@ set nowritebackup
 " Move swap files out of the way - but preserve original folder structure
 set directory=~/.tmp//
 
+" disable annoying beeps
+set visualbell
+set noerrorbells
+
 set showcmd
 set wildmode=longest,list
 set wildmenu
