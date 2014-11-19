@@ -42,6 +42,7 @@ NeoBundle 'cypok/vim-sml'
 NeoBundle 'wlangstroth/vim-racket'
 NeoBundle 'moll/vim-node'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'chase/vim-ansible-yaml'
 
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'plasticboy/vim-markdown'
