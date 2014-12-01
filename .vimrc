@@ -30,7 +30,7 @@ NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-eunuch'
-NeoBundle 'mileszs/ack.vim'
+NeoBundle 'rking/ag.vim'
 
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'kien/rainbow_parentheses.vim'
@@ -136,11 +136,6 @@ if executable('ag')
     let g:ctrlp_use_caching = 0
 else
     let g:ctrlp_show_hidden = 1
-endif
-
-" Ack should use ag
-if executable('ag')
-    let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
 
 nnoremap <leader>g :GitGutterToggle<cr>
