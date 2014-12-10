@@ -23,6 +23,7 @@
 /.lesshst
 /.local/
 /.m2/
+/.netrc
 /.node-gyp/
 /.npm/
 /.pip/
