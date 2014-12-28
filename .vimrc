@@ -45,7 +45,6 @@ NeoBundle 'moll/vim-node'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'chase/vim-ansible-yaml'
-NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'vim-scripts/paredit.vim'
 
