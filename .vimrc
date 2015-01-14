@@ -15,6 +15,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 call neobundle#end()
 
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Shougo/vimproc.vim', {
             \ 'build' : {
