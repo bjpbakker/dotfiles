@@ -1,5 +1,4 @@
 if exists('g:loaded_neocomplcache')
-    let g:neocomplcache_enable_at_startup = 1
     let g:neocomplcache_enable_camel_case_completion = 1
     NeoComplCacheEnable
 endif
