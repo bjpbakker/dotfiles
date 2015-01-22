@@ -13,7 +13,6 @@
 /.cups/
 /.dropbox/
 /.emscripten*
-/.emacs.d/
 /.gem/
 /.ghc/
 /.heroku/
