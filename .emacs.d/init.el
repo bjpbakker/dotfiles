@@ -28,7 +28,7 @@ with '.el'."
   (let ((filename (if (symbolp mod) (concat (symbol-name mod) ".el") mod)))
     (load (expand-file-name filename user-emacs-directory))))
 
-(load-conf 'ido-conf)
+(load-conf 'navigation)
 (load-conf 'evil-mode)
 
 (require 'ir-black-theme)

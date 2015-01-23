@@ -7,8 +7,7 @@
 
 (setq evil-leader/leader ",")
 (evil-leader/set-key
-  "f" 'find-files
-  )
+  "f" 'projectile-find-file)
 
 (evil-commentary-default-setup)
 
