@@ -29,6 +29,7 @@ with '.el'."
     (load (expand-file-name filename user-emacs-directory))))
 
 (load-conf 'navigation)
+(load-conf 'editor)
 (load-conf 'evil-mode)
 
 (require 'ir-black-theme)
