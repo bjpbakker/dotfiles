@@ -1,8 +1,3 @@
-(require 'package)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("MELPA" . "http://melpa.org/packages/")))
-(package-initialize)
-
 (setq inhibit-spash-screen t) ; no splash
 
 ; mode line
@@ -28,6 +23,7 @@ with '.el'."
   (let ((filename (if (symbolp mod) (concat (symbol-name mod) ".el") mod)))
     (load (expand-file-name filename user-emacs-directory))))
 
+(load-conf 'bundle)
 (load-conf 'navigation)
 (load-conf 'editor)
 (load-conf 'evil-mode)
