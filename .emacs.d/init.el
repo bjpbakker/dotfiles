@@ -1,4 +1,5 @@
-(setq inhibit-spash-screen t) ; no splash
+(setq inhibit-spash-screen t
+      initial-scratch-message nil)
 
 ; mode line
 (line-number-mode 1)
