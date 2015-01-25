@@ -10,3 +10,6 @@
 (ido-vertical-mode 1)
 
 (projectile-global-mode)
+
+;; if a file is changed outside of Emacs, reload without asking
+(global-auto-revert-mode t)
