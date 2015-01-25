@@ -9,6 +9,8 @@
 (unless (display-graphic-p)
   (menu-bar-mode -1))
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ; graphical emacs enhancements
 (when (display-graphic-p)
   (scroll-bar-mode 0)
