@@ -13,7 +13,8 @@
 
 ; graphical emacs enhancements
 (when (display-graphic-p)
-  (scroll-bar-mode 0)
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1)
   (set-frame-size (selected-frame) 120 40))
 
 (global-hl-line-mode)
