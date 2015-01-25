@@ -24,8 +24,7 @@
 
 (defun load-conf (mod)
   "Load configuration module from user-emacs-directory. If mod is a symbol
-the file to load is based on the convention of (symbol-name mod) appended
-with '.el'."
+the file to load is based on the convention of '(symbol-name mod).el'"
   (let ((filename (if (symbolp mod) (concat (symbol-name mod) ".el") mod)))
     (load (expand-file-name filename user-emacs-directory))))
 
