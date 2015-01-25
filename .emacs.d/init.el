@@ -20,6 +20,8 @@
 (global-hl-line-mode)
 (global-linum-mode 1)
 
+(setq make-backup-files nil)
+
 (defun load-conf (mod)
   "Load configuration module from user-emacs-directory. If mod is a symbol
 the file to load is based on the convention of (symbol-name mod) appended
