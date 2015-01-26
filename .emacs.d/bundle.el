@@ -1,4 +1,5 @@
 (require 'package)
+(require 'cl)
 (package-initialize)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -13,11 +14,9 @@
     ir-black-theme)
   "Packages required at runtime")
 
-(defun bundle-install ()
-  (interactive)
+(unless (every #'package-installed-p bart/packages)
+  (message "%s" "Refreshing package database...")
   (package-refresh-contents)
-  (dolist (package bart/packages)
-    (condition-case err
-        (package-install package)
-      (error
-       (message "%s" (error-message-string err))))))
+  (dolist (pkg bart/packages)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
