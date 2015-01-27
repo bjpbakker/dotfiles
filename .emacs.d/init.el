@@ -1,22 +1,8 @@
-(setq inhibit-spash-screen t
-      initial-scratch-message nil)
-
 ; mode line
 (line-number-mode 1)
 (column-number-mode 1)
 
-; srsly..
-(unless (display-graphic-p)
-  (menu-bar-mode -1))
-
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-; graphical emacs enhancements
-(when (display-graphic-p)
-  (set-face-attribute 'default nil :font "Inconsolata-g-13")
-  (scroll-bar-mode -1)
-  (tool-bar-mode -1)
-  (set-frame-size (selected-frame) 120 40))
 
 (global-hl-line-mode)
 (global-linum-mode 1)
@@ -32,6 +18,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'bundle)
 (load-conf 'navigation)
 (load-conf 'editor)
+(load-conf 'ui)
 (load-conf 'evil-mode)
 
 (require 'ir-black-theme)
