@@ -19,6 +19,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'navigation)
 (load-conf 'editor)
 (load-conf 'ui)
+(load-conf 'osx)
 (load-conf 'evil-mode)
 
 (require 'ir-black-theme)
