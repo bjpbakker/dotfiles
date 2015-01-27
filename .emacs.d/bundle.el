@@ -9,6 +9,7 @@
 (defvar bart/packages
   '(projectile flx-ido ido-ubiquitous ido-vertical-mode
     exec-path-from-shell
+    magit
     evil evil-commentary evil-leader evil-paredit
     rainbow-delimiters
     clojure-mode
