@@ -12,6 +12,7 @@
     magit
     evil evil-commentary evil-leader evil-paredit
     paredit rainbow-delimiters clojure-mode
+    auto-complete
     ir-black-theme)
   "Packages required at runtime")
 
