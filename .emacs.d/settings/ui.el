@@ -1,4 +1,4 @@
-(setq inhibit-spash-screen t
+(setq inhibit-splash-screen t
       initial-scratch-message nil)
 
 ; srsly..
