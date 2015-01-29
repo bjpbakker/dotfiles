@@ -11,7 +11,8 @@
     exec-path-from-shell
     magit
     evil evil-commentary evil-leader evil-paredit
-    paredit rainbow-delimiters clojure-mode
+    paredit rainbow-delimiters
+    clojure-mode inf-clojure
     auto-complete
     ir-black-theme)
   "Packages required at runtime")
