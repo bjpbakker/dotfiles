@@ -22,6 +22,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'ui)
 (load-conf 'osx)
 (load-conf 'power-lisp)
+(load-conf 'clojure)
 (load-conf 'evil-mode)
 
 (require 'ir-black-theme)
