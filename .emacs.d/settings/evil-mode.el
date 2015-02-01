@@ -10,7 +10,8 @@
 (evil-leader/set-key
   "f" 'projectile-find-file
   "b" 'switch-to-buffer
-  "cd" 'cd)
+  "cd" 'cd
+  "h" (lambda () (interactive) (call-interactively 'help)))
 
 (setq evil-jumper-auto-center t)
 (global-evil-jumper-mode t)
@@ -32,3 +33,8 @@
 (nmap (kbd "C-b") 'evil-scroll-up)
 (nmap (kbd "C-f") 'evil-scroll-down)
 (nmap (kbd "Y") (kbd "y$"))
+
+(nmap (kbd "C-h") 'evil-window-left)
+(nmap (kbd "C-l") 'evil-window-right)
+(nmap (kbd "C-k") 'evil-window-up)
+(nmap (kbd "C-j") 'evil-window-down)
