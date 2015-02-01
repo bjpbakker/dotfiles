@@ -10,7 +10,7 @@
   '(exec-path-from-shell
     projectile flx-ido ido-ubiquitous ido-vertical-mode ;; fuzzy open files within project
     paredit rainbow-delimiters auto-complete ;; editing
-    evil evil-commentary evil-leader evil-paredit ;; modal editing
+    evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     clojure-mode inf-clojure ;; clojure
     magit ;; tools
     ir-black-theme)
