@@ -15,7 +15,7 @@
   "b" 'switch-to-buffer
   "cd" 'cd)
 
-(evil-commentary-default-setup)
+(evil-commentary-mode)
 
 ; delete evil motion key bindings for RET and SPC. These keys are
 ; useless motion-wise and should be mapped in normal mode.
