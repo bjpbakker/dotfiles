@@ -7,13 +7,12 @@
              '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 (defvar bart/packages
-  '(projectile flx-ido ido-ubiquitous ido-vertical-mode
-    exec-path-from-shell
-    magit
-    evil evil-commentary evil-leader evil-paredit
-    paredit rainbow-delimiters
-    clojure-mode inf-clojure
-    auto-complete
+  '(exec-path-from-shell
+    projectile flx-ido ido-ubiquitous ido-vertical-mode ;; fuzzy open files within project
+    paredit rainbow-delimiters auto-complete ;; editing
+    evil evil-commentary evil-leader evil-paredit ;; modal editing
+    clojure-mode inf-clojure ;; clojure
+    magit ;; tools
     ir-black-theme)
   "Packages required at runtime")
 
