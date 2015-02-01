@@ -19,6 +19,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'bundle)
 (load-conf 'navigation)
 (load-conf 'editor)
+(load-conf 'flycheck)
 (load-conf 'ui)
 (load-conf 'osx)
 (load-conf 'power-lisp)
