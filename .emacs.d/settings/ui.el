@@ -10,7 +10,7 @@
   (set-face-attribute 'default nil :font "Inconsolata-g-13")
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
-  (set-frame-size (selected-frame) 120 40))
+  (toggle-frame-maximized))
 
 (setq echo-keystrokes 0.1
       use-dialog-box nil)
