@@ -1,14 +1,6 @@
 (require 'evil)
 (require 'evil-leader)
 
-(setq evil-leader/leader ",")
-(evil-leader/set-key
-  "f" 'projectile-find-file
-  "b" 'switch-to-buffer
-  "cd" 'cd
-  "h" (lambda () (interactive) (call-interactively 'help)))
-
-
 ; delete evil motion key bindings for RET and SPC. These keys are
 ; useless motion-wise and should be mapped in normal mode.
 (defun delete-evil-motion-key! (key)
@@ -25,6 +17,13 @@
   (define-key evil-normal-state-map key action))
 (defun imap (key action)
   (define-key evil-insert-state-map key action))
+
+(setq evil-leader/leader ",")
+(evil-leader/set-key
+  "f" 'projectile-find-file
+  "b" 'switch-to-buffer
+  "cd" 'cd
+  "h" (bind (call-interactively 'help)))
 
 (nmap (kbd "RET") 'save-buffer)
 (nmap (kbd "C-b") 'evil-scroll-up)
