@@ -1,10 +1,10 @@
 (require 'package)
 (require 'cl-lib)
 (package-initialize)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/"))
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ("marmalade" . "http://marmalade-repo.org/packages/")
+        ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 (defvar bart/packages
   '(exec-path-from-shell
@@ -16,6 +16,8 @@
     magit ;; tools
     ir-black-theme)
   "Packages required at runtime")
+
+(setq package-pinned-packages '((magit . "marmalade")))
 
 (unless (cl-every #'package-installed-p bart/packages)
   (message "%s" "Refreshing package database...")
