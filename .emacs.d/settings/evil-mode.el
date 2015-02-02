@@ -46,3 +46,7 @@
 (nmap (kbd "C-j") 'evil-window-down)
 
 (imap (kbd "C-u") (bind (kill-line 0)))
+
+(require 'magit)
+(with-eval-after-load 'magit
+  (global-set-key (kbd "C-x g") 'magit-status))
