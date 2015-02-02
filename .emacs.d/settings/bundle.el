@@ -1,5 +1,5 @@
 (require 'package)
-(require 'cl)
+(require 'cl-lib)
 (package-initialize)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -17,7 +17,7 @@
     ir-black-theme)
   "Packages required at runtime")
 
-(unless (every #'package-installed-p bart/packages)
+(unless (cl-every #'package-installed-p bart/packages)
   (message "%s" "Refreshing package database...")
   (package-refresh-contents)
   (dolist (pkg bart/packages)
