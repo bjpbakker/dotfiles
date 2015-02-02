@@ -13,10 +13,12 @@
   "Convenience macro to bind to interactive functions"
   `(lambda () (interactive) ,@commands))
 
-(defun nmap (key action)
-  (define-key evil-normal-state-map key action))
-(defun imap (key action)
-  (define-key evil-insert-state-map key action))
+(defmacro nmap (key action)
+  "Maps key to action in normal state"
+  `(define-key evil-normal-state-map ,key ,action))
+(defmacro imap (key action)
+  "Maps key to action in insert state"
+  `(define-key evil-insert-state-map ,key ,action))
 
 (setq evil-leader/leader ",")
 (evil-leader/set-key
