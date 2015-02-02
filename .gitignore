@@ -37,6 +37,7 @@
 /.vim/.netrwhist
 /.vim/bundle/*
 /.viminfo
+/.workaway
 /.zcompdump
 /.zilverline*
 /.zinc/
