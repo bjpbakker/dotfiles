@@ -13,6 +13,7 @@
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     flycheck ;; syntax checking
     clojure-mode inf-clojure ;; clojure
+    markdown-mode writegood-mode ;; markdown
     magit ;; tools
     ir-black-theme)
   "Packages required at runtime")
