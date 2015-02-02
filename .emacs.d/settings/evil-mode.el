@@ -26,6 +26,10 @@
 (delete-evil-motion-key! (kbd "RET"))
 (delete-evil-motion-key! (kbd " "))
 
+(defmacro bind (&rest commands)
+  "Convenience macro to bind to interactive functions"
+  `(lambda () (interactive) ,@commands))
+
 (defun nmap (key action)
   (define-key evil-normal-state-map key action))
 (defun imap (key action)
@@ -41,4 +45,4 @@
 (nmap (kbd "C-k") 'evil-window-up)
 (nmap (kbd "C-j") 'evil-window-down)
 
-(imap (kbd "C-u") (lambda () (interactive) (kill-line 0)))
+(imap (kbd "C-u") (bind (kill-line 0)))
