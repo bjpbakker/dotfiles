@@ -1,14 +1,6 @@
 (require 'evil)
 (require 'evil-leader)
 
-; delete evil motion key bindings for RET and SPC. These keys are
-; useless motion-wise and should be mapped in normal mode.
-(defun delete-evil-motion-key! (key)
-  "Delete key binding from evil motion keymap"
-  (define-key evil-motion-state-map key nil))
-(delete-evil-motion-key! (kbd "RET"))
-(delete-evil-motion-key! (kbd " "))
-
 (defmacro bind (&rest commands)
   "Convenience macro to bind to interactive functions"
   `(lambda () (interactive) ,@commands))
@@ -19,6 +11,14 @@
 (defmacro imap (key action)
   "Maps key to action in insert state"
   `(define-key evil-insert-state-map ,key ,action))
+
+; delete evil motion key bindings for RET and SPC. These keys are
+; useless motion-wise and should be mapped in normal mode.
+(defun delete-evil-motion-key! (key)
+  "Delete key binding from evil motion keymap"
+  (define-key evil-motion-state-map key nil))
+(delete-evil-motion-key! (kbd "RET"))
+(delete-evil-motion-key! (kbd " "))
 
 (setq evil-leader/leader ",")
 (evil-leader/set-key
