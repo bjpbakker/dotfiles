@@ -13,3 +13,6 @@
 (evil-commentary-mode)
 
 (add-hook 'paredit-mode-hook #'evil-paredit-mode)
+
+;; use hjkl bindings in some emacs modes
+(evil-add-hjkl-bindings magit-status-mode-map 'emacs)
