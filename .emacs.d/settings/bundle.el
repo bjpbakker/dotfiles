@@ -12,6 +12,7 @@
     paredit rainbow-delimiters auto-complete ;; editing
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     flycheck ;; syntax checking
+    powerline powerline-evil ;; ui enhancements
     clojure-mode inf-clojure ;; clojure
     markdown-mode writegood-mode ;; markdown
     magit ;; tools

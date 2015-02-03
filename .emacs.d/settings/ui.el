@@ -14,3 +14,6 @@
 
 (setq echo-keystrokes 0.1
       use-dialog-box nil)
+
+(require 'powerline)
+(powerline-evil-center-color-theme)
