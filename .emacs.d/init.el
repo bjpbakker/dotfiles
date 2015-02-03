@@ -26,6 +26,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'power-lisp)
 (load-conf 'clojure)
 (load-conf 'markdown)
+(load-conf 'ruby)
 (load-conf 'sh-mode)
 (load-conf 'key-bindings)
 
