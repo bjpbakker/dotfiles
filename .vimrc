@@ -37,6 +37,9 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'kien/rainbow_parentheses.vim'
 
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 't9md/vim-ruby-xmpfilter'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'cypok/vim-sml'
@@ -182,7 +185,6 @@ augroup vimrcEx
     autocmd Syntax clojure call s:RainbowParenthesesLoad()
 
     autocmd FileType c setlocal noexpandtab
-    autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
     autocmd FileType xml setlocal formatprg=xmllint\ --format\ -
 augroup END
