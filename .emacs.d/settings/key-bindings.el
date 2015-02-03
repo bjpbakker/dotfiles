@@ -11,6 +11,9 @@
 (defmacro imap (key action)
   "Maps key to action in insert state"
   `(define-key evil-insert-state-map ,key ,action))
+(defmacro vmap (key action)
+  "Maps key to action in insert state"
+  `(define-key evil-visual-state-map ,key ,action))
 
 ; delete evil motion key bindings for RET and SPC. These keys are
 ; useless motion-wise and should be mapped in normal mode.
@@ -37,7 +40,9 @@
 (nmap (kbd "C-k") 'evil-window-up)
 (nmap (kbd "C-j") 'evil-window-down)
 
-(imap (kbd "C-u") (bind (kill-line 0)))
+(global-set-key (kbd "C-u") (bind (kill-line 0)))
+(nmap (kbd "C-u") (bind nil))
+(vmap (kbd "C-u") (bind nil))
 
 (require 'magit)
 (with-eval-after-load 'magit
