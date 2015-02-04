@@ -21,6 +21,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'editor)
 (load-conf 'evil-mode)
 (load-conf 'flycheck)
+(load-conf 'rainbow-delimiters)
 (load-conf 'ui)
 (load-conf 'osx)
 (load-conf 'power-lisp)
