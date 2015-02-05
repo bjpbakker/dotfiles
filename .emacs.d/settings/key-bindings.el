@@ -44,6 +44,10 @@
 (nmap (kbd "C-u") (bind nil))
 (vmap (kbd "C-u") (bind nil))
 
+(global-set-key (kbd "s-0") 'text-scale-set)
+(global-set-key (kbd "s--") 'text-scale-decrease)
+(global-set-key (kbd "s-=") 'text-scale-increase)
+
 (require 'magit)
 (with-eval-after-load 'magit
   (global-set-key (kbd "C-x g") 'magit-status))
