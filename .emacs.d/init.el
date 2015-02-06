@@ -1,9 +1,11 @@
+(defconst emacs-temp-directory (concat user-emacs-directory "/temp"))
+(defconst emacs-settings-directory (concat user-emacs-directory "/settings"))
+
 (defun load-conf (mod)
   "Load configuration module from user-emacs-directory. If mod is a symbol
 the file to load is based on the convention of '(symbol-name mod).el'"
-  (let ((settings-directory (concat user-emacs-directory "/settings")))
-    (let ((filename (if (symbolp mod) (concat (symbol-name mod) ".el") mod)))
-      (load (expand-file-name filename settings-directory)))))
+  (let ((filename (if (symbolp mod) (concat (symbol-name mod) ".el") mod)))
+    (load (expand-file-name filename emacs-settings-directory))))
 
 (load-conf 'bundle)
 (load-conf 'navigation)
@@ -22,6 +24,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(setq make-backup-files nil)
+(setq make-backup-files nil
+      auto-save-file-name-transforms `((".*" ,emacs-temp-directory t)))
 
 (require 'ir-black-theme)
