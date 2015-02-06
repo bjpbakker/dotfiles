@@ -14,3 +14,6 @@
 
 ;; if a file is changed outside of Emacs, reload without asking
 (global-auto-revert-mode t)
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
