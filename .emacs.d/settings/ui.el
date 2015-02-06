@@ -15,5 +15,11 @@
 (setq echo-keystrokes 0.1
       use-dialog-box nil)
 
+; mode line
 (require 'powerline)
 (powerline-evil-center-color-theme)
+(line-number-mode 1)
+(column-number-mode 1)
+
+(global-linum-mode 1)
+(global-hl-line-mode 1)
