@@ -27,7 +27,7 @@
 (evil-leader/set-key
   "f" 'projectile-find-file
   "b" 'switch-to-buffer
-  "cd" 'cd
+  "cd" 'projectile-switch-project
   "h" (bind (call-interactively 'help)))
 
 (nmap (kbd "RET") 'save-buffer)
