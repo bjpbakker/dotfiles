@@ -35,10 +35,10 @@
 (nmap (kbd "C-f") 'evil-scroll-down)
 (nmap (kbd "Y") (kbd "y$"))
 
-(nmap (kbd "C-h") 'evil-window-left)
-(nmap (kbd "C-l") 'evil-window-right)
-(nmap (kbd "C-k") 'evil-window-up)
-(nmap (kbd "C-j") 'evil-window-down)
+(define-key evil-motion-state-map (kbd "C-h") 'evil-window-left)
+(define-key evil-motion-state-map (kbd "C-j") 'evil-window-down)
+(define-key evil-motion-state-map (kbd "C-k") 'evil-window-up)
+(define-key evil-motion-state-map (kbd "C-l") 'evil-window-right)
 
 (global-set-key (kbd "C-u") (bind (kill-line 0)))
 (nmap (kbd "C-u") (bind nil))
