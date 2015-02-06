@@ -8,6 +8,10 @@
   (ruby-electric-mode t)
   (inf-ruby-minor-mode t)
   (ruby-key-bindings)
+  (require 'rspec-mode)
+  (setq rspec-use-rake-when-possible nil)
+  (with-eval-after-load 'inf-ruby
+    (inf-ruby-switch-setup))
   (add-hook 'projectile-mode-hook 'projectile-rails-on))
 
 (defun ruby-key-bindings ()
@@ -17,7 +21,10 @@
   (with-eval-after-load 'evil-leader
     (require 'evil-leader)
     (evil-leader/set-key
-      "." 'rspec-find-spec-or-target-find-example-other-window)))
+      "." 'rspec-find-spec-or-target-find-example-other-window
+      "T" 'rspec-verify-single
+      "t" 'rspec-verify
+      "r" 'rspec-rerun)))
 
 (defun ruby/engage-power ()
   (ruby-power-mode t))
