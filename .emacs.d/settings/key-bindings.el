@@ -53,3 +53,6 @@
 
 (with-eval-after-load 'neotree
   (global-set-key [f8] 'neotree-toggle))
+
+(with-eval-after-load 'dash-at-point
+  (global-set-key (kbd "C-c d") 'dash-at-point))

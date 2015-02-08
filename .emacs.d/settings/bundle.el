@@ -17,7 +17,7 @@
     clojure-mode inf-clojure ;; clojure
     markdown-mode writegood-mode ;; markdown
     ruby-electric inf-ruby rspec-mode projectile-rails ;; ruby
-    magit ;; tools
+    magit dash-at-point ;; tools
     ir-black-theme)
   "Packages required at runtime")
 
