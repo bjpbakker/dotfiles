@@ -32,10 +32,15 @@
   (with-eval-after-load 'evil-leader
     (require 'evil-leader)
     (evil-leader/set-key
-      "." 'rspec-find-spec-or-target-find-example-other-window
+      "." 'goto-spec-or-target
       "T" 'rspec-verify-single
       "t" 'rspec-verify
       "r" 'rspec-rerun)))
+
+(defun goto-spec-or-target ()
+  (interactive)
+  (or (rspec-find-spec-or-target-other-window)
+      (projectile-rails-find-current-spec)))
 
 (defun start-robe-server()
   (save-excursion
