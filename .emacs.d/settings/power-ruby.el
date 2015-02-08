@@ -1,18 +1,23 @@
 (require 'ruby-mode)
 
+(defmacro setup (module &rest commands)
+  "Convenience macro to require module and run commands"
+  `(require ,module)
+  `(progn ,@commands))
+
 (defvar ruby-power-map (make-keymap))
 (define-minor-mode ruby-power-mode "Add power to Ruby"
   :lighter " (power)"
   :keymap ruby-power-map
-  (require 'ruby-electric)
-  (ruby-electric-mode t)
-  (inf-ruby-minor-mode t)
-  (ruby-key-bindings)
-  (require 'rspec-mode)
-  (setq rspec-use-rake-when-possible nil)
-  (with-eval-after-load 'inf-ruby
-    (inf-ruby-switch-setup))
-  (add-hook 'projectile-mode-hook 'projectile-rails-on))
+  (setup 'ruby-electric (ruby-electric-mode t))
+  (setup 'inf-ruby (inf-ruby-minor-mode t))
+  (setup 'rspec-mode
+         (setq rspec-use-rake-when-possible nil)
+         (with-eval-after-load 'inf-ruby
+           (inf-ruby-switch-setup)))
+  (setup 'projectile-rails
+         (add-hook 'projectile-mode-hook 'projectile-rails-on))
+  (ruby-key-bindings))
 
 (defun ruby-key-bindings ()
   (with-eval-after-load 'evil
