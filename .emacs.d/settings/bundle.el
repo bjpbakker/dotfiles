@@ -16,7 +16,7 @@
     powerline powerline-evil ;; ui enhancements
     clojure-mode inf-clojure ;; clojure
     markdown-mode writegood-mode ;; markdown
-    ruby-electric inf-ruby rspec-mode projectile-rails ;; ruby
+    ruby-electric inf-ruby rspec-mode projectile-rails robe ;; ruby
     magit dash-at-point ;; tools
     ir-black-theme)
   "Packages required at runtime")

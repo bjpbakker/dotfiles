@@ -15,6 +15,9 @@
          (setq rspec-use-rake-when-possible nil)
          (with-eval-after-load 'inf-ruby
            (inf-ruby-switch-setup)))
+  (setup 'robe
+         (robe-mode)
+         (start-robe-server))
   (setup 'projectile-rails
          (add-hook 'projectile-mode-hook 'projectile-rails-on))
   (ruby-key-bindings))
@@ -30,6 +33,13 @@
       "T" 'rspec-verify-single
       "t" 'rspec-verify
       "r" 'rspec-rerun)))
+
+(defun start-robe-server()
+  (save-excursion
+    (window-configuration-to-register 'a)
+    (inf-ruby)
+    (robe-start)
+    (jump-to-register 'a)))
 
 (defun ruby/engage-power ()
   (ruby-power-mode t))
