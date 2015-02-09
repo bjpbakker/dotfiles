@@ -18,7 +18,7 @@
          (robe-mode)
          (start-robe-server))
   (setup 'projectile-rails
-         (add-hook 'projectile-mode-hook 'projectile-rails-on))
+         (projectile-rails-on))
   (setup 'smartparens
          (require 'smartparens-config)
          (require 'smartparens-ruby)
