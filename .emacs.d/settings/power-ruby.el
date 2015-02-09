@@ -36,7 +36,8 @@
       "." 'goto-spec-or-target
       "T" 'rspec-verify-single
       "t" 'rspec-verify
-      "r" 'rspec-rerun)))
+      "r" 'rspec-rerun))
+  (define-key ruby-power-map (kbd "C-c C-z") 'inf-ruby-console-auto))
 
 (defun goto-spec-or-target ()
   (interactive)
