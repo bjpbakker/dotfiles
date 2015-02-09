@@ -1,5 +1,6 @@
 typeset -A _launchctl_services;
-_launchctl_services=("postgres" "/usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist")
+_launchctl_services=("postgres" "/usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist"
+                     "mysql" "/usr/local/opt/mysql/homebrew.mxcl.mysql.plist")
 
 launch() {
     local what=$1;

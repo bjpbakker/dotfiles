@@ -13,7 +13,6 @@
 /.cups/
 /.dropbox/
 /.emscripten*
-/.emacs.d/
 /.gem/
 /.ghc/
 /.heroku/
@@ -51,7 +50,7 @@
 /Music/
 /Pictures/
 /Public/
-/VirtualBox\ VMs/
+/VirtualBox VMs/
 /accounts
 /breakable-toys
 /proj
