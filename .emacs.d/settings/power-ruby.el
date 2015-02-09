@@ -46,7 +46,7 @@
 (defun start-robe-server()
   (save-excursion
     (window-configuration-to-register 'a)
-    (inf-ruby)
+    (inf-ruby-console-auto)
     (set-process-query-on-exit-flag (get-process "ruby") nil)
     (robe-start)
     (jump-to-register 'a)))
