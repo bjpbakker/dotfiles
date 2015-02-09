@@ -9,16 +9,16 @@
 (define-minor-mode ruby-power-mode "Add power to Ruby"
   :lighter " (power)"
   :keymap ruby-power-map
-  (setup 'inf-ruby (inf-ruby-minor-mode t))
   (setup 'rspec-mode
-         (setq rspec-use-rake-when-possible nil)
-         (with-eval-after-load 'inf-ruby
-           (inf-ruby-switch-setup)))
+         (setq rspec-use-rake-when-possible nil))
+  (setup 'projectile-rails
+         (projectile-rails-on))
+  (setup 'inf-ruby
+         (inf-ruby-minor-mode t)
+         (inf-ruby-switch-setup))
   (setup 'robe
          (robe-mode)
          (start-robe-server))
-  (setup 'projectile-rails
-         (projectile-rails-on))
   (setup 'smartparens
          (require 'smartparens-config)
          (require 'smartparens-ruby)
