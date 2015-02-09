@@ -1,4 +1,5 @@
 (require 'magit)
+(add-hook 'magit-mode-hook (lambda () (evil-mode 0)))
 
 (require 'dash-at-point)
 (autoload 'dash-at-point "dash-at-point"
