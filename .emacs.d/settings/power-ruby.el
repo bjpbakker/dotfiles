@@ -18,6 +18,7 @@
          (inf-ruby-switch-setup))
   (setup 'robe
          (robe-mode)
+         (push 'company-robe company-backends)
          (start-robe-server))
   (setup 'smartparens
          (require 'smartparens-config)
