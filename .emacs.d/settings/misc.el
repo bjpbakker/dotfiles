@@ -1,5 +1,5 @@
 (require 'magit)
-(add-hook 'magit-mode-hook (lambda () (evil-mode 0)))
+(add-hook 'magit-mode-hook (lambda () (evil-local-mode 0)))
 
 (require 'dash-at-point)
 (autoload 'dash-at-point "dash-at-point"
