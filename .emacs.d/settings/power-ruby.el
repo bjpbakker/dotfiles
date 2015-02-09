@@ -48,7 +48,7 @@
   (save-excursion
     (window-configuration-to-register 'a)
     (inf-ruby-console-auto)
-    (set-process-query-on-exit-flag (get-process "ruby") nil)
+    (set-process-query-on-exit-flag (or (get-process "ruby") (get-process "rails")) nil)
     (robe-start)
     (jump-to-register 'a)))
 
