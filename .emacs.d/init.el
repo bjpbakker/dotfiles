@@ -1,7 +1,7 @@
-(defconst emacs-temp-directory (concat user-emacs-directory "/temp"))
-(defconst emacs-settings-directory (concat user-emacs-directory "/settings"))
+(defconst emacs-temp-directory (concat user-emacs-directory "temp/"))
+(defconst emacs-settings-directory (concat user-emacs-directory "settings/"))
 
-(add-to-list 'load-path (concat user-emacs-directory "/elisp"))
+(add-to-list 'load-path (concat user-emacs-directory "elisp/"))
 
 (defun load-conf (mod)
   "Load configuration module from user-emacs-directory. If mod is a symbol
