@@ -1,5 +1,8 @@
 (require 'ruby-mode)
 
+(defun always (value)
+  `(lambda (&rest _) ,value))
+
 (defmacro setup (module &rest commands)
   "Convenience macro to require module and run commands"
   `(require ,module)
@@ -26,6 +29,11 @@
          (smartparens-mode))
   (ruby-key-bindings))
 
+(defun ruby-console ()
+  (interactive)
+  (cl-letf (((symbol-function 'completing-read) (always "test")))
+    (inf-ruby-console-auto)))
+
 (defun ruby-key-bindings ()
   (with-eval-after-load 'evil
     (require 'evil)
@@ -37,7 +45,7 @@
       "T" 'rspec-verify-single
       "t" 'rspec-verify
       "r" 'rspec-rerun))
-  (define-key ruby-power-map (kbd "C-c C-z") 'inf-ruby-console-auto))
+  (define-key ruby-power-map (kbd "C-c C-z") 'ruby-console))
 
 (defun goto-spec-or-target ()
   (interactive)
@@ -47,7 +55,7 @@
 (defun start-robe-server()
   (save-excursion
     (window-configuration-to-register 'a)
-    (inf-ruby-console-auto)
+    (ruby-console)
     (set-process-query-on-exit-flag (or (get-process "ruby") (get-process "rails")) nil)
     (robe-start)
     (jump-to-register 'a)))
