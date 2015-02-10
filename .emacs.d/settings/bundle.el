@@ -18,6 +18,7 @@
     markdown-mode writegood-mode ;; markdown
     smartparens inf-ruby rspec-mode projectile-rails robe ;; ruby
     magit ag dash-at-point ;; tools
+    org deft ;; org-mode tools
     ir-black-theme)
   "Packages required at runtime")
 

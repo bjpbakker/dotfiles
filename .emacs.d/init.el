@@ -21,6 +21,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'power-ruby)
 (load-conf 'sh-mode)
 (load-conf 'misc)
+(load-conf 'org-mode)
 (load-conf 'key-bindings)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
