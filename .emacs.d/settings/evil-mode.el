@@ -1,27 +1,28 @@
-(require 'evil)
-(require 'evil-leader)
-(require 'evil-commentary)
-(require 'evil-jumper)
-(require 'evil-paredit)
+(require 'config-util)
 
-(global-evil-leader-mode)
-(evil-mode 1)
+(setup 'evil-leader
+       (global-evil-leader-mode))
 
-(setq evil-jumper-auto-center t)
-(global-evil-jumper-mode t)
+(setup 'evil-commentary
+       (evil-commentary-mode))
 
-(evil-commentary-mode)
+(setup 'evil-jumper
+       (setq evil-jumper-auto-center t)
+       (global-evil-jumper-mode t))
 
-(add-hook 'paredit-mode-hook #'evil-paredit-mode)
+(setup 'evil-paredit
+       (add-hook 'paredit-mode-hook #'evil-paredit-mode))
 
-;; make Esc quit pretty much anything
-(define-key evil-normal-state-map [escape] 'keyboard-quit)
-(define-key evil-visual-state-map [escape] 'keyboard-quit)
-(define-key minibuffer-local-map [escape] 'abort-recursive-edit)
-(define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
-(define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
-(define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
-(define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit)
+(defun evil-esc-to-quit ()
+  ;; make Esc quit pretty much anything
+  (define-key evil-normal-state-map [escape] 'keyboard-quit)
+  (define-key evil-visual-state-map [escape] 'keyboard-quit)
+  (define-key minibuffer-local-map [escape] 'abort-recursive-edit)
+  (define-key minibuffer-local-ns-map [escape] 'abort-recursive-edit)
+  (define-key minibuffer-local-completion-map [escape] 'abort-recursive-edit)
+  (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
+  (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit))
 
-;; use hjkl bindings in some emacs modes
-(evil-add-hjkl-bindings magit-status-mode-map 'emacs)
+(setup 'evil
+       (evil-mode 1)
+       (evil-esc-to-quit))

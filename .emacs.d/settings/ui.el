@@ -1,3 +1,5 @@
+(require 'config-util)
+
 (setq inhibit-splash-screen t
       initial-scratch-message nil)
 
@@ -16,8 +18,8 @@
       use-dialog-box nil)
 
 ; mode line
-(require 'powerline)
-(powerline-evil-center-color-theme)
+(setup 'powerline
+       (powerline-evil-center-color-theme))
 (line-number-mode 1)
 (column-number-mode 1)
 

@@ -1,5 +1,7 @@
+(require 'config-util)
+
 (setq-default indent-tabs-mode nil)
 
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-(setq company-idle-delay 0.2)
+(setup 'company
+       (add-hook 'after-init-hook 'global-company-mode)
+       (setq company-idle-delay 0.2))

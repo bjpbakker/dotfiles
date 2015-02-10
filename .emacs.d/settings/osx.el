@@ -1,2 +1,4 @@
-(require 'exec-path-from-shell)
-(exec-path-from-shell-initialize)
+(require 'config-util)
+
+(setup 'exec-path-from-shell
+       (exec-path-from-shell-initialize))
