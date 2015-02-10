@@ -51,6 +51,9 @@
 (with-eval-after-load 'magit
   (global-set-key (kbd "C-x g") 'magit-status))
 
+(with-eval-after-load 'ag
+  (global-set-key (kbd "s-F") 'ag-project))
+
 (with-eval-after-load 'neotree
   (global-set-key [f8] 'neotree-toggle))
 
