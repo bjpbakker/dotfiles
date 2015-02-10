@@ -13,7 +13,8 @@
   :lighter " (power)"
   :keymap ruby-power-map
   (setup 'rspec-mode
-         (setq rspec-use-rake-when-possible nil))
+         (setq rspec-use-rake-when-possible nil
+               compilation-scroll-output t))
   (setup 'projectile-rails
          (projectile-rails-on))
   (setup 'inf-ruby
