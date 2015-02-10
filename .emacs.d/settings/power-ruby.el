@@ -28,6 +28,8 @@
          (require 'smartparens-config)
          (require 'smartparens-ruby)
          (smartparens-mode))
+  (setup 'rainbow-delimiters
+         (rainbow-delimiters-mode))
   (ruby-key-bindings))
 
 (defun ruby-console ()
