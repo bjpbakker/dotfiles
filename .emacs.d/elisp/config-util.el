@@ -3,8 +3,9 @@
 
 (defmacro setup (module &rest commands)
   "Convenience macro to require module and run commands"
-  `(require ,module)
-  `(progn ,@commands))
+  `(progn
+     (require ,module)
+     ,@commands))
 
 (defmacro bind (&rest commands)
   "Convenience macro to bind to interactive functions"
