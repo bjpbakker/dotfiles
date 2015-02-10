@@ -1,19 +1,6 @@
+(require 'config-util)
 (require 'evil)
 (require 'evil-leader)
-
-(defmacro bind (&rest commands)
-  "Convenience macro to bind to interactive functions"
-  `(lambda () (interactive) ,@commands))
-
-(defmacro nmap (key action)
-  "Maps key to action in normal state"
-  `(define-key evil-normal-state-map ,key ,action))
-(defmacro imap (key action)
-  "Maps key to action in insert state"
-  `(define-key evil-insert-state-map ,key ,action))
-(defmacro vmap (key action)
-  "Maps key to action in insert state"
-  `(define-key evil-visual-state-map ,key ,action))
 
 ; delete evil motion key bindings for RET and SPC. These keys are
 ; useless motion-wise and should be mapped in normal mode.

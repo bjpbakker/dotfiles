@@ -1,12 +1,5 @@
+(require 'config-util)
 (require 'ruby-mode)
-
-(defun always (value)
-  `(lambda (&rest _) ,value))
-
-(defmacro setup (module &rest commands)
-  "Convenience macro to require module and run commands"
-  `(require ,module)
-  `(progn ,@commands))
 
 (defvar ruby-power-map (make-keymap))
 (define-minor-mode ruby-power-mode "Add power to Ruby"
