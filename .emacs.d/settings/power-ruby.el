@@ -21,6 +21,8 @@
          (electric-pair-mode))
   (setup 'ruby-end
          (ruby-end-mode))
+  (setup 'paredit-non-lisp
+         (paredit-non-lisp-mode))
   (setup 'rainbow-delimiters
          (rainbow-delimiters-mode))
   (ruby-key-bindings))
