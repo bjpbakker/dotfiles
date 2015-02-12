@@ -8,9 +8,12 @@
 (define-minor-mode lisp-power-mode "Fix keybindings; add power."
   :lighter " (power)"
   :keymap lisp-power-map
-  (paredit-mode t)
-  (rainbow-delimiters-mode)
-  (show-paren-mode))
+  (setup 'paredit
+         (paredit-mode t))
+  (setup 'rainbow-delimiters
+         (rainbow-delimiters-mode))
+  (setup 'paren
+         (show-paren-mode))
 (define-key lisp-power-map [delete] 'paredit-forward-delete)
 (define-key lisp-power-map [backspace] 'paredit-backward-delete)
 
