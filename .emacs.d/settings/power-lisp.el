@@ -14,6 +14,9 @@
          (rainbow-delimiters-mode))
   (setup 'paren
          (show-paren-mode))
+  (setup 'fill-column-indicator
+         (setq fci-rule-column 80)
+         (fci-mode)))
 (define-key lisp-power-map [delete] 'paredit-forward-delete)
 (define-key lisp-power-map [backspace] 'paredit-backward-delete)
 
