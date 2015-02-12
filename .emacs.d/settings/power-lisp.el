@@ -18,9 +18,15 @@
          (show-paren-mode))
   (setup 'fill-column-indicator
          (setq fci-rule-column 80)
-         (fci-mode)))
+         (fci-mode))
+  (lisp-key-bindings))
 (define-key lisp-power-map [delete] 'paredit-forward-delete)
 (define-key lisp-power-map [backspace] 'paredit-backward-delete)
+
+(defun lisp-key-bindings ()
+  (with-eval-after-load 'evil
+    (require 'evil)
+    (nmap (kbd "g.") 'find-function-at-point)))
 
 (defun lisp/engage-lisp-power ()
   (lisp-power-mode t))
