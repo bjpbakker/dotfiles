@@ -25,6 +25,9 @@
          (paredit-non-lisp-mode))
   (setup 'rainbow-delimiters
          (rainbow-delimiters-mode))
+  (setup 'fill-column-indicator
+         fci-rule-column 80
+         (fci-mode))
   (ruby-key-bindings))
 
 (defun ruby-console ()

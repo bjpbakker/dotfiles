@@ -29,3 +29,8 @@
 ;; smooth scrolling
 (setq scroll-margin 3
       scroll-conservatively 10000)
+
+;; defaults for line length indicator
+(setup 'fill-column-indicator
+       (setq fci-rule-width 1
+             fci-rule-color "#4d4d4d"))
