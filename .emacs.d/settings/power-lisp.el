@@ -8,6 +8,8 @@
 (define-minor-mode lisp-power-mode "Fix keybindings; add power."
   :lighter " (power)"
   :keymap lisp-power-map
+  (setup 'eldoc
+         (eldoc-mode))
   (setup 'paredit
          (paredit-mode t))
   (setup 'rainbow-delimiters
