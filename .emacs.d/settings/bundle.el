@@ -16,7 +16,7 @@
     powerline powerline-evil ;; ui enhancements
     clojure-mode inf-clojure ;; clojure
     markdown-mode writegood-mode ;; markdown
-    smartparens inf-ruby rspec-mode projectile-rails robe ;; ruby
+    ruby-end inf-ruby rspec-mode projectile-rails robe ;; ruby
     magit ag dash-at-point ;; tools
     org deft ;; org-mode tools
     ir-black-theme)

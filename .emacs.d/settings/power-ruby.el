@@ -17,10 +17,10 @@
          (robe-mode)
          (push 'company-robe company-backends)
          (start-robe-server))
-  (setup 'smartparens
-         (require 'smartparens-config)
-         (require 'smartparens-ruby)
-         (smartparens-mode))
+  (setup 'electric
+         (electric-pair-mode))
+  (setup 'ruby-end
+         (ruby-end-mode))
   (setup 'rainbow-delimiters
          (rainbow-delimiters-mode))
   (ruby-key-bindings))
