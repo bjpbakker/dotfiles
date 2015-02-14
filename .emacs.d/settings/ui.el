@@ -18,6 +18,19 @@
       use-dialog-box nil)
 
 ;; mode line
+(setup 'delight
+       (delight '((company-mode nil company)
+                  (eldoc-mode nil eldoc)
+                  (evil-commentary-mode nil evil-commentary)
+                  (flycheck-mode nil flycheck)
+                  (paredit-mode nil paredit)
+                  (paredit-non-lisp-mode nil paredit-non-lisp)
+                  (projectile-mode nil projectile)
+                  (projectile-rails-mode nil projectile-rails)
+                  (robe-mode nil robe)
+                  (rspec-mode nil)
+                  (ruby-end-mode nil ruby-end)
+                  (undo-tree-mode nil undo-tree))))
 (setup 'powerline
        (powerline-evil-center-color-theme))
 (line-number-mode 1)
@@ -29,3 +42,8 @@
 ;; smooth scrolling
 (setq scroll-margin 3
       scroll-conservatively 10000)
+
+;; defaults for line length indicator
+(setup 'fill-column-indicator
+       (setq fci-rule-width 1
+             fci-rule-color "#4d4d4d"))

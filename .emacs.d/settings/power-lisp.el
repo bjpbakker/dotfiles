@@ -8,11 +8,25 @@
 (define-minor-mode lisp-power-mode "Fix keybindings; add power."
   :lighter " (power)"
   :keymap lisp-power-map
-  (paredit-mode t)
-  (rainbow-delimiters-mode)
-  (show-paren-mode))
+  (setup 'eldoc
+         (eldoc-mode))
+  (setup 'paredit
+         (paredit-mode t))
+  (setup 'rainbow-delimiters
+         (rainbow-delimiters-mode))
+  (setup 'paren
+         (show-paren-mode))
+  (setup 'fill-column-indicator
+         (setq fci-rule-column 80)
+         (fci-mode))
+  (lisp-key-bindings))
 (define-key lisp-power-map [delete] 'paredit-forward-delete)
 (define-key lisp-power-map [backspace] 'paredit-backward-delete)
+
+(defun lisp-key-bindings ()
+  (with-eval-after-load 'evil
+    (require 'evil)
+    (nmap (kbd "g.") 'find-function-at-point)))
 
 (defun lisp/engage-lisp-power ()
   (lisp-power-mode t))

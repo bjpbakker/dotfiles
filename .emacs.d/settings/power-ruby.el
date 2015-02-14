@@ -17,12 +17,17 @@
          (robe-mode)
          (push 'company-robe company-backends)
          (start-robe-server))
-  (setup 'smartparens
-         (require 'smartparens-config)
-         (require 'smartparens-ruby)
-         (smartparens-mode))
+  (setup 'electric
+         (electric-pair-mode))
+  (setup 'ruby-end
+         (ruby-end-mode))
+  (setup 'paredit-non-lisp
+         (paredit-non-lisp-mode))
   (setup 'rainbow-delimiters
          (rainbow-delimiters-mode))
+  (setup 'fill-column-indicator
+         fci-rule-column 80
+         (fci-mode))
   (ruby-key-bindings))
 
 (defun ruby-console ()
@@ -33,8 +38,8 @@
 (defun ruby-key-bindings ()
   (with-eval-after-load 'evil
     (require 'evil)
-    (define-key evil-normal-state-map (kbd "gf") 'projectile-rails-goto-file-at-point)
-    (define-key evil-normal-state-map (kbd "g.") 'robe-jump))
+    (nmap (kbd "gf") 'projectile-rails-goto-file-at-point)
+    (nmap (kbd "g.") 'robe-jump))
   (with-eval-after-load 'evil-leader
     (require 'evil-leader)
     (evil-leader/set-key

@@ -13,10 +13,11 @@
     paredit rainbow-delimiters company ;; editing
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     flycheck ;; syntax checking
-    powerline powerline-evil ;; ui enhancements
+    powerline powerline-evil delight fill-column-indicator ;; ui enhancements
     clojure-mode inf-clojure ;; clojure
     markdown-mode writegood-mode ;; markdown
-    smartparens inf-ruby rspec-mode projectile-rails robe ;; ruby
+    ruby-end inf-ruby rspec-mode projectile-rails robe ;; ruby
+    swift-mode ;; swift
     magit ag dash-at-point ;; tools
     org deft ;; org-mode tools
     ir-black-theme)

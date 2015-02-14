@@ -11,7 +11,8 @@
        (global-evil-jumper-mode t))
 
 (setup 'evil-paredit
-       (add-hook 'paredit-mode-hook #'evil-paredit-mode))
+       (add-hook 'paredit-mode-hook #'evil-paredit-mode)
+       (add-hook 'paredit-non-lisp-mode-hook #'evil-paredit-mode))
 
 (defun evil-esc-to-quit ()
   ;; make Esc quit pretty much anything
