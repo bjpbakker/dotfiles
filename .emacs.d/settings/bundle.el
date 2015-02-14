@@ -17,6 +17,7 @@
     clojure-mode inf-clojure ;; clojure
     markdown-mode writegood-mode ;; markdown
     ruby-end inf-ruby rspec-mode projectile-rails robe ;; ruby
+    swift-mode ;; swift
     magit ag dash-at-point ;; tools
     org deft ;; org-mode tools
     ir-black-theme)
