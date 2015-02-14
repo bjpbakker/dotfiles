@@ -15,7 +15,8 @@
   "f" 'projectile-find-file
   "b" 'switch-to-buffer
   "cd" 'projectile-switch-project
-  "h" (bind (call-interactively 'help)))
+  "h" (bind (call-interactively 'help))
+  "." 'projectile-toggle-between-implementation-and-test)
 
 (nmap (kbd "RET") 'save-buffer)
 (nmap (kbd "C-b") 'evil-scroll-up)
