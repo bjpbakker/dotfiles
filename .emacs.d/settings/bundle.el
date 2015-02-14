@@ -14,7 +14,7 @@
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     flycheck ;; syntax checking
     powerline powerline-evil delight fill-column-indicator ;; ui enhancements
-    clojure-mode inf-clojure ;; clojure
+    clojure-mode cider ;; clojure
     markdown-mode writegood-mode ;; markdown
     ruby-end inf-ruby rspec-mode projectile-rails robe ;; ruby
     swift-mode ;; swift
