@@ -62,6 +62,17 @@
       (robe-start)
       (set-window-configuration conf))))
 
+(defun ruby-jack-out ()
+  (interactive)
+  (progn
+    (let* ((ruby-buffer (get-buffer inf-ruby-buffer))
+           (process (get-buffer-process ruby-buffer)))
+      (when process
+        (delete-process process))
+      (when (buffer-live-p ruby-buffer)
+        (kill-buffer ruby-buffer)))
+    (setq robe-running nil)))
+
 (defun ruby/engage-power ()
   (ruby-power-mode t))
 
