@@ -15,8 +15,7 @@
          (inf-ruby-switch-setup))
   (setup 'robe
          (robe-mode)
-         (push 'company-robe company-backends)
-         (start-robe-server))
+         (push 'company-robe company-backends))
   (setup 'electric
          (electric-pair-mode))
   (setup 'ruby-end
@@ -54,13 +53,14 @@
   (or (rspec-find-spec-or-target-other-window)
       (projectile-rails-find-current-spec)))
 
-(defun start-robe-server()
+(defun ruby-jack-in ()
+  (interactive)
   (save-excursion
-    (window-configuration-to-register 'a)
-    (ruby-console)
-    (set-process-query-on-exit-flag (or (get-process "ruby") (get-process "rails")) nil)
-    (robe-start)
-    (jump-to-register 'a)))
+    (let ((conf (current-window-configuration)))
+      (ruby-console)
+      (set-process-query-on-exit-flag (inf-ruby-proc) nil)
+      (robe-start)
+      (set-window-configuration conf))))
 
 (defun ruby/engage-power ()
   (ruby-power-mode t))
