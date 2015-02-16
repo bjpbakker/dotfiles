@@ -7,7 +7,8 @@
   :keymap ruby-power-map
   (setup 'rspec-mode
          (setq rspec-use-rake-when-possible nil
-               compilation-scroll-output t))
+               compilation-scroll-output t
+               compilation-exit-message-function 'auto-close-rspec-compilation-buffer))
   (setup 'projectile-rails
          (projectile-rails-on))
   (setup 'inf-ruby
@@ -72,6 +73,12 @@
       (when (buffer-live-p ruby-buffer)
         (kill-buffer ruby-buffer)))
     (setq robe-running nil)))
+
+(defun auto-close-rspec-compilation-buffer (status code msg)
+  (when (and (eq status 'exit) (zerop code))
+    (bury-buffer)
+    (replace-buffer-in-windows))
+  (cons msg code))
 
 (defun ruby/engage-power ()
   (ruby-power-mode t))
