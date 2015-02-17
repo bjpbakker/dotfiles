@@ -11,14 +11,11 @@
   "Convenience macro to bind to interactive functions"
   `(lambda () (interactive) ,@commands))
 
-(defmacro nmap (key action)
-  "Maps key to action in normal state"
-  `(define-key evil-normal-state-map ,key ,action))
-(defmacro imap (key action)
-  "Maps key to action in insert state"
-  `(define-key evil-insert-state-map ,key ,action))
-(defmacro vmap (key action)
-  "Maps key to action in insert state"
+(defmacro define-evil-motion (key action)
+  "Define an evil motion for `key` to do `action`."
+  `(define-key evil-motion-state-map ,key ,action))
+(defmacro define-evil-visual-motion (key action)
+  "Define an evil motion `key` to do `action` in visual state."
   `(define-key evil-visual-state-map ,key ,action))
 
 (provide 'config-util)

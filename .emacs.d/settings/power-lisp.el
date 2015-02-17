@@ -26,7 +26,7 @@
 (defun lisp-key-bindings ()
   (with-eval-after-load 'evil
     (require 'evil)
-    (nmap (kbd "g.") 'find-function-at-point)))
+    (define-evil-motion (kbd "g.") 'find-function-at-point)))
 
 (defun lisp/engage-lisp-power ()
   (lisp-power-mode t))

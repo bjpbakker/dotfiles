@@ -37,8 +37,8 @@
 
 (defun ruby-key-bindings ()
   (with-eval-after-load 'evil
-    (nmap (kbd "gf") 'projectile-rails-goto-file-at-point)
-    (nmap (kbd "g.") 'robe-jump))
+    (define-evil-motion (kbd "gf") 'projectile-rails-goto-file-at-point)
+    (define-evil-motion (kbd "g.") 'robe-jump))
   (with-eval-after-load 'evil-leader
     (evil-leader/set-key
       "." 'goto-spec-or-target
