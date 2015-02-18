@@ -17,6 +17,7 @@
     clojure-mode cider ;; clojure
     markdown-mode writegood-mode ;; markdown
     ruby-end inf-ruby rspec-mode projectile-rails robe ;; ruby
+    yaml-mode ;; yaml
     swift-mode ;; swift
     magit ag dash-at-point ;; tools
     org deft ;; org-mode tools
