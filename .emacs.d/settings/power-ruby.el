@@ -82,4 +82,5 @@
   (ruby-power-mode t))
 
 (with-eval-after-load 'ruby-mode
-  (add-hook 'ruby-mode-hook #'ruby/engage-power))
+  (add-hook 'ruby-mode-hook #'ruby/engage-power)
+  (setq ruby-insert-encoding-magic-comment nil))
