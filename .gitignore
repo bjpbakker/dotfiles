@@ -18,7 +18,7 @@
 /.heroku/
 /.ivy2/
 /.lldb/
-/.lein/
+/.lein/repl-history
 /.lesshst
 /.local/
 /.m2/
