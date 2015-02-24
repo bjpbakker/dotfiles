@@ -5,7 +5,7 @@
 
 (setup 'cider
        (add-hook 'clojure-mode-hook #'cider-mode)
-       (add-hook 'cider-mode #'clojure/customize-cider))
+       (add-hook 'cider-mode-hook #'clojure/customize-cider))
 
 (defun clojure/customize-cider ()
   (with-eval-after-load 'evil-leader
