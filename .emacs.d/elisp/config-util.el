@@ -11,11 +11,11 @@
   "Convenience macro to bind to interactive functions"
   `(lambda () (interactive) ,@commands))
 
-(defmacro define-evil-motion (key action)
-  "Define an evil motion for `key` to do `action`."
-  `(define-key evil-motion-state-map ,key ,action))
-(defmacro define-evil-visual-motion (key action)
-  "Define an evil motion `key` to do `action` in visual state."
+(defmacro define-evil-normal-key (key action)
+  "Define `key` to do `action` in evil normal state."
+  `(define-key evil-normal-state-map ,key ,action))
+(defmacro define-evil-visual-key (key action)
+  "Define `key` to do `action` in evil visual state."
   `(define-key evil-visual-state-map ,key ,action))
 
 (provide 'config-util)
