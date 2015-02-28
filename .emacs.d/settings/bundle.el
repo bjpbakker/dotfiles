@@ -19,6 +19,7 @@
     ruby-end inf-ruby rspec-mode projectile-rails robe ;; ruby
     yaml-mode ;; yaml
     swift-mode ;; swift
+    web-mode ;; web support
     magit ag dash-at-point ;; tools
     org deft ;; org-mode tools
     ir-black-theme)
