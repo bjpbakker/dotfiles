@@ -27,9 +27,13 @@
 
 (setq package-pinned-packages '((magit . "marmalade")))
 
-(unless (cl-every #'package-installed-p bart/packages)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg bart/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
+(defun install-missing-packages ()
+  (interactive)
+  (unless (cl-every #'package-installed-p bart/packages)
+    (message "%s" "Refreshing package database...")
+    (package-refresh-contents)
+    (dolist (pkg bart/packages)
+      (when (not (package-installed-p pkg))
+        (package-install pkg)))))
+
+(install-missing-packages)
