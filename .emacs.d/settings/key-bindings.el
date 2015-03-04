@@ -19,8 +19,10 @@
   "." 'projectile-toggle-between-implementation-and-test)
 
 (define-evil-normal-key (kbd "RET") 'save-buffer)
-(define-evil-normal-key (kbd "C-b") 'evil-scroll-up)
-(define-evil-normal-key (kbd "C-f") 'evil-scroll-down)
+(define-evil-normal-key (kbd "C-b") 'evil-scroll-page-up)
+(define-evil-normal-key (kbd "C-u") 'evil-scroll-up)
+(define-evil-normal-key (kbd "C-f") 'evil-scroll-page-down)
+(define-evil-normal-key (kbd "C-d") 'evil-scroll-down)
 (define-evil-normal-key (kbd "Y") (kbd "y$"))
 
 (define-evil-normal-key (kbd "C-h") 'evil-window-left)
