@@ -30,9 +30,7 @@
 (define-evil-normal-key (kbd "C-k") 'evil-window-up)
 (define-evil-normal-key (kbd "C-l") 'evil-window-right)
 
-(global-set-key (kbd "C-u") (bind (kill-line 0)))
-(define-evil-normal-key (kbd "C-u") (bind nil))
-(define-evil-visual-key (kbd "C-u") (bind nil))
+(define-key minibuffer-local-map (kbd "C-u") (bind (kill-line 0)))
 
 (global-set-key (kbd "s-0") (bind (text-scale-adjust 0)))
 (global-set-key (kbd "s--") 'text-scale-decrease)
