@@ -22,7 +22,7 @@
     web-mode ;; web support
     magit ag dash-at-point ;; tools
     org deft ;; org-mode tools
-    ir-black-theme)
+    darkburn-theme ir-black-theme lush-theme) ;; color themes
   "Packages required at runtime")
 
 (setq package-pinned-packages '((magit . "marmalade")))

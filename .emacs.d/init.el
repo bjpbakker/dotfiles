@@ -31,4 +31,4 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (setq make-backup-files nil
       auto-save-file-name-transforms `((".*" ,emacs-temp-directory t)))
 
-(require 'ir-black-theme)
+(require 'darkburn-theme)
