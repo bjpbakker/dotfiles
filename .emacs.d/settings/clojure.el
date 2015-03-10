@@ -12,4 +12,7 @@
     (evil-leader/set-key
       "T" 'cider-test-run-test
       "t" 'cider-test-run-tests
-      "r" 'cider-test-rerun-tests)))
+      "r" 'cider-test-rerun-tests))
+  (setq cider-show-error-buffer 'except-in-repl
+        cider-auto-select-error-buffer nil)
+  (add-hook 'after-save-hook #'cider-load-buffer nil t))
