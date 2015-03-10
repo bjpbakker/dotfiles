@@ -47,3 +47,9 @@
 (setup 'fill-column-indicator
        (setq fci-rule-width 1
              fci-rule-color "#4d4d4d"))
+
+(setup 'theme-changer
+       (setq calendar-location-name "Amsterdam, The Netherlands"
+             calendar-latitude 52.3667
+             calendar-longitude 4.9)
+       (change-theme 'sanityinc-tomorrow-day 'darkburn))
