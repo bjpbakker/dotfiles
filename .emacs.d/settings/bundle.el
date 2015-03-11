@@ -25,8 +25,6 @@
     theme-changer darkburn-theme ir-black-theme lush-theme color-theme-sanityinc-tomorrow) ;; color themes
   "Packages required at runtime")
 
-(setq package-pinned-packages '((magit . "marmalade")))
-
 (defun install-missing-packages ()
   (interactive)
   (unless (cl-every #'package-installed-p bart/packages)
