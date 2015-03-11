@@ -47,7 +47,8 @@
       "T" 'rspec-verify-single
       "t" 'rspec-verify
       "r" 'rspec-rerun))
-  (define-key ruby-power-map (kbd "C-c C-z") 'ruby-console))
+  (define-key ruby-power-map (kbd "C-c C-z") 'ruby-console)
+  (define-key ruby-power-map (kbd "C-c M-j") 'ruby-jack-in))
 
 (defun goto-spec-or-target ()
   (interactive)
