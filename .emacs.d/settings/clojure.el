@@ -8,6 +8,8 @@
        (add-hook 'cider-mode-hook #'clojure/customize-cider))
 
 (defun clojure/customize-cider ()
+  (with-eval-after-load 'evil
+    (define-evil-normal-key (kbd "g.") 'cider-jump))
   (with-eval-after-load 'evil-leader
     (evil-leader/set-key
       "T" 'cider-test-run-test
