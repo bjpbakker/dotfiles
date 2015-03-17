@@ -36,6 +36,11 @@
 (global-set-key (kbd "s--") 'text-scale-decrease)
 (global-set-key (kbd "s-=") 'text-scale-increase)
 
+(with-eval-after-load 'company
+  (define-key company-mode-map (kbd "<C-return>") 'company-complete)
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous))
+
 (with-eval-after-load 'magit
   (global-set-key (kbd "C-x g") 'magit-status))
 
