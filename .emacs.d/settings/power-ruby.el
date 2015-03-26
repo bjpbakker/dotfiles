@@ -7,8 +7,8 @@
   :keymap ruby-power-map
   (setup 'rspec-mode
          (setq rspec-use-rake-when-possible nil
-               compilation-scroll-output t
-               compilation-exit-message-function 'auto-close-rspec-compilation-buffer))
+               compilation-scroll-output t)
+         (advice-add 'rspec-compile :around #'run-with-bash-shell))
   (setup 'projectile-rails
          (projectile-rails-on))
   (setup 'inf-ruby
@@ -30,6 +30,8 @@
   (setup 'fill-column-indicator
          fci-rule-column 80
          (fci-mode))
+  (setup 'rbenv
+         (setq rbenv-show-active-ruby-in-modeline nil))
   (ruby-key-bindings))
 
 (defun ruby-console ()
@@ -75,11 +77,10 @@
         (kill-buffer ruby-buffer)))
     (setq robe-running nil)))
 
-(defun auto-close-rspec-compilation-buffer (status code msg)
-  (when (and (eq status 'exit) (zerop code))
-    (bury-buffer)
-    (replace-buffer-in-windows))
-  (cons msg code))
+(defun run-with-bash-shell (fn &rest args)
+  "Run fn with shell set to bash"
+  (let ((shell-file-name "/bin/bash"))
+    (apply fn args)))
 
 (defun ruby/engage-power ()
   (ruby-power-mode t))
