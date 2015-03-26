@@ -19,7 +19,7 @@
     ruby-end inf-ruby rbenv rspec-mode projectile-rails ruby-refactor robe ;; ruby
     yaml-mode ;; yaml
     swift-mode ;; swift
-    web-mode ;; web support
+    web-mode haml-mode sass-mode ;; web support
     magit ag dash-at-point ;; tools
     org deft ;; org-mode tools
     theme-changer darkburn-theme ir-black-theme lush-theme color-theme-sanityinc-tomorrow) ;; color themes
