@@ -23,6 +23,7 @@
                   (eldoc-mode nil eldoc)
                   (evil-commentary-mode nil evil-commentary)
                   (flycheck-mode nil flycheck)
+                  (magit-auto-revert-mode nil magit)
                   (paredit-mode nil paredit)
                   (paredit-non-lisp-mode nil paredit-non-lisp)
                   (projectile-mode nil projectile)
@@ -30,6 +31,7 @@
                   (robe-mode nil robe)
                   (rspec-mode nil)
                   (ruby-end-mode nil ruby-end)
+                  (ruby-refactor-mode nil ruby-refactor)
                   (undo-tree-mode nil undo-tree))))
 (setup 'powerline
        (powerline-evil-center-color-theme))
