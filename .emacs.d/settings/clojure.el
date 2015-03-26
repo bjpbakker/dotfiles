@@ -8,6 +8,8 @@
        (add-hook 'cider-mode-hook #'clojure/customize-cider))
 
 (defun clojure/customize-cider ()
+  (setq cider-show-error-buffer 'except-in-repl
+        cider-auto-select-error-buffer nil)
   (with-eval-after-load 'evil
     (define-evil-normal-key (kbd "g.") 'cider-jump))
   (with-eval-after-load 'evil-leader
@@ -15,6 +17,5 @@
       "T" 'cider-test-run-test
       "t" 'cider-test-run-tests
       "r" 'cider-test-rerun-tests))
-  (setq cider-show-error-buffer 'except-in-repl
-        cider-auto-select-error-buffer nil)
+  (define-key cider-mode-map (kbd "<f1>") 'cider-doc)
   (add-hook 'after-save-hook #'cider-load-buffer nil t))
