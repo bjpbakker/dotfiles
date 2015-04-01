@@ -13,6 +13,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'navigation)
 (load-conf 'editor)
 (load-conf 'evil-mode)
+(load-conf 'files)
 (load-conf 'flycheck)
 (load-conf 'rainbow-delimiters)
 (load-conf 'ui)

@@ -52,3 +52,6 @@
 
 (with-eval-after-load 'dash-at-point
   (global-set-key (kbd "C-c d") 'dash-at-point))
+
+(with-eval-after-load 'delimator
+  (global-set-key (kbd "C-c f d") 'delimator-delete-active-file))
