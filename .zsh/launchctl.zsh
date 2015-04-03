@@ -1,7 +1,8 @@
 typeset -A _launchctl_services;
 _launchctl_services=("postgres" "/usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist"
                      "mysql" "/usr/local/opt/mysql/homebrew.mxcl.mysql.plist"
-                     "domoticz" "/usr/local/opt/domoticz/homebrew.mxcl.domoticz.plist")
+                     "domoticz" "/usr/local/opt/domoticz/homebrew.mxcl.domoticz.plist"
+                     "memcached" "/usr/local/opt/memcached/homebrew.mxcl.memcached.plist")
 
 launch() {
     local what=$1;
