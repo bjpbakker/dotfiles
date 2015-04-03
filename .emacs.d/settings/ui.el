@@ -3,17 +3,6 @@
 (setq inhibit-splash-screen t
       initial-scratch-message nil)
 
-;; srsly..
-(unless (display-graphic-p)
-  (menu-bar-mode -1))
-
-;; graphical emacs enhancements
-(when (display-graphic-p)
-  (set-face-attribute 'default nil :font "Inconsolata-g-13")
-  (scroll-bar-mode -1)
-  (tool-bar-mode -1)
-  (toggle-frame-fullscreen))
-
 (setq echo-keystrokes 0.1
       use-dialog-box nil)
 
@@ -55,3 +44,21 @@
              calendar-latitude 52.3667
              calendar-longitude 4.9)
        (change-theme 'sanityinc-tomorrow-day 'darkburn))
+
+;; srsly..
+(unless (display-graphic-p)
+  (menu-bar-mode -1))
+
+(defun screen-preset (preset)
+  (interactive (list (completing-read "Preset: " (list "macbook" "thunderbolt"))))
+  (let ((height (cond ((string= preset "macbook") 130)
+                      ((string= preset "thunderbolt") 140))))
+    (set-face-attribute 'default nil :height height)))
+
+;; graphical emacs enhancements
+(when (display-graphic-p)
+  (set-face-attribute 'default nil :height 130 :family "Source Code Pro" :weight 'regular)
+  (set-face-attribute 'linum nil :height 130)
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1)
+  (toggle-frame-fullscreen))
