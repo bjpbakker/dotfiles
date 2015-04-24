@@ -16,7 +16,8 @@
          (inf-ruby-switch-setup))
   (setup 'robe
          (robe-mode)
-         (push 'company-robe company-backends))
+         (remove-hook 'completion-at-point-functions
+                      'robe-complete-at-point t))
   (setup 'electric
          (electric-pair-mode))
   (setup 'ruby-end
