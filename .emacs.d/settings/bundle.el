@@ -16,7 +16,7 @@
     powerline powerline-evil delight fill-column-indicator ;; ui enhancements
     clojure-mode cider ;; clojure
     markdown-mode writegood-mode ;; markdown
-    ruby-end inf-ruby rbenv rspec-mode projectile-rails ruby-refactor robe ;; ruby
+    ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails ruby-refactor robe ;; ruby
     yaml-mode ;; yaml
     swift-mode ;; swift
     web-mode haml-mode sass-mode ;; web support

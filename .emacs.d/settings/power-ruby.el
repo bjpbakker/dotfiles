@@ -14,6 +14,8 @@
   (setup 'inf-ruby
          (inf-ruby-minor-mode t)
          (inf-ruby-switch-setup))
+  (setup 'bundler
+         (advice-add 'bundle-command :around #'run-with-bash-shell))
   (setup 'robe
          (robe-mode)
          (remove-hook 'completion-at-point-functions
