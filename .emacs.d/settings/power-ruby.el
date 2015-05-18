@@ -16,10 +16,6 @@
          (inf-ruby-switch-setup))
   (setup 'bundler
          (advice-add 'bundle-command :around #'run-with-bash-shell))
-  (setup 'robe
-         (robe-mode)
-         (remove-hook 'completion-at-point-functions
-                      'robe-complete-at-point t))
   (setup 'electric
          (electric-pair-mode))
   (setup 'ruby-end
@@ -45,7 +41,7 @@
 (defun ruby-key-bindings ()
   (with-eval-after-load 'evil
     (define-evil-normal-key (kbd "gf") 'projectile-rails-goto-file-at-point)
-    (define-evil-normal-key (kbd "g.") 'robe-jump))
+    (define-evil-normal-key (kbd "g.") 'find-tag))
   (with-eval-after-load 'evil-leader
     (evil-leader/set-key
       "." 'goto-spec-or-target
