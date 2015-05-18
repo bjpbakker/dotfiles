@@ -17,5 +17,4 @@
       "T" 'cider-test-run-test
       "t" 'cider-test-run-tests
       "r" 'cider-test-rerun-tests))
-  (define-key cider-mode-map (kbd "<f1>") 'cider-doc)
-  (add-hook 'after-save-hook #'cider-load-buffer nil t))
+  (define-key cider-mode-map (kbd "<f1>") 'cider-doc))
