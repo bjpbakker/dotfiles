@@ -10,7 +10,8 @@
                compilation-scroll-output t)
          (advice-add 'rspec-compile :around #'run-with-bash-shell))
   (setup 'projectile-rails
-         (projectile-rails-on))
+         (projectile-rails-on)
+         (advice-add 'projectile-rails-generate :around #'run-with-bash-shell))
   (setup 'inf-ruby
          (inf-ruby-minor-mode t)
          (inf-ruby-switch-setup))
