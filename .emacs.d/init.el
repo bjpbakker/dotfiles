@@ -20,6 +20,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'osx)
 (load-conf 'power-lisp)
 (load-conf 'clojure)
+(load-conf 'haskell)
 (load-conf 'markdown)
 (load-conf 'power-ruby)
 (load-conf 'sh-mode)

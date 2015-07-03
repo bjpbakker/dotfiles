@@ -15,6 +15,7 @@
     flycheck ;; syntax checking
     powerline powerline-evil delight fill-column-indicator ;; ui enhancements
     clojure-mode cider ;; clojure
+    haskell-mode flycheck-haskell ;; haskell
     markdown-mode writegood-mode ;; markdown
     ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails ruby-refactor ;; ruby
     yaml-mode ;; yaml
