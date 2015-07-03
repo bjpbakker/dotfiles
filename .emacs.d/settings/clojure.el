@@ -11,7 +11,8 @@
   (setq cider-show-error-buffer 'except-in-repl
         cider-auto-select-error-buffer nil)
   (with-eval-after-load 'evil
-    (define-evil-normal-key (kbd "g.") 'cider-jump))
+    (define-evil-normal-key (kbd "g.") 'cider-jump)
+    (add-to-list 'evil-emacs-state-modes 'cider-repl-mode))
   (with-eval-after-load 'evil-leader
     (evil-leader/set-key
       "T" 'cider-test-run-test
