@@ -3,14 +3,14 @@
 (setup 'projectile
        (projectile-global-mode))
 
-(setup 'flx-ido
-       (ido-mode 1)
-       (ido-everywhere 1)
-       (flx-ido-mode 1)
-       (setq ido-enable-flex-matching 1
+(setup 'ido
+       (setq ido-enable-prefix nil
+             ido-enable-flex-matching t
              ido-use-virtual-buffers t
-             ido-use-faces nil))
-
+             ido-use-faces nil)
+       (ido-mode +1))
+(setup 'flx-ido
+       (flx-ido-mode +1))
 (setup 'ido-vertical-mode
        (ido-vertical-mode 1))
 
