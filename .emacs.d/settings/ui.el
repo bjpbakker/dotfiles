@@ -50,9 +50,10 @@
   (menu-bar-mode -1))
 
 (defun screen-preset (preset)
-  (interactive (list (completing-read "Preset: " (list "macbook" "thunderbolt"))))
+  (interactive (list (completing-read "Preset: " (list "macbook" "thunderbolt" "big-screen"))))
   (let ((height (cond ((string= preset "macbook") 130)
-                      ((string= preset "thunderbolt") 150))))
+                      ((string= preset "thunderbolt") 150)
+                      ((string= preset "big-screen") 190))))
     (set-face-attribute 'default nil :height height)))
 
 ;; graphical emacs enhancements
