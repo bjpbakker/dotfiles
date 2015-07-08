@@ -58,7 +58,8 @@
 
 ;; graphical emacs enhancements
 (when (display-graphic-p)
-  (set-face-attribute 'default nil :height 130 :family "Source Code Pro" :weight 'regular)
+  (set-default-font "Source Code Pro" nil t)
+  (set-face-attribute 'default nil :height 130 :weight 'regular)
   (set-face-attribute 'linum nil :height 130)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
