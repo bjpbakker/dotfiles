@@ -16,6 +16,7 @@
 /.emscripten*
 /.gem/
 /.ghc/
+/.gnupg/
 /.heroku/
 /.htoprc
 /.ivy2/
