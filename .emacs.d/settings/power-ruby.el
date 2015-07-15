@@ -7,6 +7,7 @@
   :keymap ruby-power-map
   (setup 'rspec-mode
          (setq rspec-use-rake-when-possible nil
+               rspec-use-opts-file-when-available nil
                compilation-scroll-output t)
          (advice-add 'rspec-compile :around #'run-with-bash-shell))
   (setup 'projectile-rails
