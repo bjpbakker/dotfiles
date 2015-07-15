@@ -12,6 +12,7 @@
     neotree ;; navigation
     paredit rainbow-delimiters company ;; editing
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
+    which-key ;; show available key bindings for a prefix
     flycheck ;; syntax checking
     powerline powerline-evil delight fill-column-indicator ;; ui enhancements
     clojure-mode cider ;; clojure

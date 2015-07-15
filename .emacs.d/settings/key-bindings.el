@@ -2,6 +2,10 @@
 (require 'evil)
 (require 'evil-leader)
 
+(setup 'which-key
+       (setq which-key-popup-type 'minibuffer)
+       (which-key-mode))
+
 ; delete evil motion key bindings for RET and SPC. These keys are
 ; useless motion-wise and should be mapped in normal mode.
 (defun delete-evil-motion-key! (key)
