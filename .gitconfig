@@ -4,6 +4,7 @@
 	editor = vim
 	autocrlf = input
 	safecrlf = true
+	excludesfile = ~/gitignore
 [color]
 	ui = auto
 [alias]
