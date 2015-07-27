@@ -43,7 +43,7 @@
        (setq calendar-location-name "Amsterdam, The Netherlands"
              calendar-latitude 52.3667
              calendar-longitude 4.9)
-       (change-theme 'sanityinc-tomorrow-day 'darkburn))
+       (change-theme 'sanityinc-tomorrow-day 'zerodark))
 
 ;; srsly..
 (unless (display-graphic-p)
