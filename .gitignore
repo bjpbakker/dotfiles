@@ -7,6 +7,7 @@
 /.*[_-]history
 /.atom/
 /.belastingdienst.nl/
+/.boot2docker/
 /.cabal/
 /.cache/
 /.cocoapods/
@@ -17,6 +18,7 @@
 /.gem/
 /.ghc/
 /.gnupg/
+/.gradle/
 /.heroku/
 /.htoprc
 /.ivy2/
