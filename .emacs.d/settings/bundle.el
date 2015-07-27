@@ -17,7 +17,7 @@
     powerline powerline-evil delight fill-column-indicator ;; ui enhancements
     clojure-mode cider ;; clojure
     elixir-mode ;; elixir
-    haskell-mode flycheck-haskell ;; haskell
+    haskell-mode ;; haskell
     purescript-mode psci ;; purescript
     markdown-mode writegood-mode ;; markdown
     ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails ruby-refactor ;; ruby
