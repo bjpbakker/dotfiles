@@ -5,6 +5,7 @@
 /.IntelliJIdea*/
 /.history
 /.*[_-]history
+/.android/
 /.atom/
 /.belastingdienst.nl/
 /.boot2docker/
@@ -61,5 +62,6 @@
 /accounts
 /breakable-toys
 /proj
+/sdks/
 /talks
 /.freemle.yml
