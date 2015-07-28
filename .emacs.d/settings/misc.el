@@ -1,7 +1,8 @@
 (require 'config-util)
 
 (setup 'magit
-       (setq magit-last-seen-setup-instructions "1.4.0")
+       (custom-set-variables
+        '(magit-push-always-verify nil))
        (add-hook 'magit-mode-hook (lambda () (evil-local-mode 0))))
 
 (setup 'ag
