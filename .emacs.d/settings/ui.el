@@ -76,4 +76,5 @@ Defaults to the current font family."
   (screen-preset "macbook")
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
-  (toggle-frame-fullscreen))
+  (setq ns-use-native-fullscreen nil) ;; use pre-Lion style fullscreen
+  (add-hook 'after-init-hook 'toggle-frame-fullscreen))
