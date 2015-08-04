@@ -21,13 +21,14 @@
                   (rspec-mode nil)
                   (ruby-end-mode nil ruby-end)
                   (ruby-refactor-mode nil ruby-refactor)
-                  (undo-tree-mode nil undo-tree))))
+                  (undo-tree-mode nil undo-tree)
+                  (which-key-mode nil which-key))))
 (setup 'powerline
        (powerline-evil-center-color-theme))
 (line-number-mode 1)
 (column-number-mode 1)
 
-(global-linum-mode 1)
+(global-linum-mode -1)
 (global-hl-line-mode 1)
 
 ;; smooth scrolling
@@ -43,11 +44,22 @@
        (setq calendar-location-name "Amsterdam, The Netherlands"
              calendar-latitude 52.3667
              calendar-longitude 4.9)
-       (change-theme 'sanityinc-tomorrow-day 'zerodark))
+       (change-theme 'zerodark 'quasi-monochrome))
 
 ;; srsly..
 (unless (display-graphic-p)
   (menu-bar-mode -1))
+
+(defgroup fonts nil
+  "Manage fonts.")
+
+(defcustom fonts-font-family "Source Code Pro"
+  "Determines the font family.
+
+Defaults to the current font family."
+  :options (font-family-list)
+  ;; restrict to any of (font-family-list)
+  :group 'fonts)
 
 (defun screen-preset (preset)
   (interactive (list (completing-read "Preset: " (list "macbook" "thunderbolt" "big-screen"))))
