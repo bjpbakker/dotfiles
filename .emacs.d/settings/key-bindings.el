@@ -3,7 +3,7 @@
 (require 'evil-leader)
 
 (setup 'which-key
-       (setq which-key-popup-type 'minibuffer)
+       (which-key-setup-minibuffer)
        (which-key-mode))
 
 ; delete evil motion key bindings for RET and SPC. These keys are
