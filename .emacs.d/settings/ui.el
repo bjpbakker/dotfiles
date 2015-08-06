@@ -50,31 +50,15 @@
 (unless (display-graphic-p)
   (menu-bar-mode -1))
 
-(defgroup fonts nil
-  "Manage fonts.")
-
-(defcustom fonts-font-family "Source Code Pro"
-  "Determines the font family.
-
-Defaults to the current font family."
-  :options (font-family-list)
-  ;; restrict to any of (font-family-list)
-  :group 'fonts)
-
-(defun screen-preset (preset)
-  (interactive (list (completing-read "Preset: " (list "macbook" "thunderbolt" "big-screen"))))
-  (let ((height (cond ((string= preset "macbook") 130)
-                      ((string= preset "thunderbolt") 150)
-                      ((string= preset "big-screen") 190))))
-    (set-face-attribute 'default nil :height height)))
-
 ;; graphical emacs enhancements
 (when (display-graphic-p)
-  (set-default-font "Source Code Pro" nil t)
-  (set-face-attribute 'default nil :weight 'regular)
-  (set-face-attribute 'linum nil :height 130)
-  (screen-preset "macbook")
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
+  (setup 'fonts
+         (custom-set-variables
+          '(fonts-screen-preset-alist '(("macbook" . "Source Code Pro-13")
+                                        ("thunderbolt" . "Source Code Pro-15")
+                                        ("big-screen" . "Source Code Pro-19"))))
+         (fonts-load-screen-preset "macbook"))
   (setq ns-use-native-fullscreen nil) ;; use pre-Lion style fullscreen
   (add-hook 'after-init-hook 'toggle-frame-fullscreen))
