@@ -37,7 +37,8 @@
 
 ;; defaults for line length indicator
 (setup 'fill-column-indicator
-       (setq fci-rule-width 1
+       (setq fci-rule-column 115
+             fci-rule-width 1
              fci-rule-color "#4d4d4d"))
 
 (setup 'theme-changer
