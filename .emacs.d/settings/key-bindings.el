@@ -39,6 +39,7 @@
 (global-set-key (kbd "s-0") (bind (text-scale-adjust 0)))
 (global-set-key (kbd "s--") 'text-scale-decrease)
 (global-set-key (kbd "s-=") 'text-scale-increase)
+(global-set-key (kbd "<s-return>") 'toggle-frame-fullscreen)
 
 (with-eval-after-load 'company
   (define-key company-mode-map (kbd "<C-return>") 'company-complete)
