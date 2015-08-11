@@ -32,7 +32,7 @@
 (global-hl-line-mode 1)
 
 ;; smooth scrolling
-(setq scroll-margin 3
+(setq scroll-margin 8
       scroll-conservatively 10000)
 
 ;; defaults for line length indicator
