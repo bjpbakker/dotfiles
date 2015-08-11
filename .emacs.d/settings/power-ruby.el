@@ -24,6 +24,8 @@
          (ruby-end-mode))
   (setup 'ruby-refactor
          (ruby-refactor-mode))
+  (setup 'ruby-tools
+         (ruby-tools-mode))
   (setup 'paredit-non-lisp
          (paredit-non-lisp-mode))
   (setup 'rainbow-delimiters
@@ -86,5 +88,6 @@
   (ruby-power-mode t))
 
 (with-eval-after-load 'ruby-mode
+  (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
   (add-hook 'ruby-mode-hook #'ruby/engage-power)
   (setq ruby-insert-encoding-magic-comment nil))
