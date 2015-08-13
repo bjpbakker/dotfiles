@@ -8,6 +8,10 @@
     (turn-on-haskell-indent)
     (turn-on-haskell-doc)
     (turn-on-haskell-decl-scan)
+    (custom-set-variables
+     '(haskell-tags-on-save t)
+     '(haskell-stylish-on-save t))
+
     (setup 'haskell-interactive-mode
            (require 'haskell-process)
            (custom-set-variables
