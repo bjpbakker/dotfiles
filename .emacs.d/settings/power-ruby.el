@@ -17,7 +17,14 @@
          (inf-ruby-minor-mode t)
          (inf-ruby-switch-setup))
   (setup 'bundler
-         (advice-add 'bundle-command :around #'run-with-bash-shell))
+         (advice-add 'bundle-command :around #'run-with-bash-shell)
+         (advice-add 'bundle-list-gems :around #'run-with-bash-shell)
+         (advice-add 'bundle-list-gem-paths :around #'run-with-bash-shell))
+  (setup 'ctags
+         (setq ctags-languages '("ruby")
+               ctags-extra-files-function 'bundle-list-gem-paths)
+         (add-to-list 'ctags-lang-kinds-alist '(ruby . "fF"))
+         (add-to-list 'ctags-excludes "db"))
   (setup 'electric
          (electric-pair-mode))
   (setup 'ruby-end
@@ -53,6 +60,12 @@
       "r" 'rspec-rerun))
   (define-key ruby-power-map (kbd "C-c C-z") 'ruby-console)
   (define-key ruby-power-map (kbd "C-c M-j") 'ruby-jack-in))
+
+(defun bundle-list-gem-paths ()
+  (save-excursion
+    (let* ((cmd "bundle list --paths")
+           (bundle-out (shell-command-to-string cmd)))
+      (split-string bundle-out "\n"))))
 
 (defun goto-spec-or-target ()
   (interactive)
