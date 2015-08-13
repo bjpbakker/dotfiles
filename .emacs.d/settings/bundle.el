@@ -20,7 +20,7 @@
     haskell-mode ;; haskell
     purescript-mode psci ;; purescript
     markdown-mode writegood-mode ;; markdown
-    ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-tools;; ruby
+    ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-tools ruby-hash-syntax ;; ruby
     yaml-mode ;; yaml
     swift-mode ;; swift
     web-mode less-css-mode haml-mode sass-mode ;; web support
