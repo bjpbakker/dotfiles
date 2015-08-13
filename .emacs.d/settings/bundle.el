@@ -9,7 +9,7 @@
 (defvar bart/packages
   '(exec-path-from-shell
     projectile flx-ido ido-ubiquitous ido-vertical-mode ;; fuzzy open files within project
-    neotree ;; navigation
+    neotree etags-select ;; navigation
     paredit rainbow-delimiters company ;; editing
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     which-key ;; show available key bindings for a prefix

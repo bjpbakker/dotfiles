@@ -51,7 +51,7 @@
 (defun ruby-key-bindings ()
   (with-eval-after-load 'evil
     (define-evil-normal-key (kbd "gf") 'projectile-rails-goto-file-at-point)
-    (define-evil-normal-key (kbd "g.") 'find-tag))
+    (define-evil-normal-key (kbd "g.") 'etags-select-find-tag-at-point))
   (with-eval-after-load 'evil-leader
     (evil-leader/set-key
       "." 'goto-spec-or-target

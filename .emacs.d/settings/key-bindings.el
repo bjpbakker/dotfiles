@@ -46,6 +46,10 @@
   (define-key company-active-map (kbd "C-n") 'company-select-next)
   (define-key company-active-map (kbd "C-p") 'company-select-previous))
 
+(with-eval-after-load 'etags-select
+  (global-set-key (kbd "M-.") 'etags-select-find-tag-at-point)
+  (global-set-key (kbd "M-?") 'etags-select-find-tag))
+
 (with-eval-after-load 'magit
   (global-set-key (kbd "C-x g") 'magit-status))
 
