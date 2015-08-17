@@ -34,10 +34,9 @@
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
   (setup 'fonts
-         (custom-set-variables
-          '(fonts-screen-preset-alist '(("macbook" . "Source Code Pro-13")
-                                        ("thunderbolt" . "Source Code Pro-15")
-                                        ("big-screen" . "Source Code Pro-19"))))
+         (setq fonts-screen-preset-alist '(("macbook" . "Source Code Pro-13")
+                                           ("thunderbolt" . "Source Code Pro-15")
+                                           ("big-screen" . "Source Code Pro-19")))
          (fonts-load-screen-preset "macbook"))
   (setq ns-use-native-fullscreen nil) ;; use pre-Lion style fullscreen
   (add-hook 'after-init-hook 'toggle-frame-fullscreen))
