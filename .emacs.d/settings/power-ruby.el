@@ -3,7 +3,7 @@
 
 (defvar ruby-power-map (make-keymap))
 (define-minor-mode ruby-power-mode "Add power to Ruby"
-  :lighter " (power)"
+  :lighter " ⼒"
   :keymap ruby-power-map
   (setup 'rspec-mode
          (setq rspec-use-rake-when-possible nil

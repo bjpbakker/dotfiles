@@ -6,7 +6,7 @@
 
 (defvar lisp-power-map (make-keymap))
 (define-minor-mode lisp-power-mode "Fix keybindings; add power."
-  :lighter " (power)"
+  :lighter " ⼒"
   :keymap lisp-power-map
   (setup 'eldoc
          (eldoc-mode))
