@@ -16,6 +16,7 @@
 /.config/
 /.cups/
 /.dropbox/
+/.elm/
 /.emscripten*
 /.gem/
 /.ghc/
