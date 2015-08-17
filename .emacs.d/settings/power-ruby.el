@@ -72,26 +72,6 @@
   (or (rspec-find-spec-or-target-other-window)
       (projectile-rails-find-current-spec)))
 
-(defun ruby-jack-in ()
-  (interactive)
-  (save-excursion
-    (let ((conf (current-window-configuration)))
-      (ruby-console)
-      (set-process-query-on-exit-flag (inf-ruby-proc) nil)
-      (robe-start)
-      (set-window-configuration conf))))
-
-(defun ruby-jack-out ()
-  (interactive)
-  (progn
-    (let* ((ruby-buffer (get-buffer inf-ruby-buffer))
-           (process (get-buffer-process ruby-buffer)))
-      (when process
-        (delete-process process))
-      (when (buffer-live-p ruby-buffer)
-        (kill-buffer ruby-buffer)))
-    (setq robe-running nil)))
-
 (defun run-with-bash-shell (fn &rest args)
   "Run fn with shell set to bash"
   (let ((shell-file-name "/bin/bash"))
