@@ -22,6 +22,7 @@ the file to load is based on the convention of '(symbol-name mod).el'"
 (load-conf 'clojure)
 (load-conf 'haskell)
 (load-conf 'markdown)
+(load-conf 'rust)
 (load-conf 'power-ruby)
 (load-conf 'sh-mode)
 (load-conf 'misc)
