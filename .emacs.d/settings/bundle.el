@@ -10,7 +10,7 @@
   '(exec-path-from-shell
     projectile flx-ido ido-ubiquitous ido-vertical-mode ;; fuzzy open files within project
     neotree etags-select ;; navigation
-    paredit rainbow-delimiters company ;; editing
+    paredit rainbow-delimiters company fillcode ;; editing
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     which-key ;; show available key bindings for a prefix
     flycheck ;; syntax checking
