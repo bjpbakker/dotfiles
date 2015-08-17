@@ -26,7 +26,7 @@
     web-mode less-css-mode haml-mode sass-mode ;; web support
     magit ag dash-at-point ;; tools
     org deft ;; org-mode tools
-    theme-changer zerodark-theme quasi-monochrome-theme darkburn-theme zenburn-theme color-theme-sanityinc-tomorrow) ;; color themes
+    zerodark-theme quasi-monochrome-theme darkburn-theme zenburn-theme color-theme-sanityinc-tomorrow) ;; color themes
   "Packages required at runtime")
 
 (defun install-missing-packages ()
