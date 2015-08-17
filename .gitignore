@@ -32,6 +32,7 @@
 /.m2/
 /.netrc
 /.node-gyp/
+/.ngrok2/
 /.npm/
 /.pip/
 /.private/
@@ -61,9 +62,10 @@
 /Public/
 /VirtualBox VMs/
 /accounts
+/bin/
 /breakable-toys
 /proj
 /sdks/
+/src/
 /talks
 /.freemle.yml
-/src/
