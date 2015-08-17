@@ -46,7 +46,7 @@
        (delight '((company-mode nil company)
                   (eldoc-mode nil eldoc)
                   (evil-commentary-mode nil evil-commentary)
-                  (flycheck-mode nil flycheck)
+                  (flycheck-mode " ✓" flycheck)
                   (magit-auto-revert-mode nil magit)
                   (paredit-mode nil paredit)
                   (paredit-non-lisp-mode nil paredit-non-lisp)
