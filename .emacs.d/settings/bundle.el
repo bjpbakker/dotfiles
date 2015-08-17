@@ -18,8 +18,8 @@
     clojure-mode cider ;; clojure
     elixir-mode ;; elixir
     haskell-mode ;; haskell
-    purescript-mode psci ;; purescript
     markdown-mode writegood-mode ;; markdown
+    purescript-mode psci ;; purescript
     ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-tools ruby-hash-syntax ;; ruby
     rust-mode flycheck-rust racer ;; rust
     yaml-mode ;; yaml
