@@ -14,8 +14,5 @@
 (defmacro define-evil-normal-key (key action)
   "Define `key` to do `action` in evil normal state."
   `(define-key evil-normal-state-map ,key ,action))
-(defmacro define-evil-visual-key (key action)
-  "Define `key` to do `action` in evil visual state."
-  `(define-key evil-visual-state-map ,key ,action))
 
 (provide 'config-util)
