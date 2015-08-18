@@ -77,10 +77,6 @@
   (let ((shell-file-name "/bin/bash"))
     (apply fn args)))
 
-(defun bundle-exec (cmd)
-  (interactive (list (read-from-minibuffer "bundle exec ")))
-  (bundle-command cmd))
-
 (defun ruby/engage-power ()
   (ruby-power-mode t))
 
