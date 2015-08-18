@@ -74,13 +74,10 @@ This function is called with the project root and the tagfile name."
   :group 'ctags
   :type 'function)
 
-(defun ctags-generate-tags (rebuild)
-  (interactive "P")
-  "Generate a TAGS file.
-
-By default tags are appended to an existing tag file. With a prefix argument the
-tags file is fully rebuild."
-  (let ((args (ctags--build-process-args rebuild))
+(defun ctags-generate-tags ()
+  (interactive)
+  "Generate a TAGS index file in the current project."
+  (let ((args (ctags--build-process-args))
         (max-minibuffer-height-savepoint max-mini-window-height))
     (progn
       (message "Generating tags for %s .." (ctags--root-dir))
@@ -89,10 +86,11 @@ tags file is fully rebuild."
       (setq max-mini-window-height max-minibuffer-height-savepoint)
       (message "%s file was generated" ctags-tagfile))))
 
-(defun ctags--build-process-args (rebuild)
+(defun ctags--build-process-args ()
   (delete-dups (append
                 (ctags--tagfile)
-                (ctags--append-flag rebuild)
+                (ctags--etags-mode)
+                (ctags--append-flag)
                 ctags-program-options
                 (ctags--excludes)
                 (ctags--languages)
@@ -109,8 +107,11 @@ tags file is fully rebuild."
 (defun ctags--tagfile ()
   (list "-f" (funcall ctags-tagfile-function (ctags--root-dir) ctags-tagfile)))
 
-(defun ctags--append-flag (rebuild)
-  (list "-e" (concat "--append=" (if rebuild "no" "yes"))))
+(defun ctags--etags-mode ()
+  '("-e"))
+
+(defun ctags--append-flag ()
+  '("--append=no"))
 
 (defun ctags--extra-files ()
   (if ctags-extra-files-function
