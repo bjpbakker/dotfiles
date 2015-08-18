@@ -63,7 +63,6 @@
        (setq telephone-line-lhs
              '((evil   . (telephone-line-evil-tag-segment))
                (accent . (telephone-line-vc-segment
-                          telephone-line-erc-modified-channels-segment
                           telephone-line-process-segment))
                (nil    . (telephone-line-buffer-segment))))
        (setq telephone-line-rhs
