@@ -3,6 +3,7 @@
 
 (defmacro setup (module &rest commands)
   "Convenience macro to require module and run commands"
+  (declare (indent defun))
   `(progn
      (require ,module)
      ,@commands))
