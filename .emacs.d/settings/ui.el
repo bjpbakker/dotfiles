@@ -57,7 +57,8 @@
                   (ruby-refactor-mode nil ruby-refactor)
                   (ruby-tools-mode nil ruby-tools)
                   (undo-tree-mode nil undo-tree)
-                  (which-key-mode nil which-key))))
+                  (which-key-mode nil which-key)
+                  (whitespace-mode " ␣" whitespace))))
 
 (setup 'telephone-line
        (setq telephone-line-lhs
