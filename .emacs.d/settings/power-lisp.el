@@ -17,7 +17,6 @@
   (setup 'paren
          (show-paren-mode))
   (setup 'fill-column-indicator
-         (setq fci-rule-column 110)
          (fci-mode))
   (lisp-key-bindings))
 (define-key lisp-power-map [delete] 'paredit-forward-delete)

@@ -22,5 +22,4 @@
     (setup 'flycheck-haskell-stack
            (flycheck-haskell-stack-setup))
     (setup 'fill-column-indicator
-           (setq fci-rule-column 79)
            (fci-mode))))
