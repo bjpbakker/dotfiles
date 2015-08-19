@@ -20,7 +20,7 @@
 (setup 'fill-column-indicator
        (setq fci-rule-column 115
              fci-rule-width 1
-             fci-rule-color "#4d4d4d"))
+             fci-rule-color "#4b50a7"))
 
 (setup 'zerodark-theme
        (load-theme 'zerodark t))
