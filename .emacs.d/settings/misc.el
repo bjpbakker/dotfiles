@@ -5,7 +5,9 @@
        (add-hook 'magit-mode-hook (lambda () (evil-local-mode 0))))
 
 (setup 'ag
-       (setq ag-arguments (append '("--hidden" "--ignore" ".git/") ag-arguments)))
+       (setq ag-arguments (append '("--hidden" "--ignore" ".git/") ag-arguments))
+       (with-eval-after-load 'evil
+         (add-to-list 'evil-emacs-state-modes 'ag-mode)))
 
 (setup 'dash-at-point
        (autoload 'dash-at-point "dash-at-point"
