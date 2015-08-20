@@ -32,7 +32,7 @@
   :group 'ctags
   :type '(file :must-match t))
 
-(defcustom ctags-program-options '("-R")
+(defcustom ctags-program-options '("-e" "--append=no" "--recurse")
   "List with options to pass to the ctags program"
   :group 'ctags
   :type 'list)
@@ -89,8 +89,6 @@ This function is called with the project root and the tagfile name."
 (defun ctags--build-process-args ()
   (delete-dups (append
                 (ctags--tagfile)
-                (ctags--etags-mode)
-                (ctags--append-flag)
                 ctags-program-options
                 (ctags--excludes)
                 (ctags--languages)
@@ -107,12 +105,6 @@ This function is called with the project root and the tagfile name."
 (defun ctags--tagfile ()
   (list "-f" (funcall ctags-tagfile-function (ctags--root-dir) ctags-tagfile)))
 
-(defun ctags--etags-mode ()
-  '("-e"))
-
-(defun ctags--append-flag ()
-  '("--append=no"))
-
 (defun ctags--extra-files ()
   (if ctags-extra-files-function
       (funcall ctags-extra-files-function)
@@ -122,8 +114,9 @@ This function is called with the project root and the tagfile name."
   (mapcar (lambda (x) (concat "--exclude=" x)) ctags-excludes))
 
 (defun ctags--languages ()
-  (list (concat "--languages="
-                (mapconcat #'identity ctags-languages ","))))
+  (if ctags-languages
+      (list (concat "--languages="
+                    (mapconcat #'identity ctags-languages ",")))))
 
 (defun ctags--lang-kinds ()
   (mapcar (lambda (x) (format "--%s-kinds=%s" (car x) (cdr x)))
