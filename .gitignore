@@ -37,6 +37,7 @@
 /.node-gyp/
 /.ngrok2/
 /.npm/
+/.phantomjs/
 /.pip/
 /.private/
 /.rbenv/
