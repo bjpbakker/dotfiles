@@ -80,7 +80,7 @@ This function is called with the project root and the tagfile name."
   (let ((args (ctags--build-process-args))
         (max-minibuffer-height-savepoint max-mini-window-height))
     (progn
-      (message "Generating tags for %s .." (ctags--root-dir))
+      (message "Generating tags for %s" (ctags--root-dir))
       (setq max-mini-window-height 1)
       (apply #'call-process ctags-executable nil nil nil args)
       (setq max-mini-window-height max-minibuffer-height-savepoint)
