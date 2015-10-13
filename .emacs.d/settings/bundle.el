@@ -21,7 +21,7 @@
     markdown-mode writegood-mode ;; markdown
     purescript-mode psci ;; purescript
     ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-tools ruby-hash-syntax ;; ruby
-    rust-mode flycheck-rust racer ;; rust
+    rust-mode flycheck-rust racer cargo ;; rust
     yaml-mode ;; yaml
     swift-mode ;; swift
     web-mode less-css-mode haml-mode sass-mode ;; web support

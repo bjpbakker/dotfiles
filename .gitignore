@@ -41,6 +41,7 @@
 /.pip/
 /.private/
 /.rbenv/
+/.rusty-tags/
 /.sbt/
 /.ssh/
 /.stack/
