@@ -60,16 +60,33 @@
                   (whitespace-mode " ␣" whitespace))))
 
 (setup 'telephone-line
+       (defun mode-line-buffer-filename ()
+         (when buffer-file-name
+           (let* ((root (projectile-project-root))
+                  (abs-file-path (file-truename (buffer-file-name (current-buffer))))
+                  (relative-file-path (file-relative-name abs-file-path root)))
+             relative-file-path)))
+
+       (telephone-line-defsegment* bart/telephone-line-buffer-segment
+         `(""
+           mode-line-mule-info
+           mode-line-modified
+           mode-line-client
+           mode-line-remote
+           mode-line-frame-identification
+           ,(telephone-line-raw (or (mode-line-buffer-filename)
+                                    mode-line-buffer-identification) t)))
+
        (setq telephone-line-lhs
              '((evil   . (telephone-line-evil-tag-segment))
                (accent . (telephone-line-vc-segment
                           telephone-line-process-segment))
-               (nil    . (telephone-line-buffer-segment))))
+               (nil    . (bart/telephone-line-buffer-segment))))
        (setq telephone-line-rhs
-             '((evil   . (telephone-line-airline-position-segment))
+             '((nil    . (telephone-line-misc-info-segment))
                (accent . (telephone-line-major-mode-segment
                           telephone-line-minor-mode-segment))
-               (nil    . (telephone-line-misc-info-segment))))
+               (evil   . (telephone-line-airline-position-segment))))
        (set-face-attribute 'telephone-line-evil nil :foreground "black")
        (set-face-attribute 'telephone-line-evil-normal nil :background "lemon chiffon")
        (set-face-attribute 'telephone-line-evil-insert nil :background "deep sky blue")
