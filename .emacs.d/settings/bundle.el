@@ -8,7 +8,7 @@
 
 (defvar bart/packages
   '(exec-path-from-shell
-    projectile flx-ido ido-ubiquitous ido-vertical-mode ;; fuzzy open files within project
+    projectile helm helm-projectile flx-ido ido-ubiquitous ido-vertical-mode ;; open projects, files and more
     neotree etags-select ;; navigation
     avy company fillcode paredit rainbow-delimiters ;; editing
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing

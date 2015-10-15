@@ -3,6 +3,14 @@
 (setup 'projectile
   (projectile-global-mode))
 
+(setup 'helm
+  (require 'helm-config)
+  (helm-mode 1)
+  (with-eval-after-load 'projectile
+    (setup 'helm-projectile
+      (setq projectile-completion-system 'helm)
+      (helm-projectile-on))))
+
 (setup 'ido
   (setq ido-enable-prefix nil
         ido-enable-flex-matching t

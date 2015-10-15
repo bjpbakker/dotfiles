@@ -45,6 +45,7 @@
        (delight '((company-mode nil company)
                   (eldoc-mode nil eldoc)
                   (evil-commentary-mode nil evil-commentary)
+                  (helm-mode " ⎈")
                   (magit-auto-revert-mode nil magit)
                   (paredit-mode " ⒮" paredit)
                   (paredit-non-lisp-mode " ⒮" paredit-non-lisp)
