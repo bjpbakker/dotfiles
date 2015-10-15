@@ -56,6 +56,7 @@
                   (ruby-end-mode nil ruby-end)
                   (ruby-refactor-mode nil ruby-refactor)
                   (ruby-tools-mode nil ruby-tools)
+                  (racer-mode nil racer)
                   (undo-tree-mode nil undo-tree)
                   (which-key-mode nil which-key)
                   (whitespace-mode " ␣" whitespace))))

@@ -1,13 +1,15 @@
 (require 'config-util)
 
 (setup 'rust-mode
-  (add-hook 'rust-mode-hook 'rust/customize))
+  (add-hook 'rust-mode-hook #'rust/customize))
+
+(setup 'racer
+  (setq racer-rust-src-path "/Users/bart/src/rust/src"
+        racer-cmd "/Users/bart/bin/racer")
+  (add-hook 'racer-mode-hook #'eldoc-mode))
 
 (defun rust/customize ()
-  (setup 'racer
-    (setq racer-rust-src-path "/Users/bart/src/rust/src"
-          racer-cmd "/Users/bart/bin/racer")
-    (racer-activate))
+  (racer-mode)
   (setup 'flycheck-rust
     (flycheck-rust-setup))
   (setup 'rainbow-delimiters

@@ -8,9 +8,11 @@
 
 (defvar bart/packages
   '(exec-path-from-shell
-    projectile helm helm-projectile flx-ido ido-ubiquitous ido-vertical-mode ;; open projects, files and more
+    projectile flx-ido ido-ubiquitous ido-vertical-mode ;; open projects, files and more
     neotree etags-select ;; navigation
-    avy company fillcode paredit rainbow-delimiters ;; editing
+    avy fillcode paredit rainbow-delimiters ;; editing
+    company ;; completion
+    helm helm-projectile ;; helm
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     which-key ;; show available key bindings for a prefix
     flycheck ;; syntax checking
@@ -21,7 +23,7 @@
     markdown-mode writegood-mode ;; markdown
     purescript-mode psci ;; purescript
     ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-tools ruby-hash-syntax ;; ruby
-    rust-mode flycheck-rust racer cargo ;; rust
+    rust-mode flycheck-rust racer cargo company-racer ;; rust
     yaml-mode ;; yaml
     swift-mode ;; swift
     web-mode less-css-mode haml-mode sass-mode ;; web support
