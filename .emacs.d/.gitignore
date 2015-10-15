@@ -1,6 +1,7 @@
 elpa/
 eshell/
 temp/
+*.cache
 *.dat
 *.eld
 *.last
