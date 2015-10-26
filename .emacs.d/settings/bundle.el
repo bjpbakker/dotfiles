@@ -9,10 +9,10 @@
 (defvar bart/packages
   '(exec-path-from-shell
     projectile flx-ido ido-ubiquitous ido-vertical-mode ;; open projects, files and more
+    helm helm-flx helm-projectile ;; helm
     neotree etags-select ;; navigation
     avy fillcode paredit rainbow-delimiters ;; editing
-    company ;; completion
-    helm helm-projectile ;; helm
+    company company-flx ;; completion
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     which-key ;; show available key bindings for a prefix
     flycheck ;; syntax checking
