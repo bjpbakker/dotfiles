@@ -1,38 +1,6 @@
-(require 'config-util)
-(require 'evil)
-(require 'evil-leader)
-
-(setup 'which-key
-       (which-key-setup-minibuffer)
-       (which-key-mode))
-
-; delete evil motion key bindings for RET and SPC. These keys are
-; useless motion-wise and should be mapped in normal mode.
-(defun delete-evil-motion-key! (key)
-  "Delete key binding from evil motion keymap"
-  (define-key evil-motion-state-map key nil))
-(delete-evil-motion-key! (kbd "RET"))
-(delete-evil-motion-key! (kbd " "))
-
-(setq evil-leader/leader ",")
-(evil-leader/set-key
-  "f" 'helm-projectile-find-file
-  "b" 'switch-to-buffer
-  "cd" 'helm-projectile-switch-project
-  "h" (bind (call-interactively 'help))
-  "." 'projectile-toggle-between-implementation-and-test)
-
-(define-evil-normal-key (kbd "RET") 'save-buffer)
-(define-evil-normal-key (kbd "C-b") 'evil-scroll-page-up)
-(define-evil-normal-key (kbd "C-u") 'evil-scroll-up)
-(define-evil-normal-key (kbd "C-f") 'evil-scroll-page-down)
-(define-evil-normal-key (kbd "C-d") 'evil-scroll-down)
-(define-evil-normal-key (kbd "Y") (kbd "y$"))
-
-(define-evil-normal-key (kbd "C-h") 'evil-window-left)
-(define-evil-normal-key (kbd "C-j") 'evil-window-down)
-(define-evil-normal-key (kbd "C-k") 'evil-window-up)
-(define-evil-normal-key (kbd "C-l") 'evil-window-right)
+(require 'which-key)
+(which-key-setup-minibuffer)
+(which-key-mode)
 
 (define-key minibuffer-local-map (kbd "C-u") (bind (kill-line 0)))
 
@@ -46,6 +14,7 @@
   (define-key company-active-map (kbd "C-n") 'company-select-next)
   (define-key company-active-map (kbd "C-p") 'company-select-previous))
 
+(require 'avy)
 (with-eval-after-load 'avy
   (global-set-key (kbd "C-:") 'avy-goto-char))
 
@@ -67,3 +36,28 @@
 
 (with-eval-after-load 'delimator
   (global-set-key (kbd "C-c f d") 'delimator-delete-active-file))
+
+(with-eval-after-load 'evil-leader
+  (setq evil-leader/leader ",")
+  (evil-leader/set-key
+    "f" 'helm-projectile-find-file
+    "b" 'switch-to-buffer
+    "cd" 'helm-projectile-switch-project
+    "h" (bind (call-interactively 'help))
+    "." 'projectile-toggle-between-implementation-and-test))
+
+(with-eval-after-load 'evil
+  (define-key evil-motion-state-map (kbd "RET") nil)
+  (define-key evil-motion-state-map (kbd " ") nil)
+  (define-key evil-normal-state-map (kbd "RET") 'save-buffer)
+  (define-key evil-normal-state-map (kbd "C-b") 'evil-scroll-page-up)
+  (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+  (define-key evil-normal-state-map (kbd "C-f") 'evil-scroll-page-down)
+  (define-key evil-normal-state-map (kbd "C-d") 'evil-scroll-down)
+  (define-key evil-normal-state-map (kbd "Y") (kbd "y$"))
+  (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
+  (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
+  (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
+  (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right))
+
+(provide 'key-bindings)

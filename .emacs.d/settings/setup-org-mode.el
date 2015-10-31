@@ -8,3 +8,5 @@
        (setq deft-text-mode 'org-mode)
        (with-eval-after-load 'evil
          (add-to-list 'evil-emacs-state-modes 'deft-mode)))
+
+(provide 'setup-org-mode)

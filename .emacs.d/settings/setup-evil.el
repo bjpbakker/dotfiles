@@ -1,18 +1,15 @@
-(require 'config-util)
+(require 'evil)
+(require 'evil-leader)
+(require 'evil-jumper)
+(require 'evil-commentary)
 
-(setup 'evil-leader
-       (global-evil-leader-mode))
+(setq evil-jumper-auto-center t)
 
-(setup 'evil-commentary
-       (evil-commentary-mode))
-
-(setup 'evil-jumper
-       (setq evil-jumper-auto-center t)
-       (global-evil-jumper-mode t))
-
-(setup 'evil-paredit
-       (add-hook 'paredit-mode-hook #'evil-paredit-mode)
-       (add-hook 'paredit-non-lisp-mode-hook #'evil-paredit-mode))
+(defun setup-evil-mode ()
+  (evil-esc-to-quit)
+  (global-evil-leader-mode)
+  (global-evil-jumper-mode)
+  (evil-commentary-mode))
 
 (defun evil-esc-to-quit ()
   ;; make Esc quit pretty much anything
@@ -24,6 +21,11 @@
   (define-key minibuffer-local-must-match-map [escape] 'abort-recursive-edit)
   (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit))
 
-(setup 'evil
-       (evil-mode 1)
-       (evil-esc-to-quit))
+(add-hook 'evil-mode-hook #'setup-evil-mode)
+(evil-mode)
+
+(require 'evil-paredit)
+(add-hook 'paredit-mode-hook #'evil-paredit-mode)
+(add-hook 'paredit-non-lisp-mode-hook #'evil-paredit-mode)
+
+(provide 'setup-evil)

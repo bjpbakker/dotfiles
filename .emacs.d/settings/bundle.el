@@ -20,6 +20,7 @@
     clojure-mode cider ;; clojure
     elixir-mode ;; elixir
     haskell-mode ;; haskell
+    js2-mode ;; javascript
     markdown-mode writegood-mode ;; markdown
     purescript-mode psci ;; purescript
     ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-tools ruby-hash-syntax ;; ruby
@@ -41,4 +42,4 @@
       (when (not (package-installed-p pkg))
         (package-install pkg)))))
 
-(install-missing-packages)
+(provide 'bundle)
