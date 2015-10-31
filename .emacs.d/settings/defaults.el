@@ -34,7 +34,7 @@
 (setq fill-column 80)
 
 (set-default 'indent-tabs-mode nil)
-(set-default 'indicate-empty-lines t)
+(set-default 'indicate-empty-lines nil)
 
 (global-subword-mode t)
 
