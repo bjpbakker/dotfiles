@@ -18,6 +18,8 @@
          (show-paren-mode))
   (setup 'fill-column-indicator
          (fci-mode))
+  (with-eval-after-load 'flycheck
+    (add-to-list 'flycheck-disabled-checkers 'emacs-lisp-checkdoc))
   (lisp-key-bindings))
 (define-key lisp-power-map [delete] 'paredit-forward-delete)
 (define-key lisp-power-map [backspace] 'paredit-backward-delete)
