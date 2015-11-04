@@ -6,3 +6,7 @@
       (let ((web-mode-enable-part-face nil))
         ad-do-it)
     ad-do-it))
+
+(with-eval-after-load 'flycheck
+  (require 'flycheck-javascript-flow)
+  (add-to-list 'flycheck-checkers 'javascript-flow))
