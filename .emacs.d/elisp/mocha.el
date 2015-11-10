@@ -42,11 +42,24 @@
   (let ((inhibit-read-only t))
     (ansi-color-apply-on-region compilation-filter-start (point))))
 
+(defun regexp-alternatives (regexps)
+  (mapconcat #'(lambda (regexp)
+                 (concat "\\(" regexp "\\)")) regexps "\\|"))
+
+(defvar non-sgr-control-sequence-regexp
+  (regexp-alternatives '(;; icon name escape sequences
+                         "\033\\][0-2];.*?\007"
+                         ;; non-SGR CSI escape sequences
+                         "\033\\[\\??[0-9;]*[^0-9;m]"
+                         ;; noop
+                         "\012\033\\[2K\033\\[1F")))
+
 (defun filter-non-sgr-control-sequences-apply-on-region (begin end)
   (save-excursion
     (goto-char begin)
-    (while (re-search-forward "\033\\[\\??[0-9;]*[^0-9;m]" end t)
-      (replace-match " "))))
+    (let ((regex (non-sgr-control-sequence-regexp)))
+      (while (re-search-forward regex end t)
+        (replace-match "")))))
 
 (defun mocha-filter-non-sgr-control-sequences ()
   (let ((inhibit-read-only t))
