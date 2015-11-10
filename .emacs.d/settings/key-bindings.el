@@ -40,9 +40,6 @@
 (with-eval-after-load 'evil-leader
   (setq evil-leader/leader ",")
   (evil-leader/set-key
-    "f" 'helm-projectile-find-file
-    "b" 'switch-to-buffer
-    "cd" 'helm-projectile-switch-project
     "h" (bind (call-interactively 'help))
     "." 'projectile-toggle-between-implementation-and-test))
 
