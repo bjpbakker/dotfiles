@@ -42,7 +42,8 @@
 
 ;; smooth scrolling
 (setq scroll-margin 8
-      scroll-conservatively 10000)
+      scroll-conservatively 10000
+      scroll-preserve-screen-position t)
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)

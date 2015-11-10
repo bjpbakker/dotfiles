@@ -5,7 +5,8 @@
 (setq helm-quick-update t
       helm-idle-delay 0.0
       helm-ff-skip-boring-files t
-      helm-autoresize-max-height 40)
+      helm-autoresize-max-height 40
+      helm-buffers-fuzzy-matching t)
 
 (helm-mode)
 (helm-autoresize-mode)
