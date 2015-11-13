@@ -44,7 +44,7 @@
 
 (defun regexp-alternatives (regexps)
   (mapconcat #'(lambda (regexp)
-                 (concat "\\(" regexp "\\)")) regexps "\\|"))
+                 (concat "\\(?:" regexp "\\)")) regexps "\\|"))
 
 (defvar non-sgr-control-sequence-regexp
   (regexp-alternatives '(;; icon name escape sequences
@@ -57,7 +57,7 @@
 (defun filter-non-sgr-control-sequences-apply-on-region (begin end)
   (save-excursion
     (goto-char begin)
-    (let ((regex (non-sgr-control-sequence-regexp)))
+    (let ((regex non-sgr-control-sequence-regexp))
       (while (re-search-forward regex end t)
         (replace-match "")))))
 
