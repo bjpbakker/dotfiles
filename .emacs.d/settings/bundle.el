@@ -11,7 +11,7 @@
     projectile flx-ido ido-ubiquitous ido-vertical-mode ;; open projects, files and more
     helm helm-flx helm-projectile ;; helm
     neotree etags-select ;; navigation
-    avy fillcode paredit rainbow-delimiters ;; editing
+    avy fillcode paredit rainbow-delimiters toggle-quotes ;; editing
     company company-flx ;; completion
     evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     which-key ;; show available key bindings for a prefix

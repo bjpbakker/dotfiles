@@ -18,6 +18,10 @@
 (with-eval-after-load 'avy
   (global-set-key (kbd "C-:") 'avy-goto-char))
 
+(require 'toggle-quotes)
+(with-eval-after-load 'toggle-quotes
+  (global-set-key (kbd "C-'") 'toggle-quotes))
+
 (with-eval-after-load 'etags-select
   (global-set-key (kbd "M-.") 'etags-select-find-tag-at-point)
   (global-set-key (kbd "M-?") 'etags-select-find-tag))
