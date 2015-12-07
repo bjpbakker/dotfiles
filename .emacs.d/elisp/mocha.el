@@ -31,12 +31,26 @@
 (defcustom mocha-pwd-fn 'projectile-project-root
   "Function that gets the working dir of the mocha process")
 
-(defun mocha-verify-file ()
+(defvar mocha-last-verified-file)
+
+(defun mocha-verify-file-in-buffer ()
   "Run all tests in the file associated with the current buffer"
   (interactive)
-  (let* ((command (concat "mocha " mocha-extra-args " " (buffer-file-name)))
+  (mocha-verify-file (buffer-file-name)))
+
+(defun mocha-verify-last ()
+  "Rerun the last verification"
+  (interactive)
+  (if-let ((file-name mocha-last-verified-file))
+      (mocha-verify-file mocha-last-verified-file)
+    (message "No file has been verified.")))
+
+(defun mocha-verify-file (file-name)
+  (let* ((command (concat "mocha " mocha-extra-args " " file-name))
          (default-directory (funcall mocha-pwd-fn)))
-    (compile command 'mocha-compilation-mode)))
+    (progn
+      (set-variable 'mocha-last-verified-file file-name)
+      (compile command 'mocha-compilation-mode))))
 
 (defun mocha-colorize-compilation-buffer ()
   (let ((inhibit-read-only t))
