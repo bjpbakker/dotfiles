@@ -31,8 +31,6 @@
          (ruby-end-mode))
   (setup 'ruby-refactor
          (ruby-refactor-mode))
-  (setup 'ruby-tools
-         (ruby-tools-mode))
   (setup 'paredit-non-lisp
          (paredit-non-lisp-mode))
   (setup 'rainbow-delimiters

@@ -23,7 +23,7 @@
     js2-mode ;; javascript
     markdown-mode writegood-mode ;; markdown
     purescript-mode psci ;; purescript
-    ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-tools ruby-hash-syntax ;; ruby
+    ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-hash-syntax ;; ruby
     rust-mode flycheck-rust racer cargo company-racer ;; rust
     yaml-mode ;; yaml
     swift-mode ;; swift
