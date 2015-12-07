@@ -1,5 +1,5 @@
 (autoload 'js2-mode "js2-mode")
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js-mode))
 
 (setq-default js2-mode-show-parse-errors nil
               js2-strict-inconsistent-return-warning nil
@@ -9,15 +9,19 @@
               js2-strict-cond-assign-warning nil
               js2-strict-var-redeclaration-warning nil)
 
-(autoload 'javascript-flow "flycheck-javascript-flow")
-
-(defun setup-js2-mode ()
+(defun setup-js-mode ()
   (require 'mocha)
   (setq-default mocha-extra-args "--compilers js:babel-core/register")
-  (define-key js2-mode-map (kbd "C-c , v") #'mocha-verify-file)
+  (define-key js-mode-map (kbd "C-c , v") #'mocha-verify-file-in-buffer)
+  (define-key js-mode-map (kbd "C-c , r") #'mocha-verify-last)
   (with-eval-after-load 'flycheck
-    (add-to-list 'flycheck-checkers 'javascript-flow)))
-(add-hook 'js2-mode-hook #'setup-js2-mode)
+    (require 'flycheck-javascript-flow)
+    (add-to-list 'flycheck-checkers 'javascript-flow))
+  (require'ctags)
+  (setq ctags-languages '("JavaScript"))
+  (add-to-list 'ctags-lang-kinds-alist '(JavaScript. "fcmpv"))
+  (add-to-list 'ctags-excludes "dist"))
+(add-hook 'js-mode-hook #'setup-js-mode)
 
 (autoload 'web-mode "web-mode")
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
