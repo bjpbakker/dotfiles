@@ -16,6 +16,7 @@
 (require 'setup-projectile)
 (require 'setup-flycheck)
 (require 'setup-company)
+(require 'setup-editorconfig)
 (require 'setup-rainbow-delimiters)
 (require 'setup-org-mode)
 (require 'setup-magit)

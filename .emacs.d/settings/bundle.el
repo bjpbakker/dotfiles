@@ -13,10 +13,11 @@
     neotree etags-select ;; navigation
     avy fillcode paredit rainbow-delimiters toggle-quotes ;; editing
     company company-flx ;; completion
-    evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
-    which-key ;; show available key bindings for a prefix
     flycheck ;; syntax checking
+    editorconfig ;; project-based configuration
+    which-key ;; show available key bindings for a prefix
     telephone-line delight fill-column-indicator ;; ui enhancements
+    evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
     clojure-mode cider ;; clojure
     elixir-mode ;; elixir
     haskell-mode ;; haskell
