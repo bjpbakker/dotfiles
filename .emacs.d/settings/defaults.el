@@ -17,6 +17,9 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+;; no blinking cursor
+(blink-cursor-mode 0)
+
 ;; show active region
 (transient-mark-mode 1)
 (make-variable-buffer-local 'transient-mark-mode)
