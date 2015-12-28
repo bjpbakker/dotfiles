@@ -8,8 +8,8 @@
 
 (defvar bart/packages
   '(exec-path-from-shell
-    projectile flx-ido ido-ubiquitous ido-vertical-mode ;; open projects, files and more
-    helm helm-flx helm-projectile ;; helm
+    flx-ido ido-ubiquitous ido-vertical-mode smex ;; fuzzy match files, buffers, and more
+    projectile ;; open projects, files and more
     neotree etags-select ;; navigation
     avy fillcode paredit rainbow-delimiters toggle-quotes ;; editing
     company company-flx ;; completion

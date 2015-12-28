@@ -12,7 +12,7 @@
 (require 'mac)
 (require 'defaults)
 (require 'appearance)
-(require 'setup-helm)
+(require 'setup-ido)
 (require 'setup-projectile)
 (require 'setup-flycheck)
 (require 'setup-company)
