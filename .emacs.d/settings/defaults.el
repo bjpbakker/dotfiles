@@ -48,6 +48,9 @@
       scroll-conservatively 10000
       scroll-preserve-screen-position t)
 
+(with-eval-after-load "vc"
+  '(setq vc-handled-backends nil))
+
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
