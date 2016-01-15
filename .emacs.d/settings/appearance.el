@@ -14,8 +14,7 @@
         fci-rule-width 1
         fci-rule-color "#4b50a7"))
 
-(setup 'zerodark-theme
-  (load-theme 'zerodark t))
+(load-theme 'alect-black t)
 
 ;; srsly..
 (unless (display-graphic-p)
