@@ -6,33 +6,35 @@
         ("marmalade" . "http://marmalade-repo.org/packages/")
         ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-(defvar bart/packages
-  '(exec-path-from-shell
-    flx-ido ido-ubiquitous ido-vertical-mode smex ;; fuzzy match files, buffers, and more
-    projectile ;; open projects, files and more
-    neotree etags-select ;; navigation
-    avy fillcode paredit rainbow-delimiters toggle-quotes ;; editing
-    company company-flx ;; completion
-    flycheck ;; syntax checking
-    editorconfig ;; project-based configuration
-    which-key ;; show available key bindings for a prefix
-    telephone-line delight fill-column-indicator ;; ui enhancements
-    evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
-    clojure-mode cider ;; clojure
-    elixir-mode ;; elixir
-    haskell-mode ;; haskell
-    js2-mode ;; javascript
-    markdown-mode writegood-mode ;; markdown
-    purescript-mode psci ;; purescript
-    ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-hash-syntax ;; ruby
-    rust-mode flycheck-rust racer cargo company-racer ;; rust
-    yaml-mode ;; yaml
-    swift-mode ;; swift
-    web-mode less-css-mode haml-mode sass-mode ;; web support
-    magit ag dash-at-point ;; tools
-    org deft ;; org-mode tools
-    alect-themes zerodark-theme color-theme-sanityinc-tomorrow) ;; color themes
+(defvar bart/packages nil
   "Packages required at runtime")
+
+(setq bart/packages
+      '(exec-path-from-shell
+        flx-ido ido-ubiquitous ido-vertical-mode smex swiper ;; fuzzy match files, buffers, and more
+        projectile ;; open projects, files and more
+        neotree etags-select ;; navigation
+        avy fillcode paredit rainbow-delimiters toggle-quotes ;; editing
+        company company-flx ;; completion
+        flycheck ;; syntax checking
+        editorconfig ;; project-based configuration
+        which-key ;; help on key bindings and stuff
+        telephone-line delight fill-column-indicator ;; ui enhancements
+        evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
+        clojure-mode cider ;; clojure
+        elixir-mode ;; elixir
+        haskell-mode ;; haskell
+        js2-mode ;; javascript
+        markdown-mode writegood-mode ;; markdown
+        purescript-mode psci ;; purescript
+        ruby-end inf-ruby rbenv bundler rspec-mode projectile-rails goto-gem ruby-refactor ruby-hash-syntax ;; ruby
+        rust-mode flycheck-rust racer cargo company-racer ;; rust
+        yaml-mode ;; yaml
+        swift-mode ;; swift
+        web-mode less-css-mode haml-mode sass-mode ;; web support
+        magit ag dash-at-point ;; tools
+        org deft ;; org-mode tools
+        alect-themes zerodark-theme color-theme-sanityinc-tomorrow)) ;; color themes
 
 (defun install-missing-packages ()
   (interactive)
