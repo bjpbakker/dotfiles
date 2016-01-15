@@ -24,6 +24,7 @@
 (require 'setup-neotree)
 (require 'misc)
 (require 'key-bindings)
+(require 'cheatsheets)
 
 ;; load programming language configurations
 (let ((languages-config-dir (concat user-emacs-directory "languages")))

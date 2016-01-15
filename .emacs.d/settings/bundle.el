@@ -18,7 +18,7 @@
         company company-flx ;; completion
         flycheck ;; syntax checking
         editorconfig ;; project-based configuration
-        which-key ;; help on key bindings and stuff
+        which-key cheatsheet ;; help on key bindings and stuff
         telephone-line delight fill-column-indicator ;; ui enhancements
         evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
         clojure-mode cider ;; clojure
