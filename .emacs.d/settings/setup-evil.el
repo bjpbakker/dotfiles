@@ -22,6 +22,7 @@
   (define-key minibuffer-local-isearch-map [escape] 'abort-recursive-edit))
 
 (add-hook 'evil-mode-hook #'setup-evil-mode)
+(add-to-list 'evil-emacs-state-modes #'text-mode)
 (evil-mode)
 
 (require 'evil-paredit)
