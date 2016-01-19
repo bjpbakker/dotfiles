@@ -35,8 +35,6 @@
          (paredit-non-lisp-mode))
   (setup 'rainbow-delimiters
          (rainbow-delimiters-mode))
-  (setup 'fill-column-indicator
-         (fci-mode))
   (setup 'rbenv
          (setq rbenv-show-active-ruby-in-modeline nil))
   (ruby-key-bindings))

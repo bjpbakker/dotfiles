@@ -20,6 +20,4 @@
                  haskell-process-suggest-haskell-docs-imports t)
            (interactive-haskell-mode))
     (setup 'flycheck-haskell-stack
-           (flycheck-haskell-stack-setup))
-    (setup 'fill-column-indicator
-           (fci-mode))))
+           (flycheck-haskell-stack-setup))))

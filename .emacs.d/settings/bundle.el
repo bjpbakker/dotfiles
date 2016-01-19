@@ -19,7 +19,7 @@
         flycheck ;; syntax checking
         editorconfig ;; project-based configuration
         which-key cheatsheet ;; help on key bindings and stuff
-        telephone-line delight fill-column-indicator ;; ui enhancements
+        telephone-line delight column-enforce-mode ;; ui enhancements
         evil evil-commentary evil-jumper evil-leader evil-paredit ;; modal editing
         clojure-mode cider ;; clojure
         elixir-mode ;; elixir

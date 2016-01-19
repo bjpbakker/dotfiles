@@ -8,11 +8,12 @@
 (global-linum-mode -1)
 (global-hl-line-mode 1)
 
-;; defaults for line length indicator
-(setup 'fill-column-indicator
-  (setq fci-rule-column fill-column
-        fci-rule-width 1
-        fci-rule-color "#4b50a7"))
+;; highlight unnecessary whitespace
+(setq-default whitespace-style '(face trailing tabs empty))
+
+;; highlight long lines
+(require 'column-enforce-mode)
+(add-hook 'prog-mode-hook 'column-enforce-mode)
 
 (load-theme 'alect-black t)
 

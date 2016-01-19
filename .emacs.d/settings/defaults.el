@@ -34,10 +34,12 @@
 (setq column-number-mode 1)
 
 ;; sensible default for line length would be 80
-(setq fill-column 80)
+(setq-default fill-column 80)
 
+;; no tabs and no unnecessary whitespace
 (set-default 'indent-tabs-mode nil)
 (set-default 'indicate-empty-lines nil)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (global-subword-mode t)
 
@@ -53,7 +55,5 @@
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
-
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (provide 'defaults)

@@ -16,8 +16,6 @@
          (rainbow-delimiters-mode))
   (setup 'paren
          (show-paren-mode))
-  (setup 'fill-column-indicator
-         (fci-mode))
   (with-eval-after-load 'flycheck
     (add-to-list 'flycheck-disabled-checkers 'emacs-lisp-checkdoc))
   (lisp-key-bindings))
