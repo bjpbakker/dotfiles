@@ -34,7 +34,9 @@
   (add-hook 'after-init-hook 'toggle-frame-fullscreen))
 
 (setup 'delight
-  (delight '((company-mode nil company)
+  (delight '((auto-revert-mode " 归" autorevert)
+             (company-mode nil company)
+             (column-enforce-mode nil)
              (eldoc-mode nil eldoc)
              (evil-commentary-mode nil evil-commentary)
              (helm-mode " ⎈")
