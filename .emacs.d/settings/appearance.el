@@ -13,6 +13,7 @@
 
 ;; highlight long lines
 (require 'column-enforce-mode)
+(setq column-enforce-column nil)
 (add-hook 'prog-mode-hook 'column-enforce-mode)
 
 (load-theme 'alect-black t)
