@@ -9,6 +9,9 @@
 (global-set-key (kbd "s-=") 'text-scale-increase)
 (global-set-key (kbd "<s-return>") 'toggle-frame-fullscreen)
 
+(global-set-key (kbd "M-n") 'next-error)
+(global-set-key (kbd "M-p") 'previous-error)
+
 (with-eval-after-load 'company
   (define-key company-mode-map (kbd "<C-return>") 'company-complete)
   (define-key company-active-map (kbd "C-n") 'company-select-next)
