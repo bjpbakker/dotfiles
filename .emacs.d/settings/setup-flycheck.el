@@ -5,8 +5,8 @@
 
 (defun setup-flycheck-mode ()
   (flycheck-mode-line-marker)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled)))
-
+  (setq flycheck-check-syntax-automatically '(save mode-enabled)
+        flycheck-temp-prefix ".flycheck"))
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (add-hook 'flycheck-mode-hook #'setup-flycheck-mode)
