@@ -49,7 +49,7 @@
   "A JavaScript syntax checker using Flow. See URL `http://flowtype.org/'."
   :command ("flow" "--json" source-original)
   :error-parser flycheck-javascript-flow-parse-errors
-  :modes (js-mode js2-mode)
+  :modes (js-mode js2-mode web-mode)
   :next-checkers (javascript-eslint))
 
 (provide 'flycheck-javascript-flow)

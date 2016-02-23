@@ -23,8 +23,9 @@
   (add-to-list 'ctags-excludes "dist"))
 (add-hook 'js-mode-hook #'setup-js-mode)
 
-(autoload 'web-mode "web-mode")
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+(with-eval-after-load 'flycheck
+  (flycheck-add-mode 'javascript-eslint 'web-mode))
 
 (defadvice web-mode-highlight-part (around tweak-jsx activate)
   (if (equal web-mode-content-type "jsx")
