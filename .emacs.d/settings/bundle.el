@@ -34,7 +34,7 @@
         web-mode less-css-mode haml-mode sass-mode ;; web support
         magit ag dash-at-point ;; tools
         org deft ;; org-mode tools
-        alect-themes zerodark-theme color-theme-sanityinc-tomorrow)) ;; color themes
+        alect-themes zerodark-theme select-themes)) ;; color themes
 
 (defun install-missing-packages ()
   (interactive)
