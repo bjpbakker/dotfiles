@@ -19,6 +19,7 @@
 (require 'setup-editorconfig)
 (require 'setup-rainbow-delimiters)
 (require 'setup-org-mode)
+(require 'setup-web-mode)
 (require 'setup-magit)
 (require 'setup-evil)
 (require 'setup-neotree)
