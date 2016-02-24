@@ -1,9 +1,6 @@
 (require 'evil)
 (require 'evil-leader)
-(require 'evil-jumper)
 (require 'evil-commentary)
-
-(setq evil-jumper-auto-center t)
 
 (defun setup-evil-mode ()
   (evil-esc-to-quit)
