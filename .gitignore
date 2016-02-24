@@ -17,7 +17,7 @@
 /.config/
 /.cups/
 /.did_show_opt_info
-/.itmstransporter/
+/.ercpass
 /.dropbox/
 /.elm/
 /.emscripten*
@@ -28,6 +28,7 @@
 /.gradle/
 /.heroku/
 /.htoprc
+/.itmstransporter/
 /.ivy2/
 /.jssc/
 /.lldb/
