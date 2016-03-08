@@ -1,6 +1,5 @@
 (require 'which-key)
 (which-key-setup-minibuffer)
-(setq which-key-show-prefix 'top)
 (which-key-mode)
 
 (define-key minibuffer-local-map (kbd "C-u") (bind (kill-line 0)))
