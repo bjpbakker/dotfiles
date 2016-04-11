@@ -1,7 +1,3 @@
-(defun modeline-set-lighter (minor-mode lighter)
-  (when (assq minor-mode minor-mode-alist)
-    (setcar (cdr (assq minor-mode minor-mode-alist)) lighter)))
-
 (display-time-mode)
 (require 'smart-mode-line)
 (setq sml/shorten-directory t
@@ -19,8 +15,6 @@
                       "WK"
                       ".*Doc"
                       "Projectile.*")))
-(modeline-set-lighter 'paredit-mode " ⒮")
-(modeline-set-lighter 'whitespace-mode " ␣")
 
 (sml/setup)
 
