@@ -12,6 +12,7 @@
 (require 'mac)
 (require 'defaults)
 (require 'appearance)
+(require 'setup-modeline)
 (require 'setup-ido)
 (require 'setup-projectile)
 (require 'setup-flycheck)
