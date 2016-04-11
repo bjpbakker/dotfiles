@@ -27,6 +27,7 @@
   "Delimator"
   :group 'convenience)
 
+;;;###autoload
 (defun delimator-delete-buffer-file ()
   "Delete the file associated with the current buffer"
   (interactive)

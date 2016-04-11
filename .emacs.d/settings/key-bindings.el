@@ -42,7 +42,7 @@
   (global-set-key (kbd "C-c d") 'dash-at-point))
 
 (with-eval-after-load 'delimator
-  (global-set-key (kbd "C-c f d") 'delimator-delete-active-file))
+  (global-set-key (kbd "C-c f d") 'delimator-delete-buffer-file))
 
 (with-eval-after-load 'evil-leader
   (setq evil-leader/leader ",")
