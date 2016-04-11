@@ -1,7 +1,7 @@
 (require 'company)
 (require 'company-flx)
 
-(setq company-idle-delay 0.2
+(setq company-idle-delay 0.5
       company-tooltip-limit 10
       company-tooltip-flip-when-above t
       company-dabbrev-downcase nil
