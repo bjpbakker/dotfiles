@@ -36,26 +36,12 @@
   (setup 'rainbow-delimiters
          (rainbow-delimiters-mode))
   (setup 'rbenv
-         (setq rbenv-show-active-ruby-in-modeline nil))
-  (ruby-key-bindings))
+         (setq rbenv-show-active-ruby-in-modeline nil)))
 
 (defun ruby-console ()
   (interactive)
   (cl-letf (((symbol-function 'completing-read) (always "test")))
     (inf-ruby-console-auto)))
-
-(defun ruby-key-bindings ()
-  (with-eval-after-load 'evil
-    (define-key evil-normal-state-map (kbd "gf") 'projectile-rails-goto-file-at-point)
-    (define-key evil-normal-state-map (kbd "g.") 'etags-select-find-tag-at-point))
-  (with-eval-after-load 'evil-leader
-    (evil-leader/set-key
-      "." 'goto-spec-or-target
-      "T" 'rspec-verify-single
-      "t" 'rspec-verify
-      "r" 'rspec-rerun))
-  (define-key ruby-power-map (kbd "C-c C-z") 'ruby-console)
-  (define-key ruby-power-map (kbd "C-c M-j") 'ruby-jack-in))
 
 (defun bundle-list-gem-paths ()
   (save-excursion

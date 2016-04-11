@@ -44,24 +44,4 @@
 (with-eval-after-load 'delimator
   (global-set-key (kbd "C-c f d") 'delimator-delete-buffer-file))
 
-(with-eval-after-load 'evil-leader
-  (setq evil-leader/leader ",")
-  (evil-leader/set-key
-    "h" (bind (call-interactively 'help))
-    "." 'projectile-toggle-between-implementation-and-test))
-
-(with-eval-after-load 'evil
-  (define-key evil-motion-state-map (kbd "RET") nil)
-  (define-key evil-motion-state-map (kbd " ") nil)
-  (define-key evil-normal-state-map (kbd "RET") 'save-buffer)
-  (define-key evil-normal-state-map (kbd "C-b") 'evil-scroll-page-up)
-  (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
-  (define-key evil-normal-state-map (kbd "C-f") 'evil-scroll-page-down)
-  (define-key evil-normal-state-map (kbd "C-d") 'evil-scroll-down)
-  (define-key evil-normal-state-map (kbd "Y") (kbd "y$"))
-  (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
-  (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
-  (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
-  (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right))
-
 (provide 'key-bindings)

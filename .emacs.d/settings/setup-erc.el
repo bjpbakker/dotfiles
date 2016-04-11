@@ -20,7 +20,4 @@
   (erc-tls :server "trythisjob.irc.slack.com" :port 6667
            :nick "bjpbakker" :password slack-connect-password))
 
-(with-eval-after-load 'evil
-  (add-to-list 'evil-emacs-state-modes #'erc-mode))
-
 (provide 'setup-erc)

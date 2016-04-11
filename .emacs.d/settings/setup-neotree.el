@@ -12,7 +12,4 @@
     (neo-buffer--change-root (projectile-project-root))))
 (advice-add 'neotree-show :after #'neo-change-to-project-root)
 
-(with-eval-after-load 'evil
-  (add-to-list 'evil-emacs-state-modes #'neotree-mode))
-
 (provide 'setup-neotree)

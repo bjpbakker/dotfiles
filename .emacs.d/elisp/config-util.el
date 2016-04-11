@@ -12,8 +12,4 @@
   "Convenience macro to bind to interactive functions"
   `(lambda () (interactive) ,@commands))
 
-(defmacro define-evil-normal-key (key action)
-  "Define `key` to do `action` in evil normal state."
-  `(define-key evil-normal-state-map ,key ,action))
-
 (provide 'config-util)

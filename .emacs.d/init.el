@@ -23,7 +23,6 @@
 (require 'setup-web-mode)
 (require 'setup-magit)
 (require 'setup-erc)
-(require 'setup-evil)
 (require 'setup-neotree)
 (require 'misc)
 (require 'key-bindings)

@@ -20,7 +20,6 @@
         editorconfig ;; project-based configuration
         which-key cheatsheet ;; help on key bindings and stuff
         smart-mode-line smart-mode-line-powerline-theme column-enforce-mode ;; ui enhancements
-        evil evil-commentary evil-leader evil-paredit ;; modal editing
         rainbow-mode ;; display color strings
         clojure-mode cider ;; clojure
         elixir-mode ;; elixir
