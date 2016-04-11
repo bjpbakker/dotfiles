@@ -18,7 +18,7 @@
         company company-flx ;; completion
         flycheck ;; syntax checking
         editorconfig ;; project-based configuration
-        which-key cheatsheet ;; help on key bindings and stuff
+        which-key ;; help on key bindings and stuff
         smart-mode-line smart-mode-line-powerline-theme column-enforce-mode ;; ui enhancements
         rainbow-mode ;; display color strings
         clojure-mode cider ;; clojure
