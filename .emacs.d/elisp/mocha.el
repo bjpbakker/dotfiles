@@ -23,6 +23,8 @@
 
 ;;; Code:
 
+(require 'regexp-helper)
+
 (defgroup :mocha nil
   "Run Mocha tests")
 
@@ -55,10 +57,6 @@
 (defun mocha-colorize-compilation-buffer ()
   (let ((inhibit-read-only t))
     (ansi-color-apply-on-region compilation-filter-start (point))))
-
-(defun regexp-alternatives (regexps)
-  (mapconcat #'(lambda (regexp)
-                 (concat "\\(?:" regexp "\\)")) regexps "\\|"))
 
 (defvar non-sgr-control-sequence-regexp
   (regexp-alternatives '(;; icon name escape sequences
