@@ -30,7 +30,7 @@
   (global-set-key (kbd "M-?") 'etags-select-find-tag))
 
 (with-eval-after-load 'magit
-  (global-set-key (kbd "C-x g") 'magit-status))
+  (global-set-key (kbd "C-c g") 'magit-status))
 
 (with-eval-after-load 'ag
   (global-set-key (kbd "s-F") 'ag-project))
