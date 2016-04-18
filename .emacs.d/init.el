@@ -25,6 +25,7 @@
 (require 'setup-magit)
 (require 'setup-erc)
 (require 'setup-neotree)
+(require 'setup-window-movement)
 (require 'misc)
 (require 'key-bindings)
 

@@ -16,6 +16,7 @@
         projectile ;; open projects, files and more
         neotree etags-select ;; navigation
         avy expand-region fillcode paredit rainbow-delimiters toggle-quotes idle-highlight ;; editing
+        ace-window ;; window control
         company company-flx ;; completion
         flycheck ;; syntax checking
         editorconfig ;; project-based configuration
