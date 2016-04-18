@@ -12,6 +12,8 @@
 (global-set-key (kbd "M-n") 'next-error)
 (global-set-key (kbd "M-p") 'previous-error)
 
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 (with-eval-after-load 'company
   (define-key company-mode-map (kbd "<C-return>") 'company-complete)
   (define-key company-active-map (kbd "C-n") 'company-select-next)

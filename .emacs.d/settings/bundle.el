@@ -14,7 +14,7 @@
         flx-ido ido-ubiquitous ido-vertical-mode smex swiper ;; fuzzy match files, buffers, and more
         projectile ;; open projects, files and more
         neotree etags-select ;; navigation
-        avy fillcode paredit rainbow-delimiters toggle-quotes idle-highlight ;; editing
+        avy expand-region fillcode paredit rainbow-delimiters toggle-quotes idle-highlight ;; editing
         company company-flx ;; completion
         flycheck ;; syntax checking
         editorconfig ;; project-based configuration
