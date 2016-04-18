@@ -11,7 +11,8 @@
 
 (setq bart/packages
       '(exec-path-from-shell
-        flx-ido ido-ubiquitous ido-vertical-mode smex swiper ;; fuzzy match files, buffers, and more
+        flx-ido ido-ubiquitous ido-vertical-mode smex ;; fuzzy match files, buffers, and more
+        swiper counsel counsel-projectile flx ;; Ivy search and fuzzy matching
         projectile ;; open projects, files and more
         neotree etags-select ;; navigation
         avy expand-region fillcode paredit rainbow-delimiters toggle-quotes idle-highlight ;; editing
@@ -32,6 +33,7 @@
         yaml-mode ;; yaml
         swift-mode company-sourcekit ;; swift
         web-mode less-css-mode haml-mode sass-mode ;; web support
+        realgud ;; debugging
         magit ag dash-at-point ;; tools
         org deft ;; org-mode tools
         alect-themes zerodark-theme select-themes)) ;; color themes

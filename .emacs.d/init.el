@@ -14,6 +14,7 @@
 (require 'appearance)
 (require 'setup-modeline)
 (require 'setup-ido)
+(require 'setup-ivy)
 (require 'setup-projectile)
 (require 'setup-flycheck)
 (require 'setup-company)
