@@ -2,17 +2,18 @@
 (which-key-setup-minibuffer)
 (which-key-mode)
 
-(define-key minibuffer-local-map (kbd "C-u") (bind (kill-line 0)))
+(global-set-key (kbd "M-n") 'next-error)
+(global-set-key (kbd "M-p") 'previous-error)
+
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+(global-set-key (kbd "C-c g") 'magit-status)
+(global-set-key (kbd "S-C-s") 'swiper)
 
 (global-set-key (kbd "s-0") (bind (text-scale-adjust 0)))
 (global-set-key (kbd "s--") 'text-scale-decrease)
 (global-set-key (kbd "s-=") 'text-scale-increase)
 (global-set-key (kbd "<s-return>") 'toggle-frame-fullscreen)
-
-(global-set-key (kbd "M-n") 'next-error)
-(global-set-key (kbd "M-p") 'previous-error)
-
-(global-set-key (kbd "C-=") 'er/expand-region)
 
 (with-eval-after-load 'company
   (define-key company-mode-map (kbd "<C-return>") 'company-complete)
@@ -30,9 +31,6 @@
 (with-eval-after-load 'etags-select
   (global-set-key (kbd "M-.") 'etags-select-find-tag-at-point)
   (global-set-key (kbd "M-?") 'etags-select-find-tag))
-
-(with-eval-after-load 'magit
-  (global-set-key (kbd "C-c g") 'magit-status))
 
 (with-eval-after-load 'ag
   (global-set-key (kbd "s-F") 'ag-project))
