@@ -18,7 +18,7 @@
         avy expand-region fillcode paredit rainbow-delimiters toggle-quotes idle-highlight ;; editing
         ace-window ;; window control
         company company-flx ;; completion
-        flycheck ;; syntax checking
+        flycheck flycheck-tip ;; syntax checking
         editorconfig ;; project-based configuration
         which-key ;; help on key bindings and stuff
         smart-mode-line smart-mode-line-powerline-theme column-enforce-mode ;; ui enhancements
