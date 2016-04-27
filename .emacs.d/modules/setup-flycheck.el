@@ -1,5 +1,5 @@
 (require 'flycheck)
-(require 'flycheck-top)
+(require 'flycheck-tip)
 (require 'flycheck-mode-line-marker)
 
 (setq flycheck-check-syntax-automatically '(save mode-enabled)

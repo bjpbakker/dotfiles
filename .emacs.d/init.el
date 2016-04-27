@@ -1,11 +1,12 @@
 (require 'cl-lib)
 
+(defconst dot-emacs-d (file-name-directory (file-chase-links load-file-name)))
 (defconst emacs-temp-directory (concat user-emacs-directory "temp/"))
 
-(defun user-emacs-dir-add-to-load-path (dir)
-  (add-to-list 'load-path (concat user-emacs-directory dir)))
-(dolist (dir '("elisp" "settings"))
-  (user-emacs-dir-add-to-load-path dir))
+;; Keep small custom packages in the `elisp` subfolder and the various parts
+;; of my configuration in the `modules` subfolder.
+(add-to-list 'load-path (concat dot-emacs-d "elisp"))
+(add-to-list 'load-path (concat dot-emacs-d "modules"))
 
 (require 'bundle)
 (install-missing-packages)
