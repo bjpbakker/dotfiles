@@ -1,42 +1,54 @@
-(require 'config-util)
 (require 'ruby-mode)
 
 (defvar ruby-power-map (make-keymap))
 (define-minor-mode ruby-power-mode "Add power to Ruby"
   :lighter " ⼒"
   :keymap ruby-power-map
-  (setup 'rspec-mode
-         (setq rspec-use-rake-when-possible nil
-               rspec-use-opts-file-when-available nil
-               compilation-scroll-output t)
-         (advice-add 'rspec-compile :around #'run-with-bash-shell))
-  (setup 'projectile-rails
-         (projectile-rails-on)
-         (advice-add 'projectile-rails-generate :around #'run-with-bash-shell))
-  (setup 'inf-ruby
-         (inf-ruby-minor-mode t)
-         (inf-ruby-switch-setup))
-  (setup 'bundler
-         (advice-add 'bundle-command :around #'run-with-bash-shell)
-         (advice-add 'bundle-list-gems :around #'run-with-bash-shell)
-         (advice-add 'bundle-list-gem-paths :around #'run-with-bash-shell))
-  (setup 'ctags
-         (setq ctags-languages '("ruby")
-               ctags-extra-files-function 'bundle-list-gem-paths)
-         (add-to-list 'ctags-lang-kinds-alist '(ruby . "fF"))
-         (add-to-list 'ctags-excludes "db"))
-  (setup 'electric
-         (electric-pair-mode))
-  (setup 'ruby-end
-         (ruby-end-mode))
-  (setup 'ruby-refactor
-         (ruby-refactor-mode))
-  (setup 'paredit-non-lisp
-         (paredit-non-lisp-mode))
-  (setup 'rainbow-delimiters
-         (rainbow-delimiters-mode))
-  (setup 'rbenv
-         (setq rbenv-show-active-ruby-in-modeline nil)))
+
+  (require 'rspec-mode)
+  (setq rspec-use-rake-when-possible nil
+        rspec-use-opts-file-when-available nil
+        compilation-scroll-output t)
+  (advice-add 'rspec-compile :around #'run-with-bash-shell)
+
+  (require 'projectile-rails)
+  (projectile-rails-on)
+  (advice-add 'projectile-rails-generate :around #'run-with-bash-shell)
+
+  (require 'inf-ruby)
+  (inf-ruby-minor-mode t)
+  (inf-ruby-switch-setup)
+
+  (require 'bundler)
+  (advice-add 'bundle-command :around #'run-with-bash-shell)
+  (advice-add 'bundle-list-gems :around #'run-with-bash-shell)
+  (advice-add 'bundle-list-gem-paths :around #'run-with-bash-shell)
+
+  (require 'ctags)
+  (setq ctags-languages '("ruby")
+        ctags-extra-files-function 'bundle-list-gem-paths)
+  (add-to-list 'ctags-lang-kinds-alist '(ruby . "fF"))
+  (add-to-list 'ctags-excludes "db")
+
+  (require 'electric)
+  (electric-pair-mode)
+
+  (require 'ruby-end)
+  (ruby-end-mode)
+
+  (require 'ruby-refactor)
+  (ruby-refactor-mode)
+
+  (require 'paredit-non-lisp)
+  (paredit-non-lisp-mode)
+
+  (require 'rainbow-delimiters)
+  (rainbow-delimiters-mode)
+
+  (require 'rbenv))
+
+(defun always (value)
+  `(lambda (&rest _) ,value))
 
 (defun ruby-console ()
   (interactive)

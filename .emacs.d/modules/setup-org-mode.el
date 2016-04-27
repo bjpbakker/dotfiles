@@ -1,9 +1,5 @@
-(require 'config-util)
-
-(setup 'deft
-       (setq deft-directory "~/Dropbox/deft")
-       (setq deft-use-filename-as-title t)
-       (setq deft-extension "org")
-       (setq deft-text-mode 'org-mode))
+(require 'deft)
+(setq deft-directory "~/Dropbox/deft"
+      deft-use-filename-as-title t)
 
 (provide 'setup-org-mode)

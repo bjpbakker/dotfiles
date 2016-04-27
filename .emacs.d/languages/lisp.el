@@ -8,16 +8,22 @@
 (define-minor-mode lisp-power-mode "Add power to Lisp modes"
   :lighter " ⼒"
   :keymap lisp-power-map
-  (setup 'eldoc
-         (eldoc-mode))
-  (setup 'paredit
-         (paredit-mode t))
-  (setup 'rainbow-delimiters
-         (rainbow-delimiters-mode))
-  (setup 'paren
-         (show-paren-mode))
+
+  (require 'eldoc)
+  (eldoc-mode)
+
+  (require 'paredit)
+  (paredit-mode t)
+
+  (require 'rainbow-delimiters)
+  (rainbow-delimiters-mode)
+
+  (require 'paren)
+  (show-paren-mode)
+
   (with-eval-after-load 'flycheck
     (add-to-list 'flycheck-disabled-checkers 'emacs-lisp-checkdoc)))
+
 (define-key lisp-power-map [delete] 'paredit-forward-delete)
 (define-key lisp-power-map [backspace] 'paredit-backward-delete)
 

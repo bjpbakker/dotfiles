@@ -2,6 +2,10 @@
 (which-key-setup-minibuffer)
 (which-key-mode)
 
+(defmacro bind (&rest commands)
+  "Convenience macro to bind to interactive functions"
+  `(lambda () (interactive) ,@commands))
+
 (global-set-key (kbd "M-n") 'next-error)
 (global-set-key (kbd "M-p") 'previous-error)
 

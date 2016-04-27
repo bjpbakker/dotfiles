@@ -1,5 +1,3 @@
-(require 'config-util)
-
 (setq inhibit-splash-screen t
       initial-scratch-message nil)
 
@@ -28,11 +26,13 @@
 (when (display-graphic-p)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
-  (setup 'fonts
-    (setq fonts-screen-preset-alist '(("macbook" . "Source Code Pro-13")
-                                      ("thunderbolt" . "Source Code Pro-15")
-                                      ("big-screen" . "Source Code Pro-19")))
-    (fonts-load-screen-preset "macbook"))
-  (add-hook 'after-init-hook 'toggle-frame-fullscreen))
+
+  (require 'fonts)
+  (setq fonts-screen-preset-alist '(("macbook" . "Source Code Pro-13")
+                                    ("thunderbolt" . "Source Code Pro-15")
+                                    ("big-screen" . "Source Code Pro-19")))
+  (fonts-load-screen-preset "macbook"))
+
+(add-hook 'after-init-hook 'toggle-frame-fullscreen)
 
 (provide 'appearance)
