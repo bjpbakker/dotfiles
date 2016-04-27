@@ -21,10 +21,4 @@
 (ido-vertical-mode t)
 (setq ido-vertical-define-keys 'C-n-and-C-p-only)
 
-(require 'smex)
-(setq smex-save-file (expand-file-name ".smex-items" emacs-temp-directory))
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-
 (provide 'setup-ido)

@@ -11,7 +11,7 @@
 
 (setq bart/packages
       '(exec-path-from-shell
-        flx-ido ido-ubiquitous ido-vertical-mode smex ;; fuzzy match files, buffers, and more
+        flx-ido ido-ubiquitous ido-vertical-mode ;; fuzzy match files, buffers, and more
         ivy swiper counsel counsel-projectile flx ;; Ivy search and fuzzy matching
         projectile ;; open projects, files and more
         neotree etags-select ;; navigation
