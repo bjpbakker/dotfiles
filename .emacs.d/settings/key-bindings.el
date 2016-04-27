@@ -6,6 +6,7 @@
 (global-set-key (kbd "M-p") 'previous-error)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-,") 'embrace-commander)
 
 (global-set-key (kbd "C-c g") 'magit-status)
 (global-set-key (kbd "S-C-s") 'swiper)

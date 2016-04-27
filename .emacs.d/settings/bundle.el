@@ -15,7 +15,7 @@
         swiper counsel counsel-projectile flx ;; Ivy search and fuzzy matching
         projectile ;; open projects, files and more
         neotree etags-select ;; navigation
-        avy expand-region fillcode paredit rainbow-delimiters toggle-quotes idle-highlight ;; editing
+        avy expand-region embrace fillcode paredit rainbow-delimiters toggle-quotes idle-highlight ;; editing
         ace-window ;; window control
         company company-flx ;; completion
         flycheck flycheck-tip ;; syntax checking
