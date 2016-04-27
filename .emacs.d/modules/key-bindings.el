@@ -1,7 +1,3 @@
-(require 'which-key)
-(which-key-setup-minibuffer)
-(which-key-mode)
-
 (defmacro bind (&rest commands)
   "Convenience macro to bind to interactive functions"
   `(lambda () (interactive) ,@commands))

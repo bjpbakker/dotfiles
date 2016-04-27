@@ -20,7 +20,7 @@
         company company-flx ;; completion
         flycheck flycheck-tip ;; syntax checking
         editorconfig ;; project-based configuration
-        which-key ;; help on key bindings and stuff
+        which-key discover-my-major ;; more help
         smart-mode-line smart-mode-line-powerline-theme column-enforce-mode ;; ui enhancements
         rainbow-mode ;; display color strings
         clojure-mode cider ;; clojure

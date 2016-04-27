@@ -10,9 +10,11 @@
 
 (require 'bundle)
 (install-missing-packages)
+
 (require 'mac)
 (require 'defaults)
 (require 'appearance)
+(require 'more-help)
 (require 'setup-modeline)
 (require 'setup-ido)
 (require 'setup-ivy)
