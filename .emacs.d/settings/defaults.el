@@ -56,4 +56,7 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 (provide 'defaults)
