@@ -1,11 +1,10 @@
-(display-time-mode)
 (require 'smart-mode-line)
 (setq sml/shorten-directory t
       sml/shorten-modes t
       sml/name-width '(40 . 100)
       sml/mode-width 'full
       sml/no-confirm-load-theme t
-      sml/theme 'powerline)
+      sml/theme 'respectful)
 
 ;; rich-minority-mode is automatically enabled by smart-mode-line
 (require 'regexp-helper)
@@ -13,7 +12,7 @@
                     '("company"
                       "," ;; subword
                       "WK"
-                      ".*Doc"
+                      " .*Doc"
                       "Projectile.*")))
 
 (sml/setup)
