@@ -1,5 +1,3 @@
-(require 'cl-lib)
-
 (defconst dot-emacs-d (file-name-directory (file-chase-links load-file-name)))
 (defconst emacs-temp-directory (concat user-emacs-directory "temp/"))
 
@@ -7,6 +5,16 @@
 ;; of my configuration in the `modules` subfolder.
 (add-to-list 'load-path (concat dot-emacs-d "elisp"))
 (add-to-list 'load-path (concat dot-emacs-d "modules"))
+
+;; Turn on debugging during init
+(setq debug-on-error t)
+(setq debug-on-quit t)
+
+(defconst emacs-start-time (current-time))
+
+(require 'cl-lib)
+
+(require 'nix)
 
 (require 'bundle)
 (install-missing-packages)
@@ -39,3 +47,11 @@
 
 (setq make-backup-files nil
       auto-save-file-name-transforms `((".*" ,emacs-temp-directory t)))
+
+(let ((elapsed (float-time (time-subtract (current-time)
+                                          emacs-start-time))))
+  (message "Loaded Emacs configuration in %.3fs" elapsed))
+
+;; Done, turn off debugging
+(setq debug-on-error nil)
+(setq debug-on-quit nil)

@@ -1,17 +1,16 @@
 (require 'package)
 (require 'cl-lib)
+
 (package-initialize)
 (setq package-archives
-      '(("gnu" . "http://elpa.gnu.org/packages/")
-        ("marmalade" . "http://marmalade-repo.org/packages/")
-        ("melpa" . "http://melpa.milkbox.net/packages/")))
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")))
 
 (defvar bart/packages nil
   "Packages required at runtime")
 
 (setq bart/packages
-      '(exec-path-from-shell
-        flx-ido ido-ubiquitous ido-vertical-mode ;; fuzzy match files, buffers, and more
+      '(flx-ido ido-ubiquitous ido-vertical-mode ;; fuzzy match files, buffers, and more
         ivy swiper counsel counsel-projectile flx ;; Ivy search and fuzzy matching
         projectile ;; open projects, files and more
         neotree etags-select ;; navigation
