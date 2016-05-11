@@ -4,7 +4,7 @@
 (setq use-dialog-box nil)
 
 (global-linum-mode -1)
-(global-hl-line-mode 1)
+(global-hl-line-mode nil)
 
 ;; highlight unnecessary whitespace
 (setq-default whitespace-style '(face trailing tabs empty))
