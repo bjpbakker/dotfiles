@@ -48,7 +48,7 @@
     (message "No file has been verified.")))
 
 (defun mocha-verify-file (file-name)
-  (let* ((command (concat "mocha " mocha-extra-args " " file-name))
+  (let* ((command (mocha--gen-command file-name))
          (default-directory (funcall mocha-pwd-fn)))
     (progn
       (set-variable 'mocha-last-verified-file file-name)
@@ -76,6 +76,11 @@
 (defun mocha-filter-non-sgr-control-sequences ()
   (let ((inhibit-read-only t))
     (filter-non-sgr-control-sequences-apply-on-region compilation-filter-start (point))))
+
+(defun mocha--gen-command (&rest args)
+  (mapconcat 'identity
+             (append (list "mocha" mocha-extra-args) args)
+             " "))
 
 (define-compilation-mode mocha-compilation-mode "Mocha"
   "Compilation mode for Mocha output."
