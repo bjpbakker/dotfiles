@@ -5,6 +5,8 @@
 (setq flycheck-check-syntax-automatically '(save mode-enabled)
       flycheck-temp-prefix ".flycheck")
 
+(set-face-attribute 'popup-tip-face nil :background "#58b1f3")
+
 (defun setup-flycheck-mode ()
   (flycheck-tip-use-timer 'verbose)
   (flycheck-mode-line-marker))
