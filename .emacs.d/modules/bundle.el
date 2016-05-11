@@ -14,13 +14,13 @@
         ivy swiper counsel counsel-projectile flx ;; Ivy search and fuzzy matching
         projectile ;; open projects, files and more
         neotree etags-select ;; navigation
-        undo-tree avy expand-region embrace fillcode paredit rainbow-delimiters toggle-quotes idle-highlight ;; editing
+        undo-tree avy expand-region embrace fillcode paredit rainbow-delimiters toggle-quotes idle-highlight-mode ;; editing
         ace-window ;; window control
         company company-flx ;; completion
         flycheck flycheck-tip ;; syntax checking
         editorconfig ;; project-based configuration
         which-key discover-my-major ;; more help
-        smart-mode-line smart-mode-line-powerline-theme column-enforce-mode ;; ui enhancements
+        smart-mode-line column-enforce-mode ;; ui enhancements
         rainbow-mode ;; display color strings
         clojure-mode cider ;; clojure
         elixir-mode ;; elixir
