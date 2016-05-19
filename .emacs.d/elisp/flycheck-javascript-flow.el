@@ -1,6 +1,6 @@
 ;;; flycheck-javascript-flow.el --- Flycheck Javascript syntax checker using Flow
 
-;; Copyright © 2015 Bart Bakker <bart@thesoftwarecraft.com>
+;; Copyright © 2015-2016 Bart Bakker <bart@thesoftwarecraft.com>
 
 ;; Author Bart Bakker <bart@thesoftwarecraft.com>
 
@@ -26,23 +26,26 @@
 (require 'flycheck)
 (require 'json)
 
+(defun flycheck-javascript-flow--extract-descr (err)
+  (let ((msgs (cdr (assoc 'message err))))
+    (mapconcat (lambda (x) (cdr (assoc 'descr x))) (cdr msgs) " ")))
+
 (defun flycheck-javascript-flow-parse-errors (output checker buffer)
   (let ((json-array-type 'list))
     (let ((o (json-read-from-string output)))
-      (mapcar #'(lambda (err)
-                  (let* ((msgs (cdr (assoc 'message err))))
-                    (flycheck-error-new
-                     :line (cdr (assoc 'line (car msgs)))
-                     :column (cdr (assoc 'start (car msgs)))
-                     :level 'error
-                     :message (mapconcat #'(lambda (msg)
-                                             (cdr (assoc 'descr msg))) msgs " ")
-                     :filename (file-relative-name
-                                (cdr (assoc 'path (car msgs)))
-                                (file-name-directory (file-truename
-                                                      (buffer-file-name))))
-                     :buffer buffer
-                     :checker checker)))
+      (mapcar (lambda (err)
+                (let ((cause (cadr (assoc 'message err))))
+                  (flycheck-error-new
+                   :line (cdr (assoc 'line cause))
+                   :column (cdr (assoc 'start cause))
+                   :level 'error
+                   :message (flycheck-javascript-flow--extract-descr err)
+                   :filename (file-relative-name
+                              (cdr (assoc 'path cause))
+                              (file-name-directory (file-truename
+                                                    (buffer-file-name))))
+                   :buffer buffer
+                   :checker checker)))
               (cdr (assoc 'errors o))))))
 
 (flycheck-define-checker javascript-flow
