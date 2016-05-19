@@ -3,8 +3,10 @@
 
 (setq use-dialog-box nil)
 
-(global-linum-mode -1)
-(global-hl-line-mode nil)
+(load-theme 'leuven t)
+(setq global-hl-line-mode nil)
+
+(global-linum-mode nil)
 
 ;; highlight unnecessary whitespace
 (setq-default whitespace-style '(face trailing tabs empty))
@@ -13,10 +15,6 @@
 (require 'column-enforce-mode)
 (setq column-enforce-column nil)
 (add-hook 'prog-mode-hook 'column-enforce-mode)
-
-(require 'alect-themes)
-(load-theme 'alect-black t)
-(enable-theme 'alect-black)
 
 ;; srsly..
 (unless (display-graphic-p)
