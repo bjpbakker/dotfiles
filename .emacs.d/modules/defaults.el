@@ -20,18 +20,16 @@
 ;; no blinking cursor
 (blink-cursor-mode 0)
 
-;; show active region
-(transient-mark-mode 1)
-(make-variable-buffer-local 'transient-mark-mode)
-(put 'transient-mark-mode 'permanent-local t)
-(setq-default transient-mark-mode t)
-
-;; replace active region if inserting text
-(delete-selection-mode 1)
+;; make selection work as you'd expect
+(transient-mark-mode t)
+(delete-selection-mode t)
 
 ;; display line and column numbers in mode-line
 (setq line-number-mode 1)
 (setq column-number-mode 1)
+
+;; automatically save buffers compilation
+(setq compilation-ask-about-save nil)
 
 ;; sensible default for line length would be 80
 (setq-default fill-column 80)
