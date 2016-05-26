@@ -23,6 +23,7 @@
 (require 'defaults)
 (require 'appearance)
 (require 'more-help)
+(require 'setup-navigation)
 (require 'setup-modeline)
 (require 'setup-ido)
 (require 'setup-ivy)
@@ -36,7 +37,6 @@
 (require 'setup-magit)
 (require 'setup-erc)
 (require 'setup-neotree)
-(require 'setup-window-movement)
 (require 'misc)
 (require 'key-bindings)
 

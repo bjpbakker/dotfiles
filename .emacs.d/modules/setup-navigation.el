@@ -1,5 +1,17 @@
-(require 'ace-window)
+(global-subword-mode t)
 
+(defun smart-beginning-of-line ()
+  "Move point to first non-whitespace character (indentation), or to
+beginning of line when point is at indentation."
+  (interactive "^")
+  (let ((pos (point)))
+    (back-to-indentation)
+    (and (= pos (point))
+         (beginning-of-line))))
+(global-set-key (kbd "C-a") 'smart-beginning-of-line)
+(global-set-key (kbd "<home>") 'smart-beginning-of-line)
+
+(require 'ace-window)
 (defun vsplit-last-buffer (prefix)
   "Split window vertically and display the next buffer"
   (interactive "p")
@@ -20,4 +32,4 @@
 (global-set-key (kbd "C-x 2") 'vsplit-last-buffer)
 (global-set-key (kbd "C-x 3") 'hsplit-last-buffer)
 
-(provide 'setup-window-movement)
+(provide 'setup-navigation)
