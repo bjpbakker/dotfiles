@@ -1,6 +1,7 @@
 setopt PROMPT_SUBST
 autoload -U promptinit; promptinit
-prompt pure
+prompt suse
+export PS1="%~/ > "
 
 # Colorize
 alias ls='ls -G'
