@@ -27,6 +27,7 @@
 
   (require 'fonts)
   (setq fonts-screen-preset-alist '(("macbook" . "Source Code Pro-13")
+                                    ("dell" . "Source Code Pro-13")
                                     ("thunderbolt" . "Source Code Pro-15")
                                     ("big-screen" . "Source Code Pro-19")))
   (fonts-load-screen-preset "macbook"))
