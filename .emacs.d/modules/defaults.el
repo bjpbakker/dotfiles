@@ -45,10 +45,13 @@
 
 (setq gc-cons-percentage 20000000)
 
-;; smooth scrolling
-(setq scroll-margin 8
-      scroll-conservatively 10000
-      scroll-preserve-screen-position t)
+;; smoother scrolling
+(setq scroll-margin 3
+      scroll-conservatively 101
+      scroll-preserve-screen-position t
+      mouse-wheel-progressive-speed nil)
+(setq-default scroll-up-aggressively 0.01
+              scroll-down-aggressively 0.01)
 
 (with-eval-after-load "vc"
   '(setq vc-handled-backends nil))
