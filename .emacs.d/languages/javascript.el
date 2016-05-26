@@ -25,6 +25,7 @@
   (local-set-key (kbd "C-c , r") #'mocha-verify-last))
 
 (defun setup-js-flycheck ()
+  (require 'flow-types)
   (with-eval-after-load 'flycheck
     (require 'flycheck-javascript-flow)
     (add-to-list 'flycheck-checkers 'javascript-flow)))
