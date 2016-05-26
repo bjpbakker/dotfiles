@@ -11,6 +11,10 @@ beginning of line when point is at indentation."
 (global-set-key (kbd "C-a") 'smart-beginning-of-line)
 (global-set-key (kbd "<home>") 'smart-beginning-of-line)
 
+;; rebind 'scroll-left and 'scroll-right keys to navigate the buffer ring
+(global-set-key (kbd "C-x <") 'previous-buffer)
+(global-set-key (kbd "C-x >") 'next-buffer)
+
 (require 'ace-window)
 (defun vsplit-last-buffer (prefix)
   "Split window vertically and display the next buffer"
