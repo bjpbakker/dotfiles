@@ -3,8 +3,11 @@
 
 (setq use-dialog-box nil)
 
-(load-theme 'leuven t)
-(global-hl-line-mode -1)
+(defun themes/light ()
+  (interactive)
+  (load-theme 'leuven t)
+  (global-hl-line-mode -1))
+(themes/light)
 
 (global-linum-mode t)
 (setq linum-disabled-modes '(help-mode shell-mode))
