@@ -1,13 +1,14 @@
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
-(autoload 'js2-mode "js2-mode")
-(setq-default js2-mode-show-parse-errors nil
+(setq-default js2-mode-indent-ignore-first-tab t
+              js2-mode-show-parse-errors nil
               js2-strict-inconsistent-return-warning nil
               js2-strict-var-hides-function-arg-warning nil
               js2-strict-missing-semi-warning nil
               js2-strict-trailing-comma-warning nil
               js2-strict-cond-assign-warning nil
               js2-strict-var-redeclaration-warning nil)
+(setq-default js2-global-externs '("module" "require" "process" "console"))
 
 (defun prettify-js-symbols ()
   (push '("->" . ?→) prettify-symbols-alist)
@@ -20,26 +21,24 @@
 (defun setup-js-mocha ()
   (require 'mocha)
   (setq-default mocha-extra-args "--compilers js:babel-core/register")
-  (define-key js-mode-map (kbd "C-c , v") #'mocha-verify-file-in-buffer)
-  (define-key js-mode-map (kbd "C-c , r") #'mocha-verify-last))
+  (local-set-key (kbd "C-c , v") #'mocha-verify-file-in-buffer)
+  (local-set-key (kbd "C-c , r") #'mocha-verify-last))
 
 (defun setup-js-flycheck ()
   (with-eval-after-load 'flycheck
     (require 'flycheck-javascript-flow)
     (add-to-list 'flycheck-checkers 'javascript-flow)))
 
-(defun setup-js-ctags ()
-  (require'ctags)
-  (setq ctags-languages '("JavaScript"))
-  (add-to-list 'ctags-lang-kinds-alist '(JavaScript. "fcmpv"))
-  (add-to-list 'ctags-excludes "dist"))
-
 (defun setup-js-mode ()
   (setup-js-mocha)
   (prettify-js-symbols)
-  (setup-js-flycheck)
-  (setup-js-ctags))
+  (setup-js-flycheck))
 (add-hook 'js-mode-hook #'setup-js-mode)
+(add-hook 'js2-mode-hook #'setup-js-mode)
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+
+(with-eval-after-load 'js2-refactor
+  (js2r-add-keybindings-with-prefix "C-c C-m"))
 
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 (with-eval-after-load 'flycheck

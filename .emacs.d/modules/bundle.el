@@ -50,7 +50,7 @@
         haskell-mode flycheck-stack
 
         ;; javascript
-        js2-mode
+        js2-mode js2-refactor
 
         ;; markdown
         markdown-mode writegood-mode
