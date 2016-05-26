@@ -36,6 +36,7 @@
 /.m2/
 /.netrc
 /.node-gyp/
+/.node-modules/
 /.ngrok2/
 /.npm/
 /.phantomjs/

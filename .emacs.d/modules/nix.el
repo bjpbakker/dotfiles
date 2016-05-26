@@ -21,7 +21,8 @@ Equivalent of the `NIX_PROFILE` environment variable."
 (setq exec-path (delete-dups
                  (append
                   (mapcar 'nix-file-path '("/bin" "/sbin"))
-                  (mapcar 'expand-file-name '("~/.rbenv/shims"))
+                  (mapcar 'expand-file-name '("~/.node-modules/bin"
+                                              "~/.rbenv/shims"))
                   '("/usr/local/bin" "/usr/local/sbin")
                   exec-path)))
 (setenv "PATH" (mapconcat 'identity exec-path ":"))
