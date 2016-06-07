@@ -39,8 +39,6 @@
 (set-default 'indicate-empty-lines nil)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(setq gc-cons-percentage 20000000)
-
 ;; smoother scrolling
 (setq scroll-margin 3
       scroll-conservatively 101
