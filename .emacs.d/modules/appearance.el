@@ -9,7 +9,7 @@
   (global-hl-line-mode -1))
 (themes/light)
 
-(global-linum-mode t)
+(global-linum-mode -1)
 (setq linum-disabled-modes '(help-mode shell-mode))
 (defun linum-on ()
   (unless (or (minibufferp)
