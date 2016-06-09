@@ -50,6 +50,10 @@
 (with-eval-after-load "vc"
   '(setq vc-handled-backends nil))
 
+;; get rid of standard bindings for 'suspend-frame
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
+
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
