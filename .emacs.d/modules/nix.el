@@ -27,15 +27,12 @@ Equivalent of the `NIX_PROFILE` environment variable."
                   exec-path)))
 (setenv "PATH" (mapconcat 'identity exec-path ":"))
 
-(with-eval-after-load 'tls
-  (let ((cafile (nix-file-path "/etc/ssl/certs/ca-bundle.crt")))
-    (setq tls-checktrust t
-          tls-program (list (mapconcat 'identity
-                                       (list "gnutls-cli"
-                                             "--x509cafile"
-                                             cafile
-                                             "-p %p %h")
-                                       " "))
-          gnutls-trustfiles (list cafile))))
+(require 'tls)
+
+(let ((ca-bundle-file (nix-file-path "/etc/ssl/certs/ca-bundle.crt")))
+  (setq tls-checktrust t
+	tls-program (list (format "gnutls-cli --x509cafile %s -p %%p %%h"
+				  ca-bundle-file))
+	gnutls-trustfiles (list ca-bundle-file)))
 
 (provide 'nix)
