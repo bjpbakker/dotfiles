@@ -6,6 +6,7 @@
 (defun themes/light ()
   (interactive)
   (load-theme 'leuven t)
+  (set-face-attribute 'web-mode-html-tag-face nil :background "white")
   (global-hl-line-mode -1))
 (themes/light)
 
