@@ -10,12 +10,12 @@
   (global-hl-line-mode -1))
 (themes/light)
 
-(global-linum-mode -1)
 (setq linum-disabled-modes '(help-mode shell-mode))
 (defun linum-on ()
   (unless (or (minibufferp)
               (member major-mode linum-disabled-modes))
     (linum-mode 1)))
+(global-linum-mode -1)
 
 ;; highlight unnecessary whitespace
 (setq-default whitespace-style '(face trailing tabs empty))
