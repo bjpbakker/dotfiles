@@ -1,5 +1,6 @@
 [user]
 	name = Bart Bakker
+	signingkey = 582D3883
 [core]
 	editor = vim
 	autocrlf = input
@@ -54,3 +55,5 @@
 	default = current
 [advice]
 	statusHints = false
+[gpg]
+	program = gpg2
