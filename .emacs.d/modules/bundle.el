@@ -84,7 +84,7 @@
         org deft
 
         ;; misc tools
-        ag dash-at-point
+        ag
 ))
 
 (defun install-missing-packages ()
