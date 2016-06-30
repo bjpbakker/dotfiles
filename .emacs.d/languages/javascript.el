@@ -10,6 +10,8 @@
               js2-strict-var-redeclaration-warning nil)
 (setq-default js2-global-externs '("module" "require" "process" "console"))
 
+(setenv "NODE_NO_READLINE" "1")
+
 (defun prettify-js-symbols ()
   (push '("->" . ?→) prettify-symbols-alist)
   (push '("=>" . ?⇒) prettify-symbols-alist)
