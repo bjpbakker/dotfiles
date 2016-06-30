@@ -16,6 +16,7 @@ beginning of line when point is at indentation."
 (global-set-key (kbd "C-x >") 'next-buffer)
 
 (require 'ace-window)
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 (defun vsplit-last-buffer (prefix)
   "Split window vertically and display the next buffer"
   (interactive "p")
@@ -32,8 +33,17 @@ beginning of line when point is at indentation."
   (if (= prefix 1)
       (switch-to-next-buffer)))
 
+(defun quit-other-window ()
+  (interactive)
+  (save-selected-window
+    (save-excursion
+      (other-window 1)
+      (quit-window))))
+
 (global-set-key (kbd "C-x o") 'ace-window)
+(global-set-key (kbd "C-x C-o") 'ace-swap-window)
 (global-set-key (kbd "C-x 2") 'vsplit-last-buffer)
 (global-set-key (kbd "C-x 3") 'hsplit-last-buffer)
+(global-set-key (kbd "C-x M-p") 'quit-other-window)
 
 (provide 'setup-navigation)
