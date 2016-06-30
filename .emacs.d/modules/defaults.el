@@ -55,7 +55,7 @@
 (global-unset-key (kbd "C-x C-z"))
 
 (require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
+(setq uniquify-buffer-name-style 'post-forward)
 
 (require 'undo-tree)
 (global-undo-tree-mode)
