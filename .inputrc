@@ -1,0 +1,5 @@
+set convert-meta on
+set -o emacs
+
+Meta-p: previous-history
+Meta-n: next-history
