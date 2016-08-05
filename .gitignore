@@ -12,8 +12,10 @@
 /.cache/
 /.cargo/
 /.cocoapods/
+/.compose-cache/
 /.config/
 /.cups/
+/.dbus/
 /.did_show_opt_info
 /.ercpass
 /.dropbox/
@@ -36,6 +38,8 @@
 /.local/
 /.m2/
 /.netrc
+/.nix-defexpr/
+/.nix-profile
 /.node-gyp/
 /.node-modules/
 /.ngrok2/
@@ -55,6 +59,7 @@
 /.vim/bundle/*
 /.viminfo
 /.workaway
+/.Xauthority
 /.zcompdump
 /.zilverline*
 /.zinc/

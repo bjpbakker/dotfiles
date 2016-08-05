@@ -3,7 +3,6 @@
 	email = bart@thesoftwarecraft.com
 	signingkey = 582D3883
 [core]
-	editor = vim
 	autocrlf = input
 	safecrlf = true
 	excludesfile = ~/gitignore
