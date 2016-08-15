@@ -1,14 +1,35 @@
 xrdb -override ~/.Xresources
 xsetroot -cursor_name left_ptr
-xrandr --dpi 220
+
+# Set DPI depending on the screen. When the
+# screen's resolution is '2560x1440' the
+# 27" Thunderbolt Cinema is hooked up and the
+# MBP is running in "closed-display mode".
+#
+# Otherwise we're on either the MBPs retina or
+# on the Thunderbolt with retina resolutions. Both
+# of which need 220 PPI.
+resolution=$(xdpyinfo | awk /dimensions/'{print $2}')
+if [ "$resolution" == "2560x1440" ]; then
+    ppi="109"
+else
+    ppi="220"
+fi
+
+xrandr --dpi $ppi
+xrdb -override <<EOF
+Xft.dpi: $ppi
+EOF
+
+# Tweak 'ImPS/2 Generic Wheel Mouse' constant deceleration
+xinput set-prop 9 253 0.5
 
 xset s off
 xset +dpms
-xset r rate 200 30
-xset m 30/10 4
+xset r rate 200 50
+xset m 3/1 4
 
-# set the background image
-# feh --bg-scale /path/to/image.png
+feh --no-fehbg --bg-max ~/wallpapers/astromech.jpg
 
 # start a window compositor
 # xcompmgr -n &

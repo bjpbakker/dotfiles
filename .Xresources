@@ -1,6 +1,6 @@
-URxvt*font: xft:Source Code Pro:size=9, xft:Free Mono:size=9
+URxvt*font: xft:Hack:size=9, xft:Free Mono:size=9
 
 Emacs.FontBackend: xft
-Emacs.font: Source Code Pro-9
+Emacs.font: Source Code Pro-11
 
 Xcursor.theme: Vanilla-DMZ-AA
