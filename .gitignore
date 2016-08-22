@@ -37,6 +37,7 @@
 /.lesshst
 /.local/
 /.m2/
+/.mozilla/
 /.netrc
 /.nix-defexpr/
 /.nix-profile
@@ -82,3 +83,4 @@
 /src/
 /stack/
 /talks
+/vpn/
