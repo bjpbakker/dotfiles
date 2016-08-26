@@ -1,3 +1,5 @@
+[ -f ~/.env ] && source ~/.env
+
 xrdb -override ~/.Xresources
 xsetroot -cursor_name left_ptr
 
