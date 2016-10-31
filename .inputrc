@@ -1,5 +1,5 @@
 set convert-meta on
-set -o emacs
+set editing-mode emacs
 
 Meta-p: previous-history
 Meta-n: next-history
