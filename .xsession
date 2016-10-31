@@ -28,7 +28,7 @@ xinput set-prop 9 253 0.5
 
 xset s off
 xset +dpms
-xset r rate 200 50
+xset r rate 300 50
 xset m 3/1 4
 
 feh --no-fehbg --bg-max ~/wallpapers/astromech.jpg
