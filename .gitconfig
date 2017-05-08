@@ -1,7 +1,7 @@
 [user]
 	name = Bart Bakker
 	email = bart@thesoftwarecraft.com
-	signingkey = 582D3883
+	signingkey = 8BC1D8F4C6C7B548
 [core]
 	autocrlf = input
 	safecrlf = true
