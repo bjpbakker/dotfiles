@@ -23,8 +23,9 @@ xrdb -override <<EOF
 Xft.dpi: $ppi
 EOF
 
-# Tweak 'ImPS/2 Generic Wheel Mouse' constant deceleration
-xinput set-prop 9 253 0.5
+# Tweak mouse constant deceleration
+xinput set-prop 7 258 0.4 # VMware VMware Virtual USB Mouse
+xinput set-prop 9 258 0.4 # ImPS/2 Generic Wheel Mouse
 
 xset s off
 xset +dpms
