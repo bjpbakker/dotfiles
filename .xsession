@@ -39,4 +39,5 @@ feh --no-fehbg --bg-max ~/wallpapers/astromech.jpg
 
 emacs &
 urxvt &
+urxvt -e htop &
 exec xmonad
