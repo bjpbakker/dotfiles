@@ -32,10 +32,7 @@ xset +dpms
 xset r rate 300 50
 xset m 3/1 4
 
-feh --no-fehbg --bg-max ~/wallpapers/astromech.jpg
-
-# start a window compositor
-# xcompmgr -n &
+feh --no-fehbg --bg-scale ~/wallpapers/astromech.jpg
 
 emacs &
 urxvt &
